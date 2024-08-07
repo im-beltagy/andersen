@@ -283,7 +283,7 @@ export default function Footer(props: Props) {
                       London
                     </Typography>
                     <Typography fontWeight="regular" sx={{ fontSize: { sm: 13, md: 15 } }}>
-                      30 St Mary's Axe, London, EC3A 8BF, UK
+                      {`30 St Mary's Axe, London, EC3A 8BF, UK`}
                     </Typography>
                     <Typography fontWeight="regular" sx={{ unicodeBidi: 'embed', direction: 'ltr', my: 2, fontSize: { sm: 13, md: 15 } }}>
                       +44 207 048 6755
