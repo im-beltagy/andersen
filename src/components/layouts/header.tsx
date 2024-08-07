@@ -68,7 +68,7 @@ export default function Header(props: Props) {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
-
+  const logo = sm ? '/assets/logo.svg': '/assets/small_logo.svg';
   return (
     <>
      <ThemeProvider theme={customTheme}>
@@ -78,7 +78,7 @@ export default function Header(props: Props) {
         <Box
         component="img"
         alt="auth"
-        src={ sm ? '/assets/logo.svg': '/assets/small_logo.svg'}
+        src={logo }
         sx={{
           cursor:'pointer',
         display:'block',
@@ -96,10 +96,9 @@ export default function Header(props: Props) {
           <Iconify icon="mdi:menu" />
           </IconButton>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems:'center' }}>
-            {navItems.map((item) => (
-              <Box sx={{
+            {navItems.map((item, index) => (
+              <Box key={index} sx={{
                 color:'black',
-
                 ':hover':{
                   color:'#ddd',
                   cursor:'pointer',
