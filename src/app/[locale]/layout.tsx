@@ -2,7 +2,8 @@ import { Locales, locales } from "@/config-locale";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { Cairo } from "next/font/google";
-
+import Footer from "@/components/layouts/footer";
+import Header from "@/components/layouts/header";
 // Base Font
 const cairo = Cairo({
   subsets: ["latin"],
@@ -26,7 +27,9 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className={`${cairo.variable} `}>
         <NextIntlClientProvider messages={messages}>
-          <main>{children}</main>
+          <Header />
+          <main style={{marginTop:'34px',minHeight:300}}>{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
