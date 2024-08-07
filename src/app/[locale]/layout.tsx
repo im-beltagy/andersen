@@ -1,13 +1,12 @@
 import { Locales, locales } from "@/config-locale";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, unstable_setRequestLocale } from "next-intl/server";
-import { Cairo } from "next/font/google";
+import { Roboto } from "next/font/google";
 
 // Base Font
-const cairo = Cairo({
+const roboto = Roboto({
   subsets: ["latin"],
   weight: "400",
-  variable: "--base-font",
   display: "swap",
 });
 
@@ -24,7 +23,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${cairo.variable} `}>
+      <body className={roboto.className} suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <main>{children}</main>
         </NextIntlClientProvider>

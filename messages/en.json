@@ -1,3 +1,11 @@
 {
-  "Global": {}
+  "Global": {},
+  "Pages": {
+    "Home": {
+      "Hero": {
+        "headding": "Software Development Company",
+        "action": "Let's discuss your project"
+      }
+    }
+  }
 }
