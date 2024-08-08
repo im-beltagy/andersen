@@ -55,7 +55,7 @@ const Section9 = () => {
       alignItems="center"
       sx={{
         p: 1,
-        '@media (min-width: 600px)': {
+        "@media (min-width: 600px)": {
           p: 4,
         },
       }}
@@ -63,7 +63,7 @@ const Section9 = () => {
       <Grid item xs={12} md={6}>
         <Box>
           <Typography variant="h4" gutterBottom>
-           {` Let's talk about your IT needs`}
+            {` Let's talk about your IT needs`}
           </Typography>
           <Typography variant="subtitle1" gutterBottom>
             What happens next?
@@ -194,8 +194,18 @@ const Section9 = () => {
                 />
               )}
             />
-            <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
-              <Button variant="contained" component="label" sx={{ mt: 2,width: "fit-content" }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+              }}
+            >
+              <Button
+                variant="contained"
+                component="label"
+                sx={{ mt: 2, width: "fit-content" }}
+              >
                 Attach file
                 <input type="file" hidden />
               </Button>
