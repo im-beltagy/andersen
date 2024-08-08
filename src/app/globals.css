@@ -9,9 +9,21 @@ body {
   --secondary-light: #fafafa;
 
   --container-px: 1.25rem;
-  --container-py: 3.75rem;
+  --container-py: 60px;
+  --section-py: 60px;
 
   --header-height: 145px;
+}
+@media (min-width: 545px) {
+  body {
+    --section-py: 80px;
+  }
+}
+@media (min-width: 1025px) {
+  body {
+    --container-py: 70px;
+    --section-py: 100px;
+  }
 }
 
 /* ====== Resets ====== */
@@ -25,6 +37,7 @@ body {
 }
 body {
   line-height: 1.5;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 img,

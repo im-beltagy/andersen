@@ -1,0 +1,21 @@
+.title {
+  font-family: inherit;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.3;
+}
+@media (min-width: 545px) {
+  .title {
+    flex-grow: 1;
+    font-size: 32px;
+    font-size: 22px;
+    line-height: 1.3;
+  }
+}
+
+@media (min-width: 1025px) {
+  .title {
+    font-size: 36px;
+  }
+}
