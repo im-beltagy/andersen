@@ -22,7 +22,7 @@ const labels = [
 const data = {
   popular: [
     {
-      icon: "/assets/tech/IOS.svg",
+      icon: "/assets/tech/iOS.svg",
       label: "iOS",
       href: "#",
     },
@@ -37,7 +37,7 @@ const data = {
       href: "#",
     },
     {
-      icon: "/assets/tech/IOS.svg",
+      icon: "/assets/tech/iOS.svg",
       label: "iOS",
       href: "#",
     },
@@ -59,7 +59,7 @@ const data = {
   ],
   mobile: [
     {
-      icon: "/assets/tech/IOS.svg",
+      icon: "/assets/tech/iOS.svg",
       label: "iOS",
       href: "#",
     },
@@ -74,7 +74,7 @@ const data = {
       href: "#",
     },
     {
-      icon: "/assets/tech/IOS.svg",
+      icon: "/assets/tech/iOS.svg",
       label: "iOS",
       href: "#",
     },
@@ -96,7 +96,7 @@ const data = {
   ],
   "front-end": [
     {
-      icon: "/assets/tech/IOS.svg",
+      icon: "/assets/tech/iOS.svg",
       label: "iOS",
       href: "#",
     },
@@ -111,7 +111,7 @@ const data = {
       href: "#",
     },
     {
-      icon: "/assets/tech/IOS.svg",
+      icon: "/assets/tech/iOS.svg",
       label: "iOS",
       href: "#",
     },
@@ -133,7 +133,7 @@ const data = {
   ],
   "back-end": [
     {
-      icon: "/assets/tech/IOS.svg",
+      icon: "/assets/tech/iOS.svg",
       label: "iOS",
       href: "#",
     },
@@ -148,7 +148,7 @@ const data = {
       href: "#",
     },
     {
-      icon: "/assets/tech/IOS.svg",
+      icon: "/assets/tech/iOS.svg",
       label: "iOS",
       href: "#",
     },
@@ -170,7 +170,7 @@ const data = {
   ],
   database: [
     {
-      icon: "/assets/tech/IOS.svg",
+      icon: "/assets/tech/iOS.svg",
       label: "iOS",
       href: "#",
     },
@@ -185,7 +185,7 @@ const data = {
       href: "#",
     },
     {
-      icon: "/assets/tech/IOS.svg",
+      icon: "/assets/tech/iOS.svg",
       label: "iOS",
       href: "#",
     },
@@ -207,7 +207,7 @@ const data = {
   ],
   cloud: [
     {
-      icon: "/assets/tech/IOS.svg",
+      icon: "/assets/tech/iOS.svg",
       label: "iOS",
       href: "#",
     },
@@ -222,7 +222,7 @@ const data = {
       href: "#",
     },
     {
-      icon: "/assets/tech/IOS.svg",
+      icon: "/assets/tech/iOS.svg",
       label: "iOS",
       href: "#",
     },
@@ -244,7 +244,7 @@ const data = {
   ],
   CMS: [
     {
-      icon: "/assets/tech/IOS.svg",
+      icon: "/assets/tech/iOS.svg",
       label: "iOS",
       href: "#",
     },
@@ -259,7 +259,7 @@ const data = {
       href: "#",
     },
     {
-      icon: "/assets/tech/IOS.svg",
+      icon: "/assets/tech/iOS.svg",
       label: "iOS",
       href: "#",
     },
