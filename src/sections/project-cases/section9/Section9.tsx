@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import globals from "@/app/globals.module.css";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -106,7 +107,7 @@ const Section9 = () => {
         </Box>
       </Grid>
       <Grid item xs={12} md={6}>
-        <Paper elevation={3} sx={{ p: 4 }}>
+        <Paper elevation={0} sx={{ p: 4, bgcolor: "#fafafa" }}>
           <form onSubmit={handleSubmit(onSubmit)}>
             <Controller
               name="industry"
@@ -201,14 +202,13 @@ const Section9 = () => {
                 flexDirection: "column",
               }}
             >
-              <Button
-                variant="contained"
-                component="label"
-                sx={{ mt: 2, width: "fit-content" }}
+              <button
+                className={`${globals.button} ${globals.button_secondary}`}
+                style={{ marginTop: "1rem", width: "fit-content" }}
               >
                 Attach file
                 <input type="file" hidden />
-              </Button>
+              </button>
               <FormControlLabel
                 control={
                   <Controller
@@ -220,9 +220,12 @@ const Section9 = () => {
                 label="I want to protect my data by signing an NDA."
               />
               <Box mt={2}>
-                <Button type="submit" variant="contained" color="primary">
+                <button
+                  type="submit"
+                  className={`${globals.button} ${globals.button_primary}`}
+                >
                   Send request
-                </Button>
+                </button>
                 <Typography variant="body2" color="textSecondary" mt={1}>
                   Your privacy is protected
                 </Typography>

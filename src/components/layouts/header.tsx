@@ -1,68 +1,108 @@
 "use client";
 
-import Stack from '@mui/material/Stack';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
-import { Grid, useMediaQuery } from '@mui/material';
-import IconButton from '@mui/material/IconButton';
-import React, { useEffect, useState } from 'react';
-import { Avatar, Box, Button, Divider, Drawer, List, ListItem, ListItemAvatar, ListItemButton, ListItemText, ListSubheader, Paper, Typography } from '@mui/material';
-import Iconify from '../iconify/iconify';
-import { useRouter } from 'next/navigation';
+import Stack from "@mui/material/Stack";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import { createTheme, ThemeProvider, useTheme } from "@mui/material/styles";
+import { Grid, useMediaQuery } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import React, { useEffect, useState } from "react";
+import {
+  Avatar,
+  Box,
+  Button,
+  Divider,
+  Drawer,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemButton,
+  ListItemText,
+  ListSubheader,
+  Paper,
+  Typography,
+} from "@mui/material";
+import Iconify from "../iconify/iconify";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 // ----------------------------------------------------------------------
 
 type Props = {
   onOpenNav?: VoidFunction;
   window?: () => Window;
-
 };
 
-
 const customTheme = createTheme({
- 
-  typography:{
-    fontWeightRegular:500,
+  typography: {
+    fontWeightRegular: 500,
   },
   palette: {
     primary: {
-      main: '#ffdb00',
+      main: "#ffdb00",
     },
   },
 });
+// const navItems = ['Tech Stack', 'Industries', 'Services', 'Company', 'Case studies'];
+const navItems = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "About",
+    href: "/about-us",
+  },
+  {
+    label: "Project Cases",
+    href: "/project-cases/internal-management-system-for-tourism",
+  },
+  {
+    label: "Services",
+    href: "/",
+  },
+  {
+    label: "Case studies",
+    href: "/",
+  },
+];
 export default function Header(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const navItems = ['Tech Stack', 'Industries', 'Services', 'Company', 'Case studies'];
   const route = useRouter();
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
   const theme = useTheme();
-  const sm = useMediaQuery(theme.breakpoints.up('md'));
+  const sm = useMediaQuery(theme.breakpoints.up("md"));
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Box
         component="img"
         alt="auth"
-        src={ '/logo/logo_single.svg'}
+        src={"/logo/logo_single.svg"}
         sx={{
-          my: 2 ,
-          mx:"auto",
-        display:'block',
-        width: {xs:40,md:70},
-        height: {xs:40,md:70},
+          my: 2,
+          mx: "auto",
+          display: "block",
+          width: { xs: 40, md: 70 },
+          height: { xs: 40, md: 70 },
         }}
-        />
+      />
 
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-             <Typography variant="body1" fontWeight="light">
-              {item}
-             </Typography>
+          <ListItem key={item.label} disablePadding>
+            <Typography
+              variant="body1"
+              fontWeight="light"
+              component={Link}
+              href={item.href}
+              color="inherit"
+              sx={{ textDecoration: "none" }}
+            >
+              {item.label}
+            </Typography>
           </ListItem>
         ))}
       </List>
@@ -73,139 +113,163 @@ export default function Header(props: Props) {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = pageYOffset || document.documentElement.scrollTop;
-      setIsScrolled(scrollTop  
- > 100); 
+      setIsScrolled(scrollTop > 100);
     };
 
-    addEventListener('scroll', handleScroll);
+    addEventListener("scroll", handleScroll);
     return () => {
-      removeEventListener('scroll', handleScroll);
+      removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const container = window !== undefined ? () => window().document.body : undefined;
-  const logo = sm ? '/assets/logo.svg': '/assets/small_logo.svg';
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
+  const logo = sm ? "/assets/logo.svg" : "/assets/small_logo.svg";
   return (
     <>
-     <ThemeProvider theme={customTheme}>
-    <Box sx={{ display: 'flex'}}>
-      <AppBar component="nav"  sx={{bgcolor:'#fff'}}>
-        <Toolbar sx={{display:'flex', justifyContent:"space-between", }}>
-        <Box
-        component="img"
-        alt="auth"
-        src={logo }
-        sx={{
-          cursor:'pointer',
-        display:'block',
-        width: {xs:40,md:150},
-        height: {xs:40,md:70},
-        }}
-      />
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="end"
-            onClick={handleDrawerToggle}
-            sx={{ color:'black', mr: 2, display: { md: 'none' } }}
-          >
-          <Iconify icon="mdi:menu" />
-          </IconButton>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems:'center', gap:{xs:0.5,lg:1}, }}>
-            {navItems.map((item, index) => (
-              <Box key={index} sx={{
-                color:'black',
-                ':hover':{
-                 
-                  cursor:'pointer',
-                 '.iconify': {
-                  transform: 'rotate(-180deg)'
-                 },
-                },
+      <ThemeProvider theme={customTheme}>
+        <Box sx={{ display: "flex" }}>
+          <AppBar component="nav" sx={{ bgcolor: "#fff" }}>
+            <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+              <Box
+                component="img"
+                alt="auth"
+                src={logo}
+                sx={{
+                  cursor: "pointer",
+                  display: "block",
+                  width: { xs: 40, md: 150 },
+                  height: { xs: 40, md: 70 },
+                }}
+              />
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="end"
+                onClick={handleDrawerToggle}
+                sx={{ color: "black", mr: 2, display: { md: "none" } }}
+              >
+                <Iconify icon="mdi:menu" />
+              </IconButton>
+              <Box
+                sx={{
+                  display: { xs: "none", md: "flex" },
+                  alignItems: "center",
+                  gap: { xs: 0.5, lg: 1 },
+                }}
+              >
+                {navItems.map((item, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      color: "black",
+                      ":hover": {
+                        cursor: "pointer",
+                        ".iconify": {
+                          transform: "rotate(-180deg)",
+                        },
+                      },
 
-                display:'flex',
-                alignItems:"center",
-                flexDirection: 'row',
-                flexWrap: 'nowrap',
-                px:0.1,
-                height: '100%',
-                justifyContent:' flex-start',
-               
-                }}>
-            <Typography
-            sx={{
-              position: 'relative',
-              p:'28px 0',
-              whiteSpace: 'nowrap',
-              ":after":{
-                bgcolor: '#ffdb00',
-                bottom: 0,
-                content: `" "`,
-                height: '4px',
-                left: 'auto',
-                margin: '0',
-                position: 'absolute',
-                right: 0,
-                
-                transform: 'scaleX(0)',
-                transformOrigin: 'left',
-                transition: 'transform .15s ease-out',
-                width: '100%'
-              },
-              ':hover':{
-                ":after":{
-                  transform: 'scaleX(1)',
-                },
-              },
-            }}
-             fontSize={{  xs: '14px', md: '16px'}} fontWeight="light">
-            {item}
-           </Typography>
+                      display: "flex",
+                      alignItems: "center",
+                      flexDirection: "row",
+                      flexWrap: "nowrap",
+                      px: 0.1,
+                      height: "100%",
+                      justifyContent: " flex-start",
+                    }}
+                  >
+                    <Typography
+                      component={Link}
+                      href={item.href}
+                      sx={{
+                        color: "inherit",
+                        textDecoration: "none",
+                        position: "relative",
+                        p: "28px 0",
+                        whiteSpace: "nowrap",
+                        ":after": {
+                          bgcolor: "#ffdb00",
+                          bottom: 0,
+                          content: `" "`,
+                          height: "4px",
+                          left: "auto",
+                          margin: "0",
+                          position: "absolute",
+                          right: 0,
 
-            <Iconify  icon="mdi:chevron-down" sx={{
-              transition:'transform 0.1s ease-out',
-             width:15,
-             height:15,
-              mx:0.3,
-              }} />
+                          transform: "scaleX(0)",
+                          transformOrigin: "left",
+                          transition: "transform .15s ease-out",
+                          width: "100%",
+                        },
+                        ":hover": {
+                          ":after": {
+                            transform: "scaleX(1)",
+                          },
+                        },
+                      }}
+                      fontSize={{ xs: "14px", md: "16px" }}
+                      fontWeight="light"
+                    >
+                      {item.label}
+                    </Typography>
 
-              </Box>
-            ))}
-            <Divider sx={{my:3.5, borderRight:0.1}} color="grey" orientation="vertical" variant="middle" flexItem />
-             <Box sx={{
-                color:'black',
-                ':hover':{
-                  color:'white',
-                },
-                display:'flex',
-                alignItems:"center",
-                height:'100%',
-                mx:{sx:0,sm:1,md:2
-                }}}>
-                  <Button   sx={{
-                    borderRadius:0,
-                    boxShadow:0,
-                   
-                    border:0,
-                    fontSize: '14px',
-                   fontWeight:'bold',
-                    color:'#020303',
-                    borderColor:(theme)=> theme.palette.primary.main,
-                    ':hover':{
-                      boxShadow:0,
-                      bgcolor:(theme)=> theme.palette.primary.light,
-                      borderColor:(theme)=> theme.palette.primary.light,
+                    <Iconify
+                      icon="mdi:chevron-down"
+                      sx={{
+                        transition: "transform 0.1s ease-out",
+                        width: 15,
+                        height: 15,
+                        mx: 0.3,
+                      }}
+                    />
+                  </Box>
+                ))}
+                <Divider
+                  sx={{ my: 3.5, borderRight: 0.1 }}
+                  color="grey"
+                  orientation="vertical"
+                  variant="middle"
+                  flexItem
+                />
+                <Box
+                  sx={{
+                    color: "black",
+                    ":hover": {
+                      color: "white",
                     },
-                  }} color="primary" variant="contained"  >
-                  Contact us
-                  </Button>
+                    display: "flex",
+                    alignItems: "center",
+                    height: "100%",
+                    mx: { sx: 0, sm: 1, md: 2 },
+                  }}
+                >
+                  <Button
+                    sx={{
+                      borderRadius: 0,
+                      boxShadow: 0,
 
+                      border: 0,
+                      fontSize: "14px",
+                      fontWeight: "bold",
+                      color: "#020303",
+                      borderColor: (theme) => theme.palette.primary.main,
+                      ":hover": {
+                        boxShadow: 0,
+                        bgcolor: (theme) => theme.palette.primary.light,
+                        borderColor: (theme) => theme.palette.primary.light,
+                      },
+                    }}
+                    color="primary"
+                    variant="contained"
+                  >
+                    Contact us
+                  </Button>
+                </Box>
               </Box>
-          </Box>
-           
-        </Toolbar>
-      
-      </AppBar>
-     {/*  <Box sx={{position:'fixed',top:{xs:50,sm:60,md:70},left:0, right:0,py:{xs:1.5,md:2.5},px:4, transition:'0.5s', width: '100%',bgcolor:'rgba(50,50,50,0.8)'}}>
+            </Toolbar>
+          </AppBar>
+          {/*  <Box sx={{position:'fixed',top:{xs:50,sm:60,md:70},left:0, right:0,py:{xs:1.5,md:2.5},px:4, transition:'0.5s', width: '100%',bgcolor:'rgba(50,50,50,0.8)'}}>
           
           <Grid container>
           <Grid item sm={6} display="flex" flexDirection="row" gap={3}>
@@ -222,27 +286,25 @@ export default function Header(props: Props) {
           </Grid>
         
         </Box> */}
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', md: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
-       
-    
-    </Box>
-     </ThemeProvider>
+          <nav>
+            <Drawer
+              container={container}
+              variant="temporary"
+              open={mobileOpen}
+              onClose={handleDrawerToggle}
+              ModalProps={{
+                keepMounted: true, // Better open performance on mobile.
+              }}
+              sx={{
+                display: { xs: "block", md: "none" },
+                "& .MuiDrawer-paper": { boxSizing: "border-box", width: 240 },
+              }}
+            >
+              {drawer}
+            </Drawer>
+          </nav>
+        </Box>
+      </ThemeProvider>
     </>
   );
 }
