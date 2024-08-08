@@ -37,7 +37,11 @@ function onChangeSlide(swiper: SwiperClass) {
   });
 }
 
-export default function Slider({ slides }: { slides: React.ReactNode[] }) {
+export default function Slider({
+  slides,
+  style,
+  ...others
+}: { slides: React.ReactNode[] } & SwiperProps) {
   return (
     <section className={styles.all_wrapper}>
       <div className={styles.swiper_container}>
@@ -54,7 +58,8 @@ export default function Slider({ slides }: { slides: React.ReactNode[] }) {
               slidesPerView: 3,
             },
           }}
-          style={{ position: "static" }}
+          style={{ position: "static", ...style }}
+          {...others}
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>{slide}</SwiperSlide>
