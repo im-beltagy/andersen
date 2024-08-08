@@ -87,7 +87,7 @@ export default function Header(props: Props) {
   return (
     <>
      <ThemeProvider theme={customTheme}>
-    <Box sx={{ display: 'flex'}}>
+    <Box  sx={{ display: 'flex'}} >
       <AppBar component="nav"  sx={{bgcolor:'#fff'}}>
         <Toolbar sx={{display:'flex', justifyContent:"space-between", }}>
         <Box

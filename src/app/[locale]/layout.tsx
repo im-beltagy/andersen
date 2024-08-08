@@ -28,7 +28,7 @@ export default async function LocaleLayout({
       <body className={roboto.className} suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <main style={{ minHeight: 300, paddingTop: 45 }}>{children}</main>
+          <main style={{ minHeight: 300, paddingTop: 45  }}>{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>

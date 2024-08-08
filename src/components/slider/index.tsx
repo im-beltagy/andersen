@@ -39,7 +39,7 @@ function onChangeSlide(swiper: SwiperClass) {
 
 export default function Slider({ slides }: { slides: React.ReactNode[] }) {
   return (
-    <section className={styles.all_wrapper}>
+    <section  className={styles.all_wrapper}>
       <div className={styles.swiper_container}>
         <Swiper
           modules={[Navigation, Pagination]}
