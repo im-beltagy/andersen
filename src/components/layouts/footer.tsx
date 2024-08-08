@@ -44,7 +44,7 @@ export default function Footer(props: Props) {
   return (
     <ThemeProvider theme={customTheme}>
     <Box sx={{ display: 'flex' }}>
-      <AppBar component="nav" sx={{ color: '#fff', bgcolor: "#020D1C", position: 'relative', top: 'auto', bottom: 0 }}>
+      <AppBar component="nav" sx={{zIndex:0, color: '#fff', bgcolor: "#020D1C", position: 'relative', top: 'auto', bottom: 0 }}>
         <Toolbar sx={{ py: 11, display: 'flex', flexDirection: 'column' }}>
           <Grid container justifyContent="center" >
 

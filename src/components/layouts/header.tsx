@@ -6,9 +6,10 @@ import Toolbar from '@mui/material/Toolbar';
 import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
 import { Grid, useMediaQuery } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Avatar, Box, Button, Divider, Drawer, List, ListItem, ListItemAvatar, ListItemButton, ListItemText, ListSubheader, Paper, Typography } from '@mui/material';
 import Iconify from '../iconify/iconify';
+import { useRouter } from 'next/navigation';
 // ----------------------------------------------------------------------
 
 type Props = {
@@ -33,11 +34,12 @@ export default function Header(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const navItems = ['Tech Stack', 'Industries', 'Services', 'Company', 'Case studies'];
+  const route = useRouter();
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
   const theme = useTheme();
-  const sm = useMediaQuery(theme.breakpoints.up('sm'));
+  const sm = useMediaQuery(theme.breakpoints.up('md'));
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
 
@@ -66,7 +68,20 @@ export default function Header(props: Props) {
       </List>
     </Box>
   );
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = pageYOffset || document.documentElement.scrollTop;
+      setIsScrolled(scrollTop  
+ > 100); 
+    };
+
+    addEventListener('scroll', handleScroll);
+    return () => {
+      removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   const container = window !== undefined ? () => window().document.body : undefined;
   const logo = sm ? '/assets/logo.svg': '/assets/small_logo.svg';
   return (
@@ -74,7 +89,7 @@ export default function Header(props: Props) {
      <ThemeProvider theme={customTheme}>
     <Box sx={{ display: 'flex'}}>
       <AppBar component="nav"  sx={{bgcolor:'#fff'}}>
-        <Toolbar sx={{display:'flex', justifyContent:"space-between"}}>
+        <Toolbar sx={{display:'flex', justifyContent:"space-between", }}>
         <Box
         component="img"
         alt="auth"
@@ -95,12 +110,12 @@ export default function Header(props: Props) {
           >
           <Iconify icon="mdi:menu" />
           </IconButton>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems:'center' }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems:'center', gap:{xs:0.5,lg:1}, }}>
             {navItems.map((item, index) => (
               <Box key={index} sx={{
                 color:'black',
                 ':hover':{
-                  color:'#ddd',
+                 
                   cursor:'pointer',
                  '.iconify': {
                   transform: 'rotate(-180deg)'
@@ -114,8 +129,8 @@ export default function Header(props: Props) {
                 px:0.1,
                 height: '100%',
                 justifyContent:' flex-start',
-                mx:{sx:0,sm:1,md:2
-                }}}>
+               
+                }}>
             <Typography
             sx={{
               position: 'relative',
@@ -186,9 +201,27 @@ export default function Header(props: Props) {
 
               </Box>
           </Box>
+           
         </Toolbar>
-
+      
       </AppBar>
+     {/*  <Box sx={{position:'fixed',top:{xs:50,sm:60,md:70},left:0, right:0,py:{xs:1.5,md:2.5},px:4, transition:'0.5s', width: '100%',bgcolor:'rgba(50,50,50,0.8)'}}>
+          
+          <Grid container>
+          <Grid item sm={6} display="flex" flexDirection="row" gap={3}>
+          <Typography onClick={()=>route.push('/about-us') } sx={{cursor:'pointer', ':hover':{color:(theme)=> theme.palette.primary.main}}}>
+          Technologies
+          </Typography>
+          <Typography sx={{cursor:'pointer', ':hover':{color:(theme)=> theme.palette.primary.main}}}>
+          Projects
+          </Typography>
+          <Typography sx={{cursor:'pointer', ':hover':{color:(theme)=> theme.palette.primary.main}}}>
+          Testimonials
+          </Typography>
+          </Grid>
+          </Grid>
+        
+        </Box> */}
       <nav>
         <Drawer
           container={container}
@@ -206,23 +239,7 @@ export default function Header(props: Props) {
           {drawer}
         </Drawer>
       </nav>
-        <Box sx={{bgcolor:'rgba(50,50,50,.8)'}}>
-          
-          <Grid container>
-          <Grid item sm={3}>
-          <Typography>
-          Technologies
-          </Typography>
-          <Typography>
-          Projects
-          </Typography>
-          <Typography>
-          Testimonials
-          </Typography>
-          </Grid>
-          </Grid>
-        
-        </Box>
+       
     
     </Box>
      </ThemeProvider>

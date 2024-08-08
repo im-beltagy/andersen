@@ -11,4 +11,8 @@ export const pathnames: Pathnames<typeof locales> = {
     en: "/profile",
     de: "/profile",
   },
+  "/about-us": {
+    en: "/about-us",
+    de: "/about-us",
+  },
 };
