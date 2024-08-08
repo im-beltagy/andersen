@@ -14,4 +14,16 @@
   .company_link:hover .company_img {
     filter: none;
   }
+  .about_link .company_img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) ;
+    transition: filter 0.4;
+    -webkit-transition: -webkit-filter 0.4s;
+  }
+
+  .about_link:hover .company_img {
+    filter: grayscale(1) contrast(50%) brightness(60%);
+    transition: filter 0.3;
+    -webkit-transition: -webkit-filter 0.3s;
+    
+  }
 }

@@ -9,7 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import React from 'react';
 import { Avatar, Box, Button, Container, Divider, Drawer, Grid, List, ListItem, ListItemAvatar, ListItemButton, ListItemText, ListSubheader, Paper, Typography } from '@mui/material';
 import Iconify from '../iconify/iconify';
-
+import { useRouter } from 'next/navigation';
 // ----------------------------------------------------------------------
 
 type Props = {
@@ -38,7 +38,7 @@ export default function Footer(props: Props) {
   };
   const theme = useTheme();
 
-
+const route = useRouter();
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
@@ -193,7 +193,7 @@ export default function Footer(props: Props) {
                 <Typography fontWeight="regular" component="div" sx={{ fontSize: { xs: 18, md: 22 } }}>
                   Company
                 </Typography>
-                <Typography fontWeight="regular" sx={{ my: 3, fontSize: { sm: 13, md: 15 } }}>
+                <Typography onClick={()=>route.push('/about-us')} fontWeight="regular" sx={{cursor:"pointer",transition:'0.4s',":hover":{color:(theme)=>theme.palette.primary.main}, my: 3, fontSize: { sm: 13, md: 15 } }}>
                   About us
                 </Typography>
                 <Typography fontWeight="regular" sx={{ my: 3, fontSize: { sm: 13, md: 15 } }}>
