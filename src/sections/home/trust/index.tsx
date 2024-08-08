@@ -2,8 +2,10 @@ import { Box, Container, Divider, Paper, Stack } from "@mui/material";
 import styles from "./styles.module.css";
 import globals from "@/app/globals.module.css";
 import Image from "next/image";
-
-export default function HomeTrust() {
+type props = {
+  mainText?:string;
+}
+export default function HomeTrust({mainText}:props) {
   return (
     <Box
       className={globals.card_container}
@@ -16,8 +18,7 @@ export default function HomeTrust() {
           spacing={{ xs: 2, md: 10 }}
         >
           <h2 className={styles.title}>
-            Our software products are a direct result of the right team and
-            processes cultivated over the years.
+           {mainText || ' Our software products are a direct result of the right team and processes cultivated over the years.'}
           </h2>
           <Divider flexItem orientation="vertical" />
           <Stack direction="row" spacing={2} flexShrink={0} color={"#858585"}>

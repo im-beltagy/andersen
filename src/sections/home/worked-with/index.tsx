@@ -14,31 +14,56 @@ const companies = [
   "/assets/companies/mogo-finance-color.svg",
   "/assets/companies/mercedes-color.svg",
 ];
-
-export default function HomeWorkedWith() {
+type props = {
+  Links?:string[];
+  mainText?:string
+}
+export default function HomeWorkedWith({Links, mainText}:props) {
   return (
     <Box
       className={globals.card_container}
-      sx={{ py: "var(--section-py)", bgcolor: "var(--primary-light)" }}
+      sx={{bgcolor:Links ? '#020D1C': "var(--primary-light)", py: "var(--section-py)",  }}
     >
       <Container>
-        <h2 className={globals.headding}>
-          {"Companies we're proud to have worked with"}
+        <h2 className={globals.headding} style={{color: Links? "#fff": '#000000' }}>
+          {mainText ?mainText :`Companies we're proud to have worked with`}
         </h2>
-        <Grid container spacing={4} sx={{ mt: { xs: 2, sm: 7.5 } }}>
-          {companies.map((company) => (
-            <Grid item xs={6} sm={3} key={company}>
-              <Link href="#" className={styles.company_link}>
-                <Image
-                  className={styles.company_img}
-                  width="122"
-                  height="45"
-                  alt="brand-name"
-                  src={company}
-                />
-              </Link>
-            </Grid>
-          ))}
+        <Grid container justifyContent="center" spacing={4} sx={{ mt: { xs: 2, sm: 7.5 } }}>
+          {
+            Links && (
+            Links?.map((company:string) => (
+                <Grid item xs={6} sm={2} key={company}>
+                  <Link href="#" className={styles.about_link}>
+                    <Image
+                      className={styles.company_img}
+                      width="130"
+                      height="60"
+                      alt="brand-name"
+                      src={company}
+                    />
+                  </Link>
+                </Grid>
+              ))
+            )
+          }
+            {
+            !Links && (
+            companies?.map((company:string) => (
+                <Grid item xs={6} sm={3} key={company}>
+                  <Link href="#" className={styles.company_link}>
+                    <Image
+                      className={styles.company_img}
+                      width="122"
+                      height="45"
+                      alt="brand-name"
+                      src={company}
+                    />
+                  </Link>
+                </Grid>
+              ))
+            )
+          }
+          {}
         </Grid>
       </Container>
     </Box>

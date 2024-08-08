@@ -142,13 +142,3 @@ function TeamWork(): React.JSX.Element {
 }
 
 export default TeamWork;
-
-/*  <ImageListItem key={item.img}>
-      <img
-        srcSet={`${item.img}&dpr=2 2x`}
-        src={`${item.img}`}
-        alt={item.title}
-        loading="lazy"
-      />
-      <ImageListItemBar position="below" title={item.author} />
-    </ImageListItem> */
