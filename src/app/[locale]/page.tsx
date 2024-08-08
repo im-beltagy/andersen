@@ -1,3 +1,9 @@
+import HomeHero from "@/sections/home/hero";
+
 export default function Page() {
-  return <p>here first class</p>;
+  return (
+    <>
+      <HomeHero />
+    </>
+  );
 }

@@ -1,0 +1,59 @@
+.card {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+  width: 300px;
+}
+@media (pointer: fine) {
+  .card:hover {
+    background-color: hsla(0, 0%, 100%, 0.08);
+  }
+}
+
+.title {
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.content {
+  color: #fff;
+  font-family: inherit;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-top: 5px;
+}
+
+@media (min-width: 545px) {
+  .card {
+    background-color: transparent;
+    padding: 15px 20px;
+    width: auto;
+  }
+
+  .content {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .title {
+    font-size: 16px;
+  }
+
+  .content {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+}
