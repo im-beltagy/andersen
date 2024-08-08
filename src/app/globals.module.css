@@ -63,19 +63,27 @@
   background-color: var(--accent-main);
   border-color: var(--accent-main);
 }
+.button_secondary {
+  background-color: var(--primary-light);
+  border-color: #e0e0e0;
+}
 
 .button_primary:hover {
   background-color: var(--accent-light);
   border-color: var(--accent-light);
 }
+.button_secondary:hover {
+  background-color: var(--accent-main);
+  border-color: var(--accent-main);
+}
 
-.button_primary:active {
+:is(.button_primary, .button_secondary):active {
   background-color: var(--accent-dark);
   border-color: var(--accent-dark);
 }
 
 @media (max-width: 544px) {
-  .button_primary {
+  :is(.button_primary, .button_secondary) {
     min-width: 100%;
   }
 }

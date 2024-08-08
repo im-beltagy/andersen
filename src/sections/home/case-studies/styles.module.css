@@ -1,0 +1,140 @@
+.cards_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
+  padding: 30px 15px;
+  grid-column: span 2;
+  color: inherit;
+  text-decoration: none;
+}
+
+.cover {
+  position: relative;
+  overflow: hidden;
+}
+
+.cover_image {
+  position: static !important;
+  display: block;
+  height: 240px !important;
+  transition: transform 0.3s;
+}
+
+.card:hover .cover_image {
+  transform: scale(1.1);
+}
+
+.labels {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
+
+.label_item {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  border-radius: 360px;
+  background-color: #ebebeb;
+  border: none;
+  padding: 5px 15px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.card_content {
+  margin-top: 24px;
+}
+
+.icon {
+  filter: grayscale(1) contrast(50%) brightness(60%);
+  transition: filter 0.3;
+  -webkit-transition: -webkit-filter 0.3s;
+}
+.card:hover .icon {
+  filter: none;
+}
+
+.card_title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 10px;
+}
+
+.card:not(:last-child) .labels_after_title {
+  display: none;
+}
+@media (max-width: 767px) {
+  .labels_after_title {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .card {
+    padding: 25px 20px;
+    grid-column: span 1;
+  }
+  .card:last-child {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .card:last-child .cover_image {
+    height: 380px !important;
+    width: 60% !important;
+  }
+  .card:last-child .card_content {
+    align-items: flex-start;
+    background-color: #fff;
+    color: #020303;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-top: 24px;
+    min-height: 100px;
+    margin-right: 20px;
+  }
+
+  .card:last-child .card_title {
+    margin-top: 20px;
+  }
+
+  .card:last-child .labels {
+    display: none;
+  }
+  .card:last-child .labels_after_title {
+    margin-top: 24px;
+  }
+}
+@media (min-width: 961px) {
+  .card {
+    padding: 45px 25px;
+  }
+}
+@media (min-width: 1025px) {
+  .card_title {
+    font-size: 27px;
+  }
+
+  .cover_image {
+    height: 330px !important;
+  }
+  .card:last-child .cover_image {
+    height: 460px !important;
+    width: 700px !important;
+  }
+  .card:last-child .card_content {
+    max-width: 364px;
+  }
+  .card:last-child .card_title {
+    font-size: 36px;
+  }
+}
