@@ -22,7 +22,10 @@ export default function HomeWorkedWith() {
       sx={{ py: "var(--section-py)", bgcolor: "var(--primary-light)" }}
     >
       <Container>
-        <Grid container spacing={4}>
+        <h2 className={globals.headding}>
+          {"Companies we're proud to have worked with"}
+        </h2>
+        <Grid container spacing={4} sx={{ mt: { xs: 2, sm: 7.5 } }}>
           {companies.map((company) => (
             <Grid item xs={6} sm={3} key={company}>
               <Link href="#" className={styles.company_link}>
