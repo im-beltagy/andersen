@@ -1,11 +1,16 @@
 import HomeHero from "@/sections/home/hero";
 import HomeTrust from "@/sections/home/trust";
+import HomeWorkedWith from "@/sections/home/worked-with";
+import { Box, Stack } from "@mui/material";
 
 export default function Page() {
   return (
-    <>
-      <HomeHero />
-      <HomeTrust />
-    </>
+    <Box bgcolor="#020d1c" sx={{ "& *:not(:last-child)": { marginBottom: 2 } }}>
+      <Box>
+        <HomeHero />
+        <HomeTrust />
+      </Box>
+      <HomeWorkedWith />
+    </Box>
   );
 }
