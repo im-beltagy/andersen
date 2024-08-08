@@ -61,7 +61,7 @@ export default function Slider({
           style={{ position: "static", ...style }}
           {...others}
         >
-          {slides.map((slide, index) => (
+          {slides?.map((slide, index) => (
             <SwiperSlide key={index}>{slide}</SwiperSlide>
           ))}
         </Swiper>

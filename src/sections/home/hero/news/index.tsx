@@ -10,7 +10,7 @@ export default function HomeNews() {
   useEffect(() => {
     setTimeout(() => {
       setSlides(
-        Array.from({ length: 18 }).map((_, index) => (
+        Array.from({ length: 18 })?.map((_, index) => (
           <div
             className={styles.card}
             onClick={() => console.log(index)}
