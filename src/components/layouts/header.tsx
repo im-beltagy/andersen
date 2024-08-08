@@ -61,8 +61,8 @@ const navItems = [
     href: "/",
   },
   {
-    label: "Case studies",
-    href: "/",
+    label: "Contact us",
+    href: "/contact-us",
   },
 ];
 export default function Header(props: Props) {
