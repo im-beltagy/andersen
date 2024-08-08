@@ -1,76 +1,33 @@
+"use client";
+
 import styles from "./styles.module.css";
-import "./styles.css";
-
-import { Swiper, SwiperClass, SwiperProps, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-const BULLET_CLASS = ["hidden", "sm", "md", "lg"];
-
-function onChangeSlide(swiper: SwiperClass) {
-  const length = swiper.pagination.bullets.length;
-  swiper.pagination.bullets.forEach((bullet, index) => {
-    bullet.classList.remove(...BULLET_CLASS);
-    if (
-      (swiper.activeIndex === length - 1 && index >= swiper.activeIndex - 5) ||
-      (swiper.activeIndex <= 2 && index <= 2) ||
-      index === swiper.activeIndex ||
-      index === swiper.activeIndex - 1
-    ) {
-      bullet.classList.add("lg");
-    } else if (
-      (swiper.activeIndex <= 2 && index === 3) ||
-      index === swiper.activeIndex - 2 ||
-      index === swiper.activeIndex + 1
-    ) {
-      bullet.classList.add("md");
-    } else if (
-      (swiper.activeIndex <= 2 && index === 4) ||
-      index === swiper.activeIndex - 3 ||
-      index === swiper.activeIndex + 2
-    ) {
-      bullet.classList.add("sm");
-    }
-  });
-}
+import Slider from "@/components/slider";
+import { useEffect, useState } from "react";
 
 export default function HomeNews() {
-  return (
-    <section className={styles.all_wrapper}>
-      <div className={styles.swiper_container}>
-        <Swiper
-          modules={[Navigation, Pagination]}
-          spaceBetween={20}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          onSlideChange={onChangeSlide}
-          onSwiper={onChangeSlide}
-          breakpoints={{
-            545: {
-              slidesPerView: 3,
-            },
-          }}
-          style={{ position: "static" }}
-        >
-          {Array.from({ length: 18 }).map((_, index) => (
-            <SwiperSlide key={index}>
-              <div
-                className={styles.card}
-                onClick={() => console.log(index)}
-                role="button"
-              >
-                <p className={styles.title}>Jun 14, 2024</p>
-                <h4 className={styles.content}>
-                  Andersen Sponsors Digital Uzbekistan 2024 Forum
-                </h4>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </section>
-  );
+  const [slides, setSlides] = useState<any>();
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSlides(
+        Array.from({ length: 18 }).map((_, index) => (
+          <div
+            className={styles.card}
+            onClick={() => console.log(index)}
+            role="button"
+            key={index}
+          >
+            <p className={styles.title}>Jun 14, 2024</p>
+            <h4 className={styles.content}>
+              Andersen Sponsors Digital Uzbekistan 2024 Forum
+            </h4>
+          </div>
+        ))
+      );
+    }, 1000);
+  }, []);
+
+  if (slides) return <Slider slides={slides} />;
+
+  return "Loading...";
 }
