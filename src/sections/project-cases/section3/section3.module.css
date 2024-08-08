@@ -1,0 +1,146 @@
+.section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1110px;
+  position: relative;
+  width: 100%;
+}
+
+.title {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-family: inherit;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  justify-content: flex-start;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.firstDescription {
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 20px;
+  max-width: 826px;
+}
+.parentSecondDescription {
+  margin-top: 20px;
+}
+.secondDescription {
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 0;
+  max-width: 826px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.detailItem {
+    align-items: baseline;
+    display: flex;
+    margin-top: 5px;
+}
+
+.detailTitle {
+  color: #adadad;
+  flex-shrink: 0;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-right: 10px;
+  min-width: 106px;
+  text-transform: uppercase;
+}
+
+.detailValue {
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.technologies {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.technology {
+    background-color: #ebebeb;
+    border: none;
+    color: #556170;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 10px;
+    padding: 5px 15px;
+    position: relative;
+    transition: background .1s ease;
+    white-space: nowrap;
+    border-radius: 36px;
+    color: #020303;
+    margin-right: 10px;
+
+}
+
+.viewAll {
+  display: inline-block;
+  margin-left: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+@media (min-width: 545px) {
+  .title {
+    margin-bottom: 40px;
+    font-size: 32px;
+  }
+  .firstDescription {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 1025px) {
+  .title {
+    font-size: 36px;
+  }
+  .firstDescription,
+  .secondDescription {
+    font-size: 18px;
+  }
+  .parentSecondDescription {
+    margin-top: 40px;
+  }
+  .detailTitle{
+    font-size: 18px;
+        margin-right: 20px;
+        min-width: 124px;
+  }
+  .technology{
+    font-size: 18px;
+  }
+}
