@@ -21,6 +21,7 @@ const theme = createTheme({
         maxWidthLg: "1110px",
         maxWidthXl: "1110px",
       },
+      defaultProps: { style: { marginInline: "auto" } },
     },
   },
 

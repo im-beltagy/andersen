@@ -1,10 +1,14 @@
 import { Box, Container, Divider, Paper, Stack } from "@mui/material";
 import styles from "./styles.module.css";
+import globals from "@/app/globals.module.css";
 import Image from "next/image";
 
 export default function HomeTrust() {
   return (
-    <Box sx={{ my: "var(--container-py)", bgcolor: "var(--primary-light)" }}>
+    <Box
+      className={globals.card_container}
+      sx={{ py: "var(--section-py)", bgcolor: "var(--primary-light)" }}
+    >
       <Container>
         <Stack
           direction={{ xs: "column", md: "row" }}
