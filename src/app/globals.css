@@ -1,3 +1,9 @@
+/* :root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 body {
   --accent-dark: #f2cb00;
   --accent-main: #ffdb00;
@@ -23,10 +29,21 @@ body {
 * {
   margin: 0;
 }
+html,
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 img,
 picture,
 video,
@@ -41,6 +58,12 @@ textarea,
 select {
   font: inherit;
 }
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}  */
 p,
 h1,
 h2,
