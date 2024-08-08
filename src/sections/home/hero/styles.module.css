@@ -1,4 +1,6 @@
 .container {
+  --news-height: 14rem;
+
   position: relative;
   isolation: isolate;
   min-height: 100vh;
@@ -32,11 +34,13 @@
 .wrapper {
   padding-top: var(--header-height);
   position: relative;
+  width: 100%;
 }
 
 .content {
   padding-inline: var(--container-px);
   width: min-content;
+  margin-bottom: var(--news-height);
 }
 
 .headding {
@@ -50,6 +54,14 @@
 
 .action {
   margin-top: 55px;
+}
+
+.news_wrapper {
+  position: absolute;
+  top: 100%;
+  padding: 1rem;
+  inset-inline: 0;
+  margin-top: calc(var(--news-height) * -1);
 }
 
 @media (min-width: 545px) {

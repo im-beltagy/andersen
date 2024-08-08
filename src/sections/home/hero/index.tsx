@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import styles from "./styles.module.css";
 import globals from "@/app/globals.module.css";
+import HomeNews from "./news";
 
 export default function HomeHero() {
   const t = useTranslations("Pages.Home.Hero");
@@ -30,10 +31,7 @@ export default function HomeHero() {
           objectPosition="top"
         />
 
-        <div
-          className={`${styles.content} ${globals.container}`}
-          style={{ marginBottom: "10rem" }}
-        >
+        <div className={`${styles.content} ${globals.container}`}>
           <h1 className={styles.headding}>{t("headding")}</h1>
           <button
             className={`${globals.button} ${globals.button_primary} ${styles.action}`}
@@ -42,8 +40,8 @@ export default function HomeHero() {
           </button>
         </div>
       </div>
-      <div style={{ padding: "2rem", marginTop: "-10rem" }}>
-        <div style={{ height: "10rem", background: "#f43" }}></div>
+      <div className={`${styles.news_wrapper} ${globals.container}`}>
+        <HomeNews />
       </div>
     </section>
   );
