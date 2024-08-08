@@ -28,7 +28,7 @@ export default async function LocaleLayout({
       <body className={`${cairo.variable} `}>
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <main style={{marginTop:'34px',minHeight:300}}>{children}</main>
+          <main style={{minHeight:300, paddingTop:45}}>{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>
