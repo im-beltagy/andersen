@@ -39,6 +39,10 @@ const modifiedTheme = {
       dark: "#f2cb00",
     },
   },
+  breakpoints: {
+    ...theme.breakpoints,
+    values: { ...theme.breakpoints.values, sm: 545 },
+  },
 };
 
 export default modifiedTheme;
