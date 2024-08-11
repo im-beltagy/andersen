@@ -21,6 +21,7 @@ import Slider from "@/components/slider";
 import styles from "../../../components/slider/styles.module.css";
 import styles2 from "./hero.module.css";
 import TechStack from "./TeckStack";
+import ExtraSpecialists from "./extraSpecialists";
 const TabPanel = (props: any) => {
   const { children, value, index, ...other } = props;
 
@@ -248,8 +249,7 @@ function HeroFull(): React.JSX.Element {
  
               <TechStack />
               <Divider sx={{width:"100%"}} />
-              <TechStack />
-              <Divider sx={{width:"100%"}} />
+              <ExtraSpecialists />
             </Grid>
           </Box>
         </TabPanel>
