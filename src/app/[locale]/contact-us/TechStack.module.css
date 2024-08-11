@@ -1,0 +1,57 @@
+.techStack h1 {
+    font-size: 22px;
+    margin: 40px 0;
+}
+
+.techCategory {
+  margin-bottom: 20px;
+}
+.stacks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .stacks {
+    flex-direction: row;
+  }
+}
+.techRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+@media (min-width: 1025px) {
+    .techStack h1 {
+        font-size: 27px;
+    }
+}
+.btn:focus {
+  outline: none;
+}
+
+.counterValue {
+  margin: 0 10px;
+  font-size: 18px;
+}
