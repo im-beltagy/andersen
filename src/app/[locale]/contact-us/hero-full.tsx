@@ -5,6 +5,7 @@ import {
   Button,
   Checkbox,
   Container,
+  Divider,
   FormControlLabel,
   Grid,
   Radio,
@@ -18,7 +19,9 @@ import React, { useEffect, useState } from "react";
 import Section9 from "@/sections/project-cases/section9/Section9";
 import Slider from "@/components/slider";
 import styles from "../../../components/slider/styles.module.css";
-
+import styles2 from "./hero.module.css";
+import TechStack from "./TeckStack";
+import ExtraSpecialists from "./extraSpecialists";
 const TabPanel = (props: any) => {
   const { children, value, index, ...other } = props;
 
@@ -38,55 +41,7 @@ const TabPanel = (props: any) => {
 function HeroFull(): React.JSX.Element {
   const [slides, setSlides] = useState<any>();
   const [value, setValue] = React.useState(0);
-  const [techStack, setTechStack] = React.useState([
-    {
-      name: "Front-end",
-      techs: [
-        { name: "React", number: 0 },
-        { name: "Angular", number: 0 },
-        { name: "Vue.js", number: 0 },
-      ],
-    },
-    {
-      name: "Mobile",
-      techs: [
-        { name: "React Native", number: 0 },
-        { name: "Flutter", number: 0 },
-        { name: "Xamarin", number: 0 },
-      ],
-    },
-    {
-      name: "Back-end",
-      techs: [
-        { name: "Node.js", number: 0 },
-        { name: "Python", number: 0 },
-        { name: "Java", number: 0 },
-      ],
-    },
-  ]);
 
-  const handleTechIncrease = (stackIndex: number, techIndex: number) => {
-    console.log("Increase button clicked");
-    setTechStack((prevTechStack) => {
-      const updatedTechStack = [...prevTechStack];
-      updatedTechStack[stackIndex].techs[techIndex].number += 1;
-      return updatedTechStack;
-    });
-  };
-
-  const handleTechDecrease = (stackIndex: number, techIndex: number) => {
-    console.log("Decrease button clicked");
-    setTechStack((prevTechStack) => {
-      const updatedTechStack = [...prevTechStack];
-      console.log(updatedTechStack[stackIndex].techs[techIndex]);
-      updatedTechStack[stackIndex].techs[techIndex].number = Math.max(
-        0,
-        updatedTechStack[stackIndex].techs[techIndex].number - 1
-      );
-      console.log(updatedTechStack);
-      return updatedTechStack;
-    });
-  };
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -119,8 +74,23 @@ function HeroFull(): React.JSX.Element {
   }, []);
 
   return (
-    <>
-      <Container sx={{ backgroundColor: "#fff", padding: "20px" }}>
+    <div className={styles2.contactSection}>
+      <div className={styles2.contactUs}>
+        <img
+          src="https://andersenlab.com/react-assets/static/800ae4bec3dde4fa3f515d0f41c6264e/1b2ee/tablet.webp"
+          alt="Contact Us"
+          className={styles2.contactUsImage}
+        />
+        <div className={styles2.contactUsContent}>
+          <h2>Contact Us</h2>
+          <p>
+            We would love to hear from you! Please reach out for any inquiries.
+          </p>
+        </div>
+      </div>
+      <Container
+        sx={{ backgroundColor: "#fff", padding: "20px",  }}
+      >
         <Section9 />
       </Container>
       <Container sx={{ marginTop: "100px", padding: "50px", color: "#fff" }}>
@@ -138,7 +108,7 @@ function HeroFull(): React.JSX.Element {
         <Slider slides={slides} />
       </Container>
       <Container
-        sx={{ marginTop: "100px", padding: "50px", backgroundColor: "#fff" }}
+        sx={{ marginTop: "100px", padding: "50px", backgroundColor: "#fff", display:{ xs: "none", sm: "block"} }}
       >
         <Typography
           sx={{ fontSize: "50px", fontWeight: "bold", marginBottom: "40px" }}
@@ -191,7 +161,6 @@ function HeroFull(): React.JSX.Element {
                   alignItems: "center",
                   flexDirection: "row",
                   flexWrap: "wrap",
-                  
                 }}
               >
                 <FormControlLabel
@@ -275,64 +244,17 @@ function HeroFull(): React.JSX.Element {
               alignItems: "center",
             }}
           >
-            <Typography variant="h5" component="h2" gutterBottom>
-              Specify the tech stack and the number of developers you need per
-              each technology:
-            </Typography>
+
             <Grid container spacing={2}>
-              {techStack.map((stack, stackIndex) => (
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  key={stackIndex}
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
-                  <Typography variant="h6" component="h3" gutterBottom>
-                    {stack.name}
-                  </Typography>
-                  {stack.techs.map((tech, techIndex) => (
-                    <Box
-                      key={techIndex}
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        marginTop: "10px",
-                      }}
-                    >
-                      <Button
-                        sx={{ color: "#000", fontSize: "20px" }}
-                        onClick={() =>
-                          handleTechDecrease(stackIndex, techIndex)
-                        }
-                      >
-                        -
-                      </Button>
-                      <Typography variant="subtitle2" gutterBottom>
-                        {tech.name}: {tech.number}
-                      </Typography>
-                      <Button
-                        sx={{ color: "#000", fontSize: "20px" }}
-                        onClick={() =>
-                          handleTechIncrease(stackIndex, techIndex)
-                        }
-                      >
-                        +
-                      </Button>
-                    </Box>
-                  ))}
-                </Grid>
-              ))}
+ 
+              <TechStack />
+              <Divider sx={{width:"100%"}} />
+              <ExtraSpecialists />
             </Grid>
           </Box>
         </TabPanel>
       </Container>
-    </>
+    </div>
   );
 }
 
