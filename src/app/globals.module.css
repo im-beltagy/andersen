@@ -66,7 +66,7 @@
   text-align: center;
   text-decoration: none;
   transition-duration: 0.15s;
-  transition-property: background-color, border;
+  transition-property: background-color, border-color, color;
   transition-timing-function: ease;
   z-index: 1;
   min-width: 227px;
@@ -80,6 +80,13 @@
   background-color: var(--primary-light);
   border-color: #e0e0e0;
 }
+.button_outlined:not(:hover, :active) {
+  color: var(--accent-main);
+}
+.button_outlined {
+  background-color: transparent;
+  border-color: var(--accent-main);
+}
 
 .button_primary:hover {
   background-color: var(--accent-light);
@@ -89,8 +96,12 @@
   background-color: var(--accent-main);
   border-color: var(--accent-main);
 }
+.button_outlined:hover {
+  background-color: var(--accent-main);
+  border-color: var(--accent-main);
+}
 
-:is(.button_primary, .button_secondary):active {
+:is(.button_primary, .button_secondary, .button_outlined):active {
   background-color: var(--accent-dark);
   border-color: var(--accent-dark);
 }
