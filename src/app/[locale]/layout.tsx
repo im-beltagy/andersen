@@ -31,7 +31,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider theme={theme}>
             <Header />
-            <main style={{ minHeight: 300, paddingTop: 45 }}>{children}</main>
+            <main style={{ minHeight: 300 }}>{children}</main>
             <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
