@@ -120,6 +120,7 @@ function HeroFull(): React.JSX.Element {
           onChange={handleChange}
           indicatorColor="primary"
           textColor="inherit"
+          
         >
           <Tab
             label="custom software development"
