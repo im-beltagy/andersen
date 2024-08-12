@@ -19,7 +19,6 @@
   flex-wrap: wrap;
   justify-content: center;
   overflow: hidden;
-  gap: 2px;
 }
 
 .swiper-pagination-bullet {
@@ -29,6 +28,9 @@
   border-radius: 0 !important;
   width: fit-content !important;
   flex: 0 1 auto;
+  transition: display 0.3s, margin 0.3s;
+  transition-behavior: allow-discrete;
+  margin-inline: 4px !important;
 }
 .swiper-pagination-bullet::before {
   content: "";
@@ -46,6 +48,10 @@
   background-color: var(--accent-main) !important;
 }
 
+.swiper-pagination-bullet.hidden {
+  display: none;
+  margin-inline: 0 !important;
+}
 .swiper-pagination-bullet.hidden::before {
   width: 0 !important;
 }
@@ -57,4 +63,13 @@
 }
 .swiper-pagination-bullet.lg::before {
   width: 30px !important;
+}
+
+@starting-style {
+  .swiper-pagination-bullet.sm {
+    margin-inline: 0 !important;
+  }
+  .swiper-pagination-bullet.sm::before {
+    width: 0px !important;
+  }
 }
