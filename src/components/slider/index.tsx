@@ -33,6 +33,8 @@ function onChangeSlide(swiper: SwiperClass) {
       index === swiper.activeIndex + 2
     ) {
       bullet.classList.add("sm");
+    } else {
+      bullet.classList.add("hidden");
     }
   });
 }
@@ -43,7 +45,7 @@ export default function Slider({
   ...others
 }: { slides: React.ReactNode[] } & SwiperProps) {
   return (
-    <section  className={styles.all_wrapper}>
+    <section className={styles.all_wrapper}>
       <div className={styles.swiper_container}>
         <Swiper
           modules={[Navigation, Pagination]}
