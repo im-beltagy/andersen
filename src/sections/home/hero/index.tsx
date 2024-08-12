@@ -11,7 +11,7 @@ export default function HomeHero() {
   const t = useTranslations("Pages.Home.Hero");
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} >
       <div className={styles.wrapper}>
         <Image
           className={styles.background_sm}

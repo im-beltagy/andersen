@@ -21,8 +21,8 @@ function HeroFull():React.JSX.Element {
       <Box sx={{width:'100%', height:{xs:300,sm:450,md:668}}}>
       <ImageListItem style={{height:"100%"}} >
           <img
-            srcSet={`/assets/images/about-us/hero.jpeg?w=248&fit=crop&auto=format&dpr=2 2x`}
-            src={`/assets/images/about-us/hero.jpeg?w=248&fit=crop&auto=format`}
+            srcSet={`/assets/images/about-us/hero.jpeg`}
+            src={`/assets/images/about-us/hero.jpeg`}
             alt="hero"
             loading="lazy"
             />

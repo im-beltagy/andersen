@@ -43,7 +43,7 @@ export default function Slider({
   ...others
 }: { slides: React.ReactNode[] } & SwiperProps) {
   return (
-    <section className={styles.all_wrapper}>
+    <section  className={styles.all_wrapper}>
       <div className={styles.swiper_container}>
         <Swiper
           modules={[Navigation, Pagination]}
@@ -61,7 +61,7 @@ export default function Slider({
           style={{ position: "static", ...style }}
           {...others}
         >
-          {slides.map((slide, index) => (
+          {slides?.map((slide, index) => (
             <SwiperSlide key={index}>{slide}</SwiperSlide>
           ))}
         </Swiper>
