@@ -1,6 +1,14 @@
 "use client";
 
-import { Box, Button, Container, Grid, Tab, Tabs } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Tab,
+  Tabs,
+  Typography,
+} from "@mui/material";
 import { useState } from "react";
 import globals from "@/app/globals.module.css";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
@@ -85,6 +93,16 @@ const ProvidedServices = () => {
         display: { xs: "none", md: "block" },
       }}
     >
+      <Typography
+        sx={{
+          fontSize: { xs: "20px", sm: "46px", lg: "60px" },
+          fontWeight: "bold",
+          paddingX: "20px",
+          marginBottom: "40px",
+        }}
+      >
+        Services we provide
+      </Typography>
       <Container sx={{ display: "flex", alignItems: "start" }}>
         <Tabs
           value={value}

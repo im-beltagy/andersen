@@ -8,6 +8,7 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
+  Typography,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
@@ -16,9 +17,10 @@ import { useState } from "react";
 const ProvidedServicesAccordion = () => {
   const [expanded, setExpanded] = useState<string | false>(false);
 
-  const handleChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
-    setExpanded(isExpanded ? panel : false);
-  };
+  const handleChange =
+    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpanded(isExpanded ? panel : false);
+    };
 
   const customDevelopment = [
     "MObile development",
@@ -68,8 +70,27 @@ const ProvidedServicesAccordion = () => {
   ];
 
   return (
-    <Box sx={{ py: "var(--section-py)", bgcolor: "var(--primary-light)", display:{xs:"block",md:"none"} }}>
-      <Container sx={{ display: "flex", alignItems: "start", flexDirection: "column" }}>
+    <Box
+      sx={{
+        py: "var(--section-py)",
+        bgcolor: "var(--primary-light)",
+        display: { xs: "block", md: "none" },
+      }}
+    >
+      <Typography
+        sx={{
+          fontSize: { xs: "20px", sm:"46px", lg: "60px" },
+          fontWeight: "bold",
+          paddingX: "20px",
+          marginBottom: "40px",
+          
+        }}
+      >
+        Services we provide
+      </Typography>
+      <Container
+        sx={{ display: "flex", alignItems: "start", flexDirection: "column" }}
+      >
         <Accordion
           expanded={expanded === "panel1"}
           onChange={handleChange("panel1")}
@@ -200,9 +221,7 @@ const ProvidedServicesAccordion = () => {
             aria-controls="panel3bh-content"
             id="panel3bh-header"
           >
-            <Box sx={{ fontSize: "17px", fontWeight: "bold" }}>
-              Delivery
-            </Box>
+            <Box sx={{ fontSize: "17px", fontWeight: "bold" }}>Delivery</Box>
           </AccordionSummary>
           <AccordionDetails>
             <Grid container spacing={2}>

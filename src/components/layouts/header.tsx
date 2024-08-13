@@ -51,7 +51,7 @@ const navItems = [
   },
   {
     label: "Services",
-    href: "/",
+    href: "/services",
   },
   {
     label: "Contact us",
