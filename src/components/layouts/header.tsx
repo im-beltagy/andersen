@@ -47,7 +47,7 @@ const navItems = [
   },
   {
     label: "Project Cases",
-    href: "/project-cases/internal-management-system-for-tourism",
+    href: "/project-cases/", // internal-management-system-for-tourism",
   },
   {
     label: "Services",
