@@ -25,7 +25,7 @@ const Case = () => {
                       </Typography>
                     </Grid>
                     <Grid item xs={12}>
-                      <Box sx={{mb:9, py: 2, px: 4 }}>
+                      <Box sx={{direction:'ltr', mb:9, py: 2, px: 4 }}>
                         <Image
                           objectFit="cover"
                           sizes="100%"
