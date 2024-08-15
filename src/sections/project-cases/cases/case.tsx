@@ -11,7 +11,7 @@ const Case = () => {
     
       Array?.from(items, (_,index)=> (
 
-        <Box sx={{ direction:index % 2 === 0 ? 'rtl': 'ltr', mx: "auto", my: 20 }}>
+        <Box key={index} sx={{ direction:index % 2 === 0 ? 'rtl': 'ltr', mx: "auto", my: 20 }}>
           <Box
             sx={{ display: "flex", mx: { xs: 4, md: 8 }, justifyContent: "center" }}
           >
