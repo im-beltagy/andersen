@@ -233,7 +233,7 @@ function HeroFull(): React.JSX.Element {
               <Typography>Architect</Typography>
             </Grid>
           </Grid>
-          <Button variant="contained" sx={{ marginTop: "50px", color: "#000" }}>
+          <Button  sx={{ marginTop: "50px", color: "#000", backgroundColor:"#ffdb00" }}>
             Get pricing
           </Button>
         </TabPanel>

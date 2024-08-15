@@ -68,11 +68,19 @@ export default function Header(props: Props) {
   const theme = useTheme();
   const sm = useMediaQuery(theme.breakpoints.up("md"));
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{
+        textAlign: "center",
+        backgroundColor: "#020d1c",
+        color: "white",
+        height: "100%",
+      }}
+    >
       <Box
         component="img"
         alt="auth"
-        src={"/logo/logo_single.svg"}
+        src={"/assets/WEBIZI 7.png"}
         sx={{
           my: 2,
           mx: "auto",
@@ -86,16 +94,23 @@ export default function Header(props: Props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.label} disablePadding>
-            <Typography
-              variant="body1"
-              fontWeight="light"
-              component={Link}
-              href={item.href}
-              color="inherit"
-              sx={{ textDecoration: "none" }}
+            <ListItemButton
+              sx={{
+                textAlign: "center",
+                "&:hover": { backgroundColor: "#1a2332" },
+              }}
             >
-              {item.label}
-            </Typography>
+              <Typography
+                variant="body1"
+                fontWeight="light"
+                component={Link}
+                href={item.href}
+                color="inherit"
+                sx={{ textDecoration: "none" }}
+              >
+                {item.label}
+              </Typography>
+            </ListItemButton>
           </ListItem>
         ))}
       </List>
@@ -122,11 +137,20 @@ export default function Header(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   const renderLogo = (
-    <Stack direction="row" alignItems="center" spacing={1}>
+    <Link
+      href="/"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 2,
+        flexWrap: "wrap",
+        textDecoration: "none",
+      }}
+    >
       <Box
         component="img"
         alt="auth"
-        src="/assets/small_logo.svg"
+        src="/assets/WEBIZI 7.png"
         sx={{
           cursor: "pointer",
           display: "block",
@@ -146,7 +170,7 @@ export default function Header(props: Props) {
       >
         ANDERSEN
       </Typography>
-    </Stack>
+    </Link>
   );
 
   const renderNavToggler = (
@@ -155,9 +179,13 @@ export default function Header(props: Props) {
       aria-label="open drawer"
       edge="end"
       onClick={handleDrawerToggle}
-      sx={{ color: "black", mr: 2, display: { md: "none" } }}
+      sx={{
+        mr: 2,
+        display: { md: "none" },
+        color: isScrolled ? "black" : "white",
+      }}
     >
-      <Iconify icon="mdi:menu" />
+      <Iconify icon="mdi:menu" sx={{ height: "35px", width: "35px" }} />
     </IconButton>
   );
 
@@ -186,12 +214,13 @@ export default function Header(props: Props) {
           flexItem
         />
         <LocaleButton />
-        <button
+        <Link
+          href="/contact-us"
           className={`${globals.button} ${globals.button_outlined}`}
           style={{ minWidth: "110px", padding: "10px 18px", fontSize: "14px" }}
         >
           Contact us
-        </button>
+        </Link>
       </Stack>
     </Box>
   );
@@ -229,12 +258,14 @@ export default function Header(props: Props) {
             transition:
               "color 200ms, background-color 200ms, transform 200ms 200ms",
             boxShadow: "none",
+            padding: "0 20px",
           }}
         >
           <Toolbar
             sx={{
               display: "flex",
               justifyContent: "space-between",
+              padding: "0 10px",
             }}
             className={`${globals.card_container} ${styles.toolbar}`}
           >
