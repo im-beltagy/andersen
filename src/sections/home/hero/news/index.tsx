@@ -7,27 +7,7 @@ import { useEffect, useState } from "react";
 import Slider from "../../slider";
 
 export default function HomeNews({slidess}: any) {
-  // const [slides, setSlides] = useState<any>();
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setSlides(
-  //       Array.from({ length: 18 })?.map((_, index) => (
-  //         <div
-  //           className={styles.card}
-  //           onClick={() => console.log(index)}
-  //           role="button"
-  //           key={index}
-  //         >
-  //           <p className={styles.title}>Jun 14, 2024</p>
-  //           <h4 className={styles.content}>
-  //             Andersen Sponsors Digital Uzbekistan 2024 Forum
-  //           </h4>
-  //         </div>
-  //       ))
-  //     );
-  //   }, 1000);
-  // }, []);
   const slides = slidess?.map((slide: any, index: number)=>(
     <Grid
     key={index}
@@ -42,7 +22,7 @@ export default function HomeNews({slidess}: any) {
               padding: 2,
               width: "100%",
               borderRadius: "10px",
-
+height: { xs: "auto", lg:"80vh" },
             }}
           >
             <Grid item xs={12} lg={5} sx={{ textAlign: "left", padding: 2, height: "350px" }}>
@@ -72,7 +52,7 @@ export default function HomeNews({slidess}: any) {
               <Image
                 src={slide.image}
                 alt={slide.title}
-                style={{ height: "50%" , width: "80%"}}
+                style={{ height: "50%" , width: "58%"}}
                 width={1000}
                 height={1000}
               />
