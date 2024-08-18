@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Slider from "../../slider";
 
-export default function HomeNews({slidess}) {
+export default function HomeNews({slidess}: any) {
   // const [slides, setSlides] = useState<any>();
 
   // useEffect(() => {
@@ -28,7 +28,7 @@ export default function HomeNews({slidess}) {
   //     );
   //   }, 1000);
   // }, []);
-  const slides = slidess?.map((slide, index)=>(
+  const slides = slidess?.map((slide: any, index: number)=>(
     <Grid
     key={index}
             container
