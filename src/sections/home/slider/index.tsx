@@ -64,9 +64,11 @@ export default function Slider({
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}
-          slidesPerView={1}
+          slidesPerView={1.4}
           pagination={{ clickable: true }}
           onSlideChange={onChangeSlide}
+          centeredSlides={true}
+          loop={true} 
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
             onChangeSlide(swiper);
@@ -93,10 +95,16 @@ export default function Slider({
             <SwiperSlide key={index}>{slide}</SwiperSlide>
           ))}
         </Swiper>
-        <button className={`${styles.custom_button} ${styles.prev_button}`} onClick={handlePrev}>
+        <button
+          className={`${styles.custom_button} ${styles.prev_button}`}
+          onClick={handlePrev}
+        >
           &lt;
         </button>
-        <button className={`${styles.custom_button} ${styles.next_button}`} onClick={handleNext}>
+        <button
+          className={`${styles.custom_button} ${styles.next_button}`}
+          onClick={handleNext}
+        >
           &gt;
         </button>
       </div>
