@@ -4,7 +4,6 @@
   cursor: pointer;
   display: block;
   height: 100%;
-  padding: 15px;
   transition: background-color 0.3s ease;
   width: 300px;
 }
@@ -36,7 +35,6 @@
 @media (min-width: 545px) {
   .card {
     background-color: transparent;
-    padding: 15px 20px;
     width: auto;
   }
 
