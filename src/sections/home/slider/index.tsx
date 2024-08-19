@@ -62,7 +62,7 @@ export default function Slider({
     <section className={styles.all_wrapper}>
       <div className={styles.swiper_container}>
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Navigation, Pagination ,Autoplay]}
           spaceBetween={20}
           pagination={{ clickable: true }}
           onSlideChange={onChangeSlide}
