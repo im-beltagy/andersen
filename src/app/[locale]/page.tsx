@@ -64,7 +64,17 @@ export default function Page() {
       </Box>
       <ProvidedServices />
       <ProvidedServicesAccordion />
-      <Box sx={{backgroundColor:"#fff", padding: "20px", marginTop: "100px", height: { xs: "auto", lg:"90vh" }, display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <Box
+        sx={{
+          backgroundColor: "#fff",
+          padding: "20px",
+          marginTop: "100px",
+          height: { xs: "auto", lg: "90vh" },
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <HomeNews slidess={slides} />
       </Box>
       <HomeWorkedWith />

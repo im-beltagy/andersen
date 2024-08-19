@@ -41,9 +41,9 @@ export default function HomeHero() {
           </button>
         </Container>
       </div>
-      <Container className={`${styles.news_wrapper}`}>
+      {/* <Container className={`${styles.news_wrapper}`}>
         <HomeNews />
-      </Container>
+      </Container> */}
     </section>
   );
 }
