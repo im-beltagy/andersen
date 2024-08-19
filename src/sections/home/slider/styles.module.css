@@ -15,16 +15,11 @@
   }
 }
 
-@media (min-width: 545px) {
-  .swiper_container {
-    width: auto;
-  }
-}
 .custom_button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, .24);  ;
+  background-color: rgba(255, 255, 255, 0.24);
   backdrop-filter: blur(40px);
   color: #fff;
   border: none;
@@ -35,12 +30,24 @@
   border-radius: 50%;
 }
 
-
-
 .prev_button {
-  left: 50px;
+  left: 20px;
 }
 
 .next_button {
-  right: 70px;
+  right: 10px;
+}
+
+@media (min-width: 545px) {
+  .swiper_container {
+    width: auto;
+  }
+
+  .prev_button {
+    left: 50px;
+  }
+
+  .next_button {
+    right: 70px;
+  }
 }
