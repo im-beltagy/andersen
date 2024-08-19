@@ -5,25 +5,23 @@
   padding-bottom: 1rem;
 }
 
-.swiper_container {
-  padding-inline: 3rem;
-}
-@media (max-width: 544px) {
+
+/* @media (max-width: 544px) {
   .swiper_container {
     overflow: visible;
     width: 400px;
   }
-}
+} */
 
 .custom_button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.24);
+  background-color: rgba(255, 255, 255, 0.14);
   backdrop-filter: blur(40px);
   color: #fff;
   border: none;
-  padding: 10px 15px;
+  padding: 15px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   z-index: 10;
@@ -31,11 +29,15 @@
 }
 
 .prev_button {
-  left: 20px;
+  left: 5px;
 }
 
 .next_button {
-  right: 10px;
+  right: 5px;
+}
+.custom_button{
+  top: 60%;
+  transform: translateY(-60%);
 }
 
 @media (min-width: 545px) {
@@ -44,10 +46,38 @@
   }
 
   .prev_button {
-    left: 50px;
+    left: 20px;
+  }
+
+  .next_button {
+    right: 20px;
+  }
+  .custom_button{
+    top: 60%;
+    transform: translateY(-60%);
+  }
+}
+@media (min-width: 768px) {
+  .prev_button {
+    left: 70px;
   }
 
   .next_button {
     right: 70px;
   }
+  .custom_button{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .prev_button {
+    left: 120px;
+  }
+
+  .next_button {
+    right: 120px;
+  }
+ 
 }

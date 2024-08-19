@@ -1,64 +1,164 @@
 "use client";
 
 import styles from "./styles.module.css";
-import { Box, Button, Grid, Rating, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  Rating,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import Slider from "../../slider";
 
-export default function HomeNews({slidess}: any) {
-
-  const slides = slidess?.map((slide: any, index: number)=>(
+export default function HomeNews({ slidess }: any) {
+  const md = useMediaQuery("(min-width:1190px)");
+  const slides = slidess?.map((slide: any, index: number) => (
     <Grid
-    key={index}
-            container
-            spacing={2}
+      key={index}
+      container
+      // spacing={2}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: slide.bgColor,
+        color: "#fff",
+        padding: { xs: 2, sm: "0" },
+        width: "100%",
+        height: { xs: "60vh", lg: "90vh" },
+        overflow: "hidden",
+      }}
+    >
+      <Grid
+        item
+        xs={12}
+        md={5}
+        sx={{ textAlign: "left", padding: 2, height: md ? "350px" : "auto" }}
+      >
+        <Image
+          src={slide.logo}
+          alt={slide.title}
+          style={{ height: md ? "46px" : "26px", width: "auto" }}
+          width={1000}
+          height={1000}
+        />
+        <Typography
+          variant="body1"
+          gutterBottom
+          sx={{
+            fontSize: { xs: ".7rem", md: "1rem" },
+            marginY: { xs: ".6rem", md: "1.5rem" },
+          }}
+        >
+          {slide.description}
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            marginTop: { xs: 2, md: 5 },
+          }}
+        >
+          <Typography variant="body2" gutterBottom>
+            Available on
+          </Typography>
+          <Image
+            src={
+              "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/optimized/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/04/5f9eb47f82d7eddf1cbe9e1b7f270fa9.play-store.webp"
+            }
+            alt={slide.title}
+            style={{
+              height: md ? "30px" : "20px",
+              width: "auto",
+              margin: "0 1rem ",
+            }}
+            width={1000}
+            height={1000}
+          />
+          <Image
+            src="https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/optimized/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/04/16f87c122b619f21a0f2f9d8e3c38e2a.app-store.webp"
+            alt={slide.title}
+            style={{ height: md ? "30px" : "20px", width: "auto" }}
+            width={1000}
+            height={1000}
+          />
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            marginY: { xs: 1, md: 3 },
+          }}
+        >
+          <Box
             sx={{
               display: "flex",
-              justifyContent: "center",
               alignItems: "center",
-              backgroundColor: slide.bgColor,
-              color: "#fff",
-              padding: 2,
-              width: "100%",
-              borderRadius: "10px",
-height: { xs: "auto", lg:"80vh" },
+              flexDirection: "column",
             }}
           >
-            <Grid item xs={12} lg={5} sx={{ textAlign: "left", padding: 2, height: "350px" }}>
-              <Typography variant="h4" component="h2" gutterBottom>
-                {slide.title}
-              </Typography>
-              <Typography variant="body1" gutterBottom>
-                {slide.description}
-              </Typography>
-              <Typography variant="body2" gutterBottom>
-                Available on --
-              </Typography>
-              <Box sx={{ display: "flex", alignItems: "center", marginTop: 1 }}>
-                <Rating value={slide.rating} readOnly precision={0.5} />
-                <Typography variant="body2" sx={{ marginLeft: 1 }}>
-                  {slide.rating}/5 Ratings
-                </Typography>
-              </Box>
-              <Typography variant="body2" sx={{ marginTop: 1 }}>
-                {slide.employeeUsage} Employee Usage
-              </Typography>
-              <Button variant="contained" color="success" sx={{ marginTop: 2 }}>
-                {slide.buttonLabel}
-              </Button>
-            </Grid>
-            <Grid item xs={12} lg={4} sx={{ marginLeft: 4 }}>
-              <Image
-                src={slide.image}
-                alt={slide.title}
-                style={{ height: "50%" , width: "58%"}}
-                width={1000}
-                height={1000}
-              />
-            </Grid>
-          </Grid>
-  ))
+            <Typography variant="body2" sx={{ fontSize: "1.1rem" }}>
+              {slide.rating}/5
+            </Typography>
+            <Typography sx={{ fontSize: "0.7rem" }}> Ratings</Typography>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              marginX: 5,
+              flexDirection: "column",
+            }}
+          >
+            <Typography variant="body2" sx={{ fontSize: "1.1rem" }}>
+              10M+
+            </Typography>
+            <Typography sx={{ fontSize: "0.7rem" }}> Downloads</Typography>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+          >
+            <Typography variant="body2" sx={{ fontSize: "1.1rem" }}>
+              $47M+
+            </Typography>
+            <Typography sx={{ fontSize: "0.7rem" }}> Funding Raised</Typography>
+          </Box>
+        </Box>
+
+        <Button
+          variant="contained"
+          color="success"
+          sx={{ marginTop: 1, fontSize: { xs: ".7rem", md: "1rem" } }}
+        >
+          {slide.buttonLabel}
+        </Button>
+      </Grid>
+      <Grid
+        item
+        xs={12}
+        md={5}
+        sx={{
+          display: "flex",
+          justifyContent: { xs: "center", lg: "flex-end" },
+          // marginLeft: 4,
+        }}
+      >
+        <Image
+          src={slide.image}
+          alt={slide.title}
+          style={{ height: "50%", width: "60%" }}
+          width={1000}
+          height={1000}
+        />
+      </Grid>
+    </Grid>
+  ));
 
   if (slides) return <Slider slides={slides} />;
 

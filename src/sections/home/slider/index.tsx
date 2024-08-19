@@ -62,32 +62,22 @@ export default function Slider({
     <section className={styles.all_wrapper}>
       <div className={styles.swiper_container}>
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[Navigation, Pagination]}
           spaceBetween={20}
-          // slidesPerView={1.3}
           pagination={{ clickable: true }}
           onSlideChange={onChangeSlide}
           centeredSlides={true}
-          loop={true} 
+          loop={true}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
             onChangeSlide(swiper);
           }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
           breakpoints={{
-            545: {
-              slidesPerView: 1.3,
-            },
-            768: {
-              slidesPerView: 1.3,
-            },
-            900: {
-              slidesPerView: 1.3,
-            },
-            1200: {
-              slidesPerView: 1.3,
-            },
+             545: { slidesPerView: 1 },
+             768: { slidesPerView: 1.4 },
+  
           }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           style={{ position: "static", ...style }}
           {...others}
         >
