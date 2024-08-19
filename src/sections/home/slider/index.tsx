@@ -64,7 +64,7 @@ export default function Slider({
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}
-          slidesPerView={1.4}
+          // slidesPerView={1.3}
           pagination={{ clickable: true }}
           onSlideChange={onChangeSlide}
           centeredSlides={true}
@@ -76,16 +76,16 @@ export default function Slider({
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           breakpoints={{
             545: {
-              slidesPerView: 1,
+              slidesPerView: 1.3,
             },
             768: {
-              slidesPerView: 2,
+              slidesPerView: 1.3,
             },
             900: {
-              slidesPerView: 3,
+              slidesPerView: 1.3,
             },
             1200: {
-              slidesPerView: 1,
+              slidesPerView: 1.3,
             },
           }}
           style={{ position: "static", ...style }}
