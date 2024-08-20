@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./section10.module.css";
 import Image from "next/image";
+import { Box } from "@mui/material";
 
 const Section10 = () => {
   return (
     <section className={styles.section}>
-      <div className={styles.container}>
+      <Box className={styles.container}>
         <article className={styles["Item-module--gridItems--ef819"]}>
-          <div className={styles["ProjectGalleryCard-module--item--d0f20"]}>
+          <Box className={styles["ProjectGalleryCard-module--item--d0f20"]}>
             <a
               className={
                 styles["ProjectGalleryCard-module--pictureWrapper--b2b15"]
@@ -40,7 +41,9 @@ const Section10 = () => {
                 />
               </picture>
             </a>
-            <div className={styles["ProjectGalleryCard-module--content--513b2"]}>
+            <Box
+              className={styles["ProjectGalleryCard-module--content--513b2"]}
+            >
               <Image
                 className={`${styles["ProjectGalleryCard-module--logo--75429"]} lazyloaded`}
                 src="https://static.andersenlab.com/andersenlab/new-andersensite/cases/nda.svg"
@@ -54,11 +57,11 @@ const Section10 = () => {
               >
                 UI/UX Redesign for Airline SaaS
               </a>
-            </div>
-          </div>
+            </Box>
+          </Box>
         </article>
         <article className={styles["Item-module--gridItems--ef819"]}>
-          <div className={styles["ProjectGalleryCard-module--item--d0f20"]}>
+          <Box className={styles["ProjectGalleryCard-module--item--d0f20"]}>
             <a
               className={
                 styles["ProjectGalleryCard-module--pictureWrapper--b2b15"]
@@ -86,18 +89,20 @@ const Section10 = () => {
                   className={`${styles["ProjectGalleryCard-module--img--11f55"]} ${styles["Image-module--img--b87cd"]} lazyloaded`}
                   alt="UI/UX Redesign for Airline SaaS preview"
                   src="https://static.andersenlab.com/andersenlab/new-andersensite/cases/avacanet_camino/preview-shots/medium.webp"
-                  width={500} // Set appropriate width
-                  height={300} // Set appropriate height
+                  width={500}
+                  height={300}
                 />
               </picture>
             </a>
-            <div className={styles["ProjectGalleryCard-module--content--513b2"]}>
+            <Box
+              className={styles["ProjectGalleryCard-module--content--513b2"]}
+            >
               <Image
                 className={`${styles["ProjectGalleryCard-module--logo--75429"]} lazyloaded`}
                 src="https://static.andersenlab.com/andersenlab/new-andersensite/cases/nda.svg"
                 alt="UI/UX Redesign for Airline SaaS logo"
-                width={50} // Set appropriate width
-                height={50} // Set appropriate height
+                width={50}
+                height={50}
               />
               <a
                 className={styles["ProjectGalleryCard-module--title--f49ae"]}
@@ -105,10 +110,10 @@ const Section10 = () => {
               >
                 UI/UX Redesign for Airline SaaS
               </a>
-            </div>
-          </div>
+            </Box>
+          </Box>
         </article>
-      </div>
+      </Box>
     </section>
   );
 };

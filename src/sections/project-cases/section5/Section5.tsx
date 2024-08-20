@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./section5.module.css";
+import { Box, Typography } from "@mui/material";
 
 const Section5 = () => {
   const functionalities = [
@@ -12,11 +13,11 @@ const Section5 = () => {
   ];
   return (
     <section className={styles.section}>
-      <div className={styles.gridContainer}>
-        <div className={styles.box}>
-          <h2 className={styles.title}>Application functionality</h2>
-          <div className={styles.gridContainer}>
-            <div className={styles.gridItem}>
+      <Box className={styles.gridContainer}>
+        <Box className={styles.box}>
+          <Typography className={styles.title}>Application functionality</Typography>
+          <Box className={styles.gridContainer}>
+            <Box className={styles.gridItem}>
               <ul className={styles.list}>
                 {functionalities?.map((text, index) => (
                   <li className={styles.listItem }  key={index}>
@@ -25,10 +26,10 @@ const Section5 = () => {
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
     </section>
   );
 };

@@ -17,6 +17,7 @@ import React from "react";
 import { createTheme, ThemeProvider, useTheme } from "@mui/material/styles";
 import TabPanel from "@/components/tabs/tab-panel";
 import Iconify from "@/components/iconify";
+import Image from "next/image";
 
 const customTheme = createTheme({
   typography: {
@@ -54,51 +55,56 @@ function TeamWork(): React.JSX.Element {
               <Box >
                 <Grid container rowSpacing={3} columnSpacing={3}>
                   <Grid item xs={5} md={5}>
-                      <img
-                        srcSet={`/assets/images/about-us/team5.jpeg`}
+                      <Image
                         src={`/assets/images/about-us/team5.jpeg`}
                         alt={'work team'}
                         style={{height:'100%'}}
                         loading="lazy"
+                        width={1000}
+                        height={1000}
                       />
                   </Grid>
                   <Grid item xs={7} md={7}>
                      
                  <Grid  container rowSpacing={3} columnSpacing={3}>
                   <Grid item xs={6} >
-                  <img
-                        srcSet={`/assets/images/about-us/team1.jpeg`}
+                  <Image
                         src={`/assets/images/about-us/team1.jpeg`}
                         alt={'work team'}
                         loading="lazy"
                         style={{height:'100%'}}
+                        width={1000}
+                        height={1000}
                       />
                   </Grid>
                   <Grid item xs={6} >
-                  <img
-                        srcSet={`/assets/images/about-us/team4.jpeg`}
+                  <Image
                         src={`/assets/images/about-us/team4.jpeg`}
                         alt={'work team'}
                        loading="lazy"
                        style={{height:'100%'}}
+                       width={1000}
+                       height={1000}
                       />
                     </Grid>
                     <Grid item xs={7} >
-                  <img
-                        srcSet={`/assets/images/about-us/team2.jpeg`}
+                  <Image
                         src={`/assets/images/about-us/team2.jpeg`}
                         alt={'work team'}
                        loading="lazy"
                        style={{height:'100%'}}
+                       width={1000}
+                       height={1000}
                       />
                     </Grid>
                     <Grid item xs={5} >
-                  <img
-                        srcSet={`/assets/images/about-us/team3.jpeg`}
+                  <Image
                         src={`/assets/images/about-us/team3.jpeg`}
                         alt={'work team'}
                         style={{height:'100%'}}
                        loading="lazy"
+                       width={1000}
+                       height={1000}
                       />
                     </Grid>
                   </Grid>
@@ -127,9 +133,7 @@ function TeamWork(): React.JSX.Element {
                 }}>
                   See more
                 </Typography>
-                {/* <Typography color="#fff">
-                  →
-                </Typography> */}
+
               </Box>
         </Box>
                

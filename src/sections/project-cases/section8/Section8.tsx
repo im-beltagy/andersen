@@ -1,16 +1,17 @@
 import React from "react";
 import styles from "./section8.module.css";
 import Image from "next/image";
+import { Box, Typography } from "@mui/material";
 
 const Section8 = () => {
   return (
     <section className={styles.section}>
-      <h1 className={styles.title}>Customer review</h1>
+      <Typography className={styles.title}>Customer review</Typography>
 
-      <div className={`${styles.item2}`}>
-        <div className={styles.box}>
-          <div className={styles.boxHeader}>
-            <div className={styles.userInfo}>
+      <Box className={`${styles.item2}`}>
+        <Box className={styles.box}>
+          <Box className={styles.boxHeader}>
+            <Box className={styles.userInfo}>
               <Image
                 src="https://d3jqtupnzefbtn.cloudfront.net/andersenlab/new-andersensite/testimonials/60x60/gert-becker-60x60.jpg"
                 alt="Gert Becker"
@@ -18,14 +19,14 @@ const Section8 = () => {
                 width={40}
                 height={40}
               />
-              <div className={styles.userDetails}>
-                <p className={styles.userName}>Gert Becker</p>
-                <div className={styles.userRole}>
-                  <p>PR Manager</p>
-                  <p className={styles.company}>FTI</p>
-                </div>
-                <div className={styles.countryParent}>
-                  <div>
+              <Box className={styles.userDetails}>
+                <Typography className={styles.userName}>Gert Becker</Typography>
+                <Box className={styles.userRole}>
+                  <Typography>PR Manager</Typography>
+                  <Typography className={styles.company}>FTI</Typography>
+                </Box>
+                <Box className={styles.countryParent}>
+                  <Box>
                     <Image
                       src="https://d3jqtupnzefbtn.cloudfront.net/andersenlab/new-andersensite/icons/countries-flags/Germany.svg"
                       alt="Gert Becker"
@@ -33,12 +34,12 @@ const Section8 = () => {
                       width={40}
                       height={40}
                     />
-                  </div>
-                  <p className={styles.country}>Germany</p>
-                </div>
-              </div>
-            </div>
-            <div className={styles.svgparent}>
+                  </Box>
+                  <Typography className={styles.country}>Germany</Typography>
+                </Box>
+              </Box>
+            </Box>
+            <Box className={styles.svgparent}>
               <svg
                 className=" review-module--clutchWidget--72ee7 review-module--icon--21515 Icon-module--icon--c95f8"
                 fill="none"
@@ -86,16 +87,18 @@ const Section8 = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </div>
-          </div>
-          <div className={styles.parentQuote}>
-            <p>Review verified by clutch and matches the customer’s words</p>
-            <p className={styles.quote}>
+            </Box>
+          </Box>
+          <Box className={styles.parentQuote}>
+            <Typography>
+              Review verified by clutch and matches the customer’s words
+            </Typography>
+            <Typography className={styles.quote}>
               {`Establishing this partnership, we planned to give Andersen a try and pass them the development of one subproject to see their performance. The work was done well enough, so we gave these guys another task. And thus, step by step, Andersen’s engineers won our confidence with their clean code, business-friendly ideas, and full transparency. Our cooperation extended to the work on four subprojects in the travel industry, and we are ready to entrust them with a task of any complexity.`}
-            </p>
-          </div>
-        </div>
-      </div>
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
     </section>
   );
 };

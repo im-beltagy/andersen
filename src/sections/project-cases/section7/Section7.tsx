@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./section7.module.css";
+import { Box, Typography } from "@mui/material";
 
 const Section7 = () => {
   const functionalities = [
@@ -10,15 +11,15 @@ const Section7 = () => {
   ];
   return (
     <section className={styles.section}>
-      <div className={styles.container}>
-        <h1 className={styles.title}>Results</h1>
-        <div className={styles.parentDescription}>
-          <p className={styles.description}>
+      <Box className={styles.container}>
+        <Typography className={styles.title}>Results</Typography>
+        <Box className={styles.parentDescription}>
+          <Typography className={styles.description}>
             {`Andersen implemented one project from scratch that brought positive business results and helped to implement four other subprojects. The well-optimized tools and applications helped the customer focus on their crucial goals, attract more users, and reduce costs by optimizing their technical processes.`}
-          </p>
-        </div>
-        <div className={styles.gridContainer}>
-            <div className={styles.gridItem}>
+          </Typography>
+        </Box>
+        <Box className={styles.gridContainer}>
+            <Box className={styles.gridItem}>
               <ul className={styles.list}>
                 {functionalities?.map((text, index) => (
                   <li className={styles.listItem }  key={index}>
@@ -27,9 +28,9 @@ const Section7 = () => {
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
-      </div>
+            </Box>
+          </Box>
+      </Box>
     </section>
   );
 };

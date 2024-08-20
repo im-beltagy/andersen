@@ -25,6 +25,7 @@ import ExtraSpecialists from "./extraSpecialists";
 import ProvidedServices from "@/sections/home/provided-services";
 import ProvidedServicesAccordion from "@/sections/home/provided-services/withAccordion";
 import Section7 from "@/sections/services/section7/Section7";
+import Image from "next/image";
 const TabPanel = (props: any) => {
   const { children, value, index, ...other } = props;
 
@@ -59,34 +60,36 @@ function HeroFull(): React.JSX.Element {
     setTimeout(() => {
       setSlides(
         Array.from({ length: 18 })?.map((_, index) => (
-          <div
+          <Box
             className={styles.card}
             onClick={() => console.log(index)}
             role="button"
             key={index}
           >
-            <p className={styles.title}>Jun 14, 2024</p>
-            <h4 className={styles.content}>
+            <Typography className={styles.title}>Jun 14, 2024</Typography>
+            <Typography className={styles.content}>
               Andersen Sponsors Digital Uzbekistan 2024 Forum
-            </h4>
-          </div>
+            </Typography>
+          </Box>
         ))
       );
     }, 1000);
   }, []);
 
   return (
-    <div className={styles2.contactSection}>
-      <div className={styles2.contactUs}>
-        <img
+    <Box className={styles2.contactSection}>
+      <Box className={styles2.contactUs}>
+        <Image
           src="https://andersenlab.com/react-assets/static/74306c57a3b06cb29a7e834f2089349b/ae3a5/1920x546-2x-v2.webp"
           alt="Contact Us"
           className={styles2.contactUsImage}
+          width={500}
+          height={300}
         />
-        <div className={styles2.contactUsContent}>
+        <Box className={styles2.contactUsContent}>
           <h2>IT Services with Sparkling Results</h2>
-        </div>
-      </div>
+        </Box>
+      </Box>
      
       <Container sx={{ padding: "50px" }}>
         <ProvidedServices />
@@ -105,7 +108,7 @@ function HeroFull(): React.JSX.Element {
       <Container sx={{ backgroundColor: "#fff", padding: "20px", marginTop: "100px" }}>
         <Section9 />
       </Container>
-    </div>
+    </Box>
   );
 }
 
