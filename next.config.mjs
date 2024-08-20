@@ -9,7 +9,9 @@ const nextConfig = {
           "d3jqtupnzefbtn.cloudfront.net",
           "content.andersenlab.com",
           "static.andersenlab.com",
-          "cdn-gnpmp.nitrocdn.com"
+          "cdn-gnpmp.nitrocdn.com",
+          "prestashop.com",
+          "andersenlab.com"
         ],
       },
 };

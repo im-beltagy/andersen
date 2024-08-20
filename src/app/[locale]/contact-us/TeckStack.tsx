@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./TechStack.module.css"; // Assume you're using CSS Modules
+import { Box } from "@mui/material";
 
 type TechCounts = {
   frontend: { [key: string]: number };
@@ -69,9 +70,9 @@ const TechStack = () => {
 
   const renderTechStack = (category: keyof TechCounts) => {
     return Object.keys(techCounts[category]).map((tech) => (
-      <div key={tech} className={styles.techRow}>
+      <Box key={tech} className={styles.techRow}>
         <span>{tech}</span>
-        <div className={styles.counter}>
+        <Box className={styles.counter}>
           <button
             className={styles.btn}
             onClick={() => handleDecrement(category, tech)}
@@ -87,8 +88,8 @@ const TechStack = () => {
           >
             +
           </button>
-        </div>
-      </div>
+        </Box>
+      </Box>
     ));
   };
 
@@ -98,24 +99,24 @@ const TechStack = () => {
         1.Specify the tech stack and the number of developers you need per each
         technology:
       </h1>
-      <div className={styles.stacks}>
-        <div className={styles.techCategory}>
+      <Box className={styles.stacks}>
+        <Box className={styles.techCategory}>
           <h2>Front-end</h2>
           {renderTechStack("frontend")}
-        </div>
-        <div className={styles.techCategory}>
+        </Box>
+        <Box className={styles.techCategory}>
           <h2>Back-end</h2>
           {renderTechStack("backend")}
-        </div>
-        <div className={styles.techCategory}>
+        </Box>
+        <Box className={styles.techCategory}>
           <h2>Mobile</h2>
           {renderTechStack("mobile")}
-        </div>
-        <div className={styles.techCategory}>
+        </Box>
+        <Box className={styles.techCategory}>
           <h2>Database & Cloud</h2>
           {renderTechStack("database")}
-        </div>
-      </div>
+        </Box>
+      </Box>
     </div>
   );
 };

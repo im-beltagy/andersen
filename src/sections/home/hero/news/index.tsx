@@ -18,7 +18,6 @@ export default function HomeNews({ slidess }: any) {
     <Grid
       key={index}
       container
-      // spacing={2}
       sx={{
         display: "flex",
         justifyContent: "center",

@@ -1,4 +1,4 @@
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import styles from "./styles.module.css";
 import globals from "@/app/globals.module.css";
 import Image from "next/image";
@@ -25,9 +25,9 @@ export default function HomeWorkedWith({Links, mainText}:props) {
       sx={{bgcolor:Links ? '#020D1C': "var(--primary-light)", py: "var(--section-py)",  }}
     >
       <Container>
-        <h2 className={globals.headding} style={{color: Links? "#fff": '#000000' }}>
+        <Typography className={globals.headding} style={{color: Links? "#fff": '#000000' }}>
           {mainText ?mainText :`Companies we're proud to have worked with`}
-        </h2>
+        </Typography>
         <Grid container justifyContent="center" spacing={4} sx={{ mt: { xs: 2, sm: 7.5 } }}>
           {
             Links && (

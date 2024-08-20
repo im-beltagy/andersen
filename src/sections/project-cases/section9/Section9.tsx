@@ -202,13 +202,13 @@ const Section9 = () => {
                 flexDirection: "column",
               }}
             >
-              <button
+              <Button
                 className={`${globals.button} ${globals.button_secondary}`}
                 style={{ marginTop: "1rem", width: "fit-content" }}
               >
                 Attach file
                 <input type="file" hidden />
-              </button>
+              </Button>
               <FormControlLabel
                 control={
                   <Controller

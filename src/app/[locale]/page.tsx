@@ -2,6 +2,7 @@ import HomeCaseStudies from "@/sections/home/case-studies";
 import HomeForm from "@/sections/home/form";
 import HomeHero from "@/sections/home/hero";
 import HomeNews from "@/sections/home/hero/news";
+import InfiniteAutoplayCarousel from "@/sections/home/infinite-scroll";
 import EventsTabs from "@/sections/home/meet-us";
 import ProvidedServices from "@/sections/home/provided-services";
 import ProvidedServicesAccordion from "@/sections/home/provided-services/withAccordion";
@@ -67,12 +68,12 @@ export default function Page() {
         <HomeHero />
         <HomeTrust />
       </Box>
+      <InfiniteAutoplayCarousel />
       <ProvidedServices />
       <ProvidedServicesAccordion />
       <Box
         sx={{
           backgroundColor: "#fff",
-          // padding: "20px",
           marginTop: "100px",
           height: { xs: "auto", lg: "95vh" },
           display: "flex",

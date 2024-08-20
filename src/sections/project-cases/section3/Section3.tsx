@@ -1,12 +1,13 @@
 import React from "react";
 import styles from "./section3.module.css";
+import { Box, Typography } from "@mui/material";
 
 const Section3 = () => {
   return (
     <section className={styles.section}>
-      <div className={styles.container}>
-        <h1 className={styles.title}>About the project</h1>
-        <p className={styles.firstDescription}>
+      <Box className={styles.container}>
+        <Typography className={styles.title}>About the project</Typography>
+        <Typography className={styles.firstDescription}>
           {`     This partnership, which lasted for two years, relied on our teamwork
             to improve and streamline FTI Group's websites, introduce a voucher
             management system and checker, and redesign various modules of the
@@ -14,9 +15,9 @@ const Section3 = () => {
             research to enhance the user experience of the cross-platform mobile
             app. As part of the project, we developed an internal tool for FTI
             Group to manage their vouchers with ease and efficiency.`}
-        </p>
-        <div className={styles.parentSecondDescription}>
-          <p className={styles.secondDescription}>
+        </Typography>
+        <Box className={styles.parentSecondDescription}>
+          <Typography className={styles.secondDescription}>
             {`   The results of the project spoke for themselves. PR Manager at FTI
             Group Gert Becker was full of praise for Andersen's contribution to
             the resulting voucher management software. He noted that the clean
@@ -24,16 +25,16 @@ const Section3 = () => {
             work won their confidence, leading to the partnership extending to
             four subprojects in the travel industry. FTI Group entrusted
             Andersen with tasks of various complexity levels.`}
-          </p>
-        </div>
-        <div className={styles.details}>
-          <div className={styles.detailItem}>
+          </Typography>
+        </Box>
+        <Box className={styles.details}>
+          <Box className={styles.detailItem}>
             <span className={styles.detailTitle}>DURATION:</span>
             <span className={styles.detailValue}>23 months</span>
-          </div>
-          <div className={styles.detailItem}>
+          </Box>
+          <Box className={styles.detailItem}>
             <span className={styles.detailTitle}>TECHNOLOGIES:</span>
-            <div className={styles.technologies}>
+            <Box className={styles.technologies}>
               <span className={styles.technology}>JavaScript</span>
               <span className={styles.technology}>Vue.js</span>
               <span className={styles.technology}>Angular</span>
@@ -43,10 +44,10 @@ const Section3 = () => {
               <a href="#" className={styles.viewAll}>
                 + View all
               </a>
-            </div>
-          </div>
-        </div>
-      </div>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
     </section>
   );
 };

@@ -1,20 +1,21 @@
 import React from "react";
 import styles from "./section6.module.css";
 import Image from "next/image";
+import { Box, Typography } from "@mui/material";
 
 const Section6 = () => {
   return (
     <section className={styles.section}>
-      <div className={styles.container}>
-        <h1 className={styles.title}>Solutions</h1>
-        <div className={styles.parentDescription}>
+      <Box className={styles.container}>
+        <Typography className={styles.title}>Solutions</Typography>
+        <Box className={styles.parentDescription}>
           <Image
             src="https://static.andersenlab.com/andersenlab/new-andersensite/icons/brand/hint.svg"
             alt="hint"
             width={40}
             height={40}
           />
-          <p className={styles.description}>
+          <Typography className={styles.description}>
             {`     This partnership, which lasted for two years, relied on our teamwork
             to improve and streamline FTI Group's websites, introduce a voucher
             management system and checker, and redesign various modules of the
@@ -22,9 +23,9 @@ const Section6 = () => {
             research to enhance the user experience of the cross-platform mobile
             app. As part of the project, we developed an internal tool for FTI
             Group to manage their vouchers with ease and efficiency.`}
-          </p>
-        </div>
-      </div>
+          </Typography>
+        </Box>
+      </Box>
     </section>
   );
 };
