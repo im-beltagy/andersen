@@ -3,6 +3,7 @@
 import { Box, Container, ImageList, ImageListItem, ImageListItemBar, ListSubheader, Typography } from '@mui/material'
 import React from 'react'
 import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
+import Image from 'next/image';
 
 
 const customTheme = createTheme({
@@ -20,11 +21,13 @@ function HeroFull():React.JSX.Element {
     <ThemeProvider theme={customTheme}>
       <Box sx={{width:'100%', height:{xs:300,sm:450,md:668}}}>
       <ImageListItem style={{height:"100%"}} >
-          <img
-            srcSet={`/assets/images/about-us/hero.jpeg`}
+          <Image
             src={`/assets/images/about-us/hero.jpeg`}
             alt="hero"
             loading="lazy"
+            width={1000}
+            height={1000}
+            style={{height:"100%", width:"100%"}}
             />
           <ImageListItemBar
           sx={{height:'50%', background:`linear-gradient(0deg, rgba(2,13,28,1) 0%, rgba(255,255,255,0) 100%)`}}
