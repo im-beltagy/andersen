@@ -2,14 +2,18 @@ import React from "react";
 import styles from "./section1.module.css";
 import Image from "next/image";
 import { Box, Typography } from "@mui/material";
-
-const Section1 = () => {
+interface Section1Props {
+  title: string;
+  branch: string;
+  imageUrl: string;
+}
+const Section1: React.FC<Section1Props> = ({title, branch, imageUrl}) => {
   return (
     <section className={styles.section}>
       <Box className={styles.gridContainer}>
         <Box className={` ${styles.item1}`}>
-          <Typography className={styles.title}>Internal Tools to Manage Vouchers</Typography>
-          <Typography className={styles.tag}>Travel & Hospitality</Typography>
+          <Typography className={styles.title}>{title}</Typography>
+          <Typography className={styles.tag}>{branch}</Typography>
         </Box>
 
         <Box className={`${styles.item2}`}>
@@ -94,7 +98,7 @@ const Section1 = () => {
       </Box>
       <Box className={` ${styles.item3}`}>
         <Image
-          src="https://d3jqtupnzefbtn.cloudfront.net/andersenlab/new-andersensite/cases/fti/preview-shots/big.webp"
+          src={imageUrl}
           alt="voucher management"
           width={1000}
           height={500}

@@ -1,22 +1,20 @@
 import React from "react";
 import styles from "./section3.module.css";
 import { Box, Typography } from "@mui/material";
-
-const Section3 = () => {
+interface Section3Props {
+    description: string;
+    duration: string;
+    technologies: string[];
+}
+const Section3: React.FC<Section3Props> = ({description, duration, technologies}) => {
   return (
     <section className={styles.section}>
       <Box className={styles.container}>
-        <Typography className={styles.title}>About the project</Typography>
+        <Typography className={styles.title}>Über das Projekt</Typography>
         <Typography className={styles.firstDescription}>
-          {`     This partnership, which lasted for two years, relied on our teamwork
-            to improve and streamline FTI Group's websites, introduce a voucher
-            management system and checker, and redesign various modules of the
-            official website. Andersen's team also conducted thorough UX
-            research to enhance the user experience of the cross-platform mobile
-            app. As part of the project, we developed an internal tool for FTI
-            Group to manage their vouchers with ease and efficiency.`}
+          {description}
         </Typography>
-        <Box className={styles.parentSecondDescription}>
+        {/*<Box className={styles.parentSecondDescription}>
           <Typography className={styles.secondDescription}>
             {`   The results of the project spoke for themselves. PR Manager at FTI
             Group Gert Becker was full of praise for Andersen's contribution to
@@ -26,24 +24,18 @@ const Section3 = () => {
             four subprojects in the travel industry. FTI Group entrusted
             Andersen with tasks of various complexity levels.`}
           </Typography>
-        </Box>
+        </Box>*/}
         <Box className={styles.details}>
           <Box className={styles.detailItem}>
-            <span className={styles.detailTitle}>DURATION:</span>
-            <span className={styles.detailValue}>23 months</span>
+            <span className={styles.detailTitle}>DAUER:</span>
+            <span className={styles.detailValue}>{duration}</span>
           </Box>
           <Box className={styles.detailItem}>
-            <span className={styles.detailTitle}>TECHNOLOGIES:</span>
+            <span className={styles.detailTitle}>TECHNOLOGIEN:</span>
             <Box className={styles.technologies}>
-              <span className={styles.technology}>JavaScript</span>
-              <span className={styles.technology}>Vue.js</span>
-              <span className={styles.technology}>Angular</span>
-              <span className={styles.technology}>PHP</span>
-              <span className={styles.technology}>React.js</span>
-              <span className={styles.technology}>Firebase</span>
-              <a href="#" className={styles.viewAll}>
-                + View all
-              </a>
+              {technologies.map((tech, index) => (
+                  <span key={index} className={styles.technology}>{tech}</span>
+              ))}
             </Box>
           </Box>
         </Box>

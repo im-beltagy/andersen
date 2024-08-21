@@ -18,21 +18,21 @@ import {
 
 // Validation schema
 const schema = yup.object().shape({
-  industry: yup.string().required("Industry is required"),
-  name: yup.string().required("Name is required"),
-  email: yup.string().email("Invalid email").required("Email is required"),
-  phone: yup.string().required("Phone is required"),
-  description: yup.string().required("Project requirements are required"),
+  industry: yup.string().required("Branche ist erforderlich"),
+  name: yup.string().required("Name ist erforderlich"),
+  email: yup.string().email("Invalid email").required("Email ist erforderlich"),
+  phone: yup.string().required("Telefon ist erforderlich"),
+  description: yup.string().required("Projekt Anforderung ist erforderlich"),
   nda: yup.boolean(),
 });
 
 const industries = [
-  "Technology",
-  "Finance",
-  "Healthcare",
-  "Education",
-  "Retail",
-  "Other",
+  "Technologie",
+  "Finanzen",
+  "Gesundheitswesen",
+  "Bildung",
+  "Einzelhandel",
+  "Sonstiges"
 ];
 
 const Section9 = () => {
@@ -64,10 +64,10 @@ const Section9 = () => {
       <Grid item xs={12} md={6}>
         <Box>
           <Typography variant="h4" gutterBottom>
-            {` Let's talk about your IT needs`}
+            {` Lassen Sie uns über Ihre IT-Bedürfnisse sprechen`}
           </Typography>
           <Typography variant="subtitle1" gutterBottom>
-            What happens next?
+            Was passiert als Nächstes?
           </Typography>
           <Box display="flex" alignItems="center" mb={2}>
             <Box mr={1}>
@@ -76,7 +76,7 @@ const Section9 = () => {
               </Typography>
             </Box>
             <Typography variant="body1">
-              An expert contacts you after having analyzed your requirements;
+              Ein Experte wird Sie kontaktieren, nachdem er Ihre Anforderungen analysiert hat
             </Typography>
           </Box>
           <Box display="flex" alignItems="center" mb={2}>
@@ -86,7 +86,7 @@ const Section9 = () => {
               </Typography>
             </Box>
             <Typography variant="body1">
-              If needed, we sign an NDA to ensure the highest privacy level;
+              Falls erforderlich, unterzeichnen wir eine Vertraulichkeitsvereinbarung, um das höchste Maß an Datenschutz zu gewährleisten
             </Typography>
           </Box>
           <Box display="flex" alignItems="center" mb={2}>
@@ -96,14 +96,9 @@ const Section9 = () => {
               </Typography>
             </Box>
             <Typography variant="body1">
-              We submit a comprehensive project proposal with estimates,
-              timelines, CVs, etc.
+              Wir unterbreiten Ihnen einen umfassenden Projektvorschlag mit Kostenschätzungen, Zeitplänen, Lebensläufen usw.
             </Typography>
           </Box>
-          <Typography variant="subtitle1" gutterBottom>
-            Customers who trust us
-          </Typography>
-          {/* Add logos here */}
         </Box>
       </Grid>
       <Grid item xs={12} md={6}>
@@ -116,7 +111,7 @@ const Section9 = () => {
                 <TextField
                   {...field}
                   select
-                  label="Select your industry"
+                  label="Wählen Sie Ihre Branche aus"
                   variant="standard"
                   fullWidth
                   margin="normal"
@@ -152,7 +147,7 @@ const Section9 = () => {
               render={({ field }) => (
                 <TextField
                   {...field}
-                  label="Corporate E-mail"
+                  label="E-mail"
                   variant="standard"
                   fullWidth
                   margin="normal"
@@ -167,7 +162,7 @@ const Section9 = () => {
               render={({ field }) => (
                 <TextField
                   {...field}
-                  label="Phone"
+                  label="Telefon"
                   variant="standard"
                   fullWidth
                   margin="normal"
@@ -182,7 +177,7 @@ const Section9 = () => {
               render={({ field }) => (
                 <TextField
                   {...field}
-                  label="Please describe your project requirements"
+                  label="Bitte beschreiben Sie Ihre Projektanforderungen"
                   variant="standard"
                   fullWidth
                   margin="normal"
@@ -202,13 +197,6 @@ const Section9 = () => {
                 flexDirection: "column",
               }}
             >
-              <Button
-                className={`${globals.button} ${globals.button_secondary}`}
-                style={{ marginTop: "1rem", width: "fit-content" }}
-              >
-                Attach file
-                <input type="file" hidden />
-              </Button>
               <FormControlLabel
                 control={
                   <Controller
@@ -217,17 +205,17 @@ const Section9 = () => {
                     render={({ field }) => <Checkbox {...field} />}
                   />
                 }
-                label="I want to protect my data by signing an NDA."
+                label="Ich möchte meine Daten durch die Unterzeichnung einer Vertraulichkeitsvereinbarung schützen."
               />
               <Box mt={2}>
                 <button
                   type="submit"
                   className={`${globals.button} ${globals.button_primary}`}
                 >
-                  Send request
+                  Senden
                 </button>
                 <Typography variant="body2" color="textSecondary" mt={1}>
-                  Your privacy is protected
+                  Ihr Datenschutz ist gewährleistet
                 </Typography>
               </Box>
             </Box>

@@ -168,7 +168,7 @@ export default function Header(props: Props) {
           color: isScrolled ? "var(--primary-dark)" : "var(--primary-light)",
         }}
       >
-        ANDERSEN
+        Webizi
       </Typography>
     </Link>
   );
