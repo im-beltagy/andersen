@@ -1,4 +1,4 @@
-import HeroFull from "@/components/hero-full";
+import HeroFull from "@/sections/about-us/hero-full";
 import { Box, Container } from "@mui/material";
 import React from "react";
 import ItServices from "./it-services";

@@ -2,21 +2,12 @@
 
 import {
   Box,
-  Button,
   Container,
   Grid,
-  ImageList,
-  ImageListItem,
-  ImageListItemBar,
-  ListSubheader,
-  Tab,
-  Tabs,
   Typography,
 } from "@mui/material";
 import React from "react";
 import { createTheme, ThemeProvider, useTheme } from "@mui/material/styles";
-import TabPanel from "@/components/tabs/tab-panel";
-import Iconify from "@/components/iconify";
 import Image from "next/image";
 
 const customTheme = createTheme({
@@ -31,8 +22,6 @@ const customTheme = createTheme({
 });
 
 function TeamWork(): React.JSX.Element {
-  const theme = useTheme();
-
   return (
     <ThemeProvider theme={customTheme}>
       <Box

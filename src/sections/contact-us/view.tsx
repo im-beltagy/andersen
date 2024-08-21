@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import HeroFull from '@/app/[locale]/contact-us/hero-full';
+import HeroFull from '@/sections/contact-us/hero/hero-full';
 
 function View():React.JSX.Element {
   return (
