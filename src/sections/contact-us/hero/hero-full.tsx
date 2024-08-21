@@ -22,6 +22,7 @@ import styles from "../../../components/slider/styles.module.css";
 import styles2 from "./hero.module.css";
 import TechStack from "../teck-stack/TeckStack";
 import ExtraSpecialists from "../extraSpecialists";
+import Image from "next/image";
 const TabPanel = (props: any) => {
   const { children, value, index, ...other } = props;
 
@@ -76,10 +77,12 @@ function HeroFull(): React.JSX.Element {
   return (
     <div className={styles2.contactSection}>
       <div className={styles2.contactUs}>
-        <img
+        <Image
           src="https://andersenlab.com/react-assets/static/800ae4bec3dde4fa3f515d0f41c6264e/1b2ee/tablet.webp"
           alt="Contact Us"
           className={styles2.contactUsImage}
+          width={500}
+            height={300}
         />
         <div className={styles2.contactUsContent}>
           <h2>Contact Us</h2>
