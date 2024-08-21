@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import styles from "./TechStack.module.css"; // Assume you're using CSS Modules
+import styles from "../contact-us/teck-stack/TechStack.module.css"
+import { Box, Button } from "@mui/material";
 
 type TechCounts = {
   frontend: { [key: string]: number };
@@ -10,41 +11,22 @@ type TechCounts = {
 
 const initialTechState: TechCounts = {
   frontend: {
-    "Vue.js": 0,
-    Angular: 0,
-    "React.js": 0,
-    JavaScript: 0,
+    "Project Manager": 0,
+    "QA/QA Automation Engineer": 0,
   },
   backend: {
-    ".NET": 0,
-    Java: 0,
-    Python: 0,
-    Scala: 0,
-    Ruby: 0,
-    "C++": 0,
-    "Node.js": 0,
-    Golang: 0,
+    "UI/UX Designer": 0,
+    "Solution Architects": 0,
   },
   mobile: {
-    Android: 0,
-    "React Native": 0,
-    iOS: 0,
-    Xamarin: 0,
-    Ionic: 0,
-    Flutter: 0,
+    "Business Analyst": 0,
   },
   database: {
-    PostgreSQL: 0,
-    MySQL: 0,
-    Oracle: 0,
-    "Microsoft Azure SQL Database": 0,
-    MsSQL: 0,
-    NoSQL: 0,
-    AWS: 0,
+    "DevOps Engineer": 0,
   },
 };
 
-const TechStack = () => {
+const ExtraSpecialists = () => {
   const [techCounts, setTechCounts] = useState<TechCounts>(initialTechState);
 
   const handleIncrement = (category: keyof TechCounts, tech: string) => {
@@ -69,9 +51,9 @@ const TechStack = () => {
 
   const renderTechStack = (category: keyof TechCounts) => {
     return Object.keys(techCounts[category]).map((tech) => (
-      <div key={tech} className={styles.techRow}>
+      <Box key={tech} className={styles.techRow}>
         <span>{tech}</span>
-        <div className={styles.counter}>
+        <Box className={styles.counter}>
           <button
             className={styles.btn}
             onClick={() => handleDecrement(category, tech)}
@@ -87,37 +69,30 @@ const TechStack = () => {
           >
             +
           </button>
-        </div>
-      </div>
+        </Box>
+      </Box>
     ));
   };
 
   return (
-    <div className={styles.techStack}>
-      <h1>
-        1.Specify the tech stack and the number of developers you need per each
-        technology:
-      </h1>
-      <div className={styles.stacks}>
-        <div className={styles.techCategory}>
-          <h2>Front-end</h2>
+    <Box className={styles.techStack}>
+      <h1>2.Extra specialists to add to the team:</h1>
+      <Box className={styles.stacks}>
+        <Box className={styles.techCategory}>
           {renderTechStack("frontend")}
-        </div>
-        <div className={styles.techCategory}>
-          <h2>Back-end</h2>
+        </Box>
+        <Box className={styles.techCategory}>
           {renderTechStack("backend")}
-        </div>
-        <div className={styles.techCategory}>
-          <h2>Mobile</h2>
+        </Box>
+        <Box className={styles.techCategory}>
           {renderTechStack("mobile")}
-        </div>
-        <div className={styles.techCategory}>
-          <h2>Database & Cloud</h2>
+        </Box>
+        <Box className={styles.techCategory}>
           {renderTechStack("database")}
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
-export default TechStack;
+export default ExtraSpecialists;

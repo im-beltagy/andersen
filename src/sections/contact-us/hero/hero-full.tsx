@@ -20,8 +20,8 @@ import Section9 from "@/sections/project-cases/section9/Section9";
 import Slider from "@/components/slider";
 import styles from "../../../components/slider/styles.module.css";
 import styles2 from "./hero.module.css";
-import TechStack from "./TeckStack";
-import ExtraSpecialists from "./extraSpecialists";
+import TechStack from "../teck-stack/TeckStack";
+import ExtraSpecialists from "../extraSpecialists";
 const TabPanel = (props: any) => {
   const { children, value, index, ...other } = props;
 

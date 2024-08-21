@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styles from "./TechStack.module.css"; // Assume you're using CSS Modules
-import { Box, Button } from "@mui/material";
+import styles from "./TechStack.module.css";
+import { Box } from "@mui/material";
 
 type TechCounts = {
   frontend: { [key: string]: number };
@@ -11,22 +11,41 @@ type TechCounts = {
 
 const initialTechState: TechCounts = {
   frontend: {
-    "Project Manager": 0,
-    "QA/QA Automation Engineer": 0,
+    "Vue.js": 0,
+    Angular: 0,
+    "React.js": 0,
+    JavaScript: 0,
   },
   backend: {
-    "UI/UX Designer": 0,
-    "Solution Architects": 0,
+    ".NET": 0,
+    Java: 0,
+    Python: 0,
+    Scala: 0,
+    Ruby: 0,
+    "C++": 0,
+    "Node.js": 0,
+    Golang: 0,
   },
   mobile: {
-    "Business Analyst": 0,
+    Android: 0,
+    "React Native": 0,
+    iOS: 0,
+    Xamarin: 0,
+    Ionic: 0,
+    Flutter: 0,
   },
   database: {
-    "DevOps Engineer": 0,
+    PostgreSQL: 0,
+    MySQL: 0,
+    Oracle: 0,
+    "Microsoft Azure SQL Database": 0,
+    MsSQL: 0,
+    NoSQL: 0,
+    AWS: 0,
   },
 };
 
-const ExtraSpecialists = () => {
+const TechStack = () => {
   const [techCounts, setTechCounts] = useState<TechCounts>(initialTechState);
 
   const handleIncrement = (category: keyof TechCounts, tech: string) => {
@@ -75,24 +94,31 @@ const ExtraSpecialists = () => {
   };
 
   return (
-    <Box className={styles.techStack}>
-      <h1>2.Extra specialists to add to the team:</h1>
+    <div className={styles.techStack}>
+      <h1>
+        1.Specify the tech stack and the number of developers you need per each
+        technology:
+      </h1>
       <Box className={styles.stacks}>
         <Box className={styles.techCategory}>
+          <h2>Front-end</h2>
           {renderTechStack("frontend")}
         </Box>
         <Box className={styles.techCategory}>
+          <h2>Back-end</h2>
           {renderTechStack("backend")}
         </Box>
         <Box className={styles.techCategory}>
+          <h2>Mobile</h2>
           {renderTechStack("mobile")}
         </Box>
         <Box className={styles.techCategory}>
+          <h2>Database & Cloud</h2>
           {renderTechStack("database")}
         </Box>
       </Box>
-    </Box>
+    </div>
   );
 };
 
-export default ExtraSpecialists;
+export default TechStack;

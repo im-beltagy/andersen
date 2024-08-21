@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./section7.module.css";
 
-const Section7 = () => {
+const Grantees = () => {
   const functionalities = [
     {
       title: "High-quality practices",
@@ -40,4 +40,4 @@ const Section7 = () => {
   );
 };
 
-export default Section7;
+export default Grantees;
