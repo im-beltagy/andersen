@@ -42,7 +42,6 @@ const InfiniteAutoplayCarousel = () => {
     "https://prestashop.com/wp-content/uploads/2023/04/LOGO_HUYGENS.svg",
   ];
 
-  // Duplicate the images to create an infinite loop effect
   const duplicatedImages = [...images, ...images];
 
   return (
