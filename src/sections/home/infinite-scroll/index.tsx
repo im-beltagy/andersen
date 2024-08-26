@@ -10,39 +10,30 @@ import Image from "next/image";
 const InfiniteAutoplayCarousel = () => {
   const settings = {
     infinite: true,
-    slidesToShow: 8,
-    slidesToScroll: 8,
+    slidesToShow: 6,
+    slidesToScroll: 1,
     autoplay: true,
-    speed: 20000,
-    autoplaySpeed: 0,
+    speed: 2000,
+    autoplaySpeed: 2000,
     cssEase: "linear",
+    pauseOnHover: false,
+    draggable: false,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 8,
-          slidesToScroll: 8,
-          infinite: true,
-          dots: true,
-        },
+        breakpoint: 1279,
+        settings: { slidesToShow: 6 },
+      },
+      {
+        breakpoint: 959,
+        settings: { slidesToShow: 4 },
       },
       {
         breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
+        settings: { slidesToShow: 2 },
       },
     ],
   };
+
   const images = [
     "https://prestashop.com/wp-content/uploads/2023/03/Kway-1.png",
     "https://prestashop.com/wp-content/uploads/2023/03/Push_listing_offre_Finsbury_240-1.png",
@@ -50,17 +41,29 @@ const InfiniteAutoplayCarousel = () => {
     "https://prestashop.com/wp-content/uploads/2023/03/Push_dealy_460_Noir-1.svg",
     "https://prestashop.com/wp-content/uploads/2023/04/LOGO_HUYGENS.svg",
   ];
+
+  // Duplicate the images to create an infinite loop effect
+  const duplicatedImages = [...images, ...images];
+
   return (
-    <Box sx={{ height: "30vh", width: "100%", backgroundColor: "#fff",paddingY: "20px" }}>
+    <Box
+      sx={{
+        height: "18vh",
+        width: "100%",
+        backgroundColor: "#fff",
+        paddingY: "15px",
+        overflow: "hidden"
+      }}
+    >
       <Slider {...settings}>
-        {images.map((image, index) => (
+        {duplicatedImages.map((image, index) => (
           <Box
             key={index}
             sx={{
               height: "100px",
               backgroundColor: "#eee",
               width: "70px",
-              marginX: "500px",
+              marginX: "10px",
               padding: "20px",
               borderRadius: "10px",
               display: "flex",
@@ -73,11 +76,7 @@ const InfiniteAutoplayCarousel = () => {
               alt="image"
               width={500}
               height={500}
-              style={{ height: "90%",
-                width: "100%",
-                objectFit: "contain",
-
-              }}
+              style={{ height: "90%", width: "100%", objectFit: "contain" }}
             />
           </Box>
         ))}
