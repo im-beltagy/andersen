@@ -9,7 +9,7 @@ import Section7 from "@/sections/project-cases/sectionResults/Section7";
 import Section8 from "../../section8/Section8";
 import Section10 from "../../section10/Section10";
 import Section11 from "../../section11/Section11";
-import Section9 from "../../section9/Section9";
+import Section9 from "@/sections/project-cases/sectionContactForm/Section9";
 import Section2 from "@/sections/project-cases/sectionAboutCustomer/Section2";
 import SectionProblem from "@/sections/project-cases/sectionProblem/SectionProblem";
 
@@ -92,10 +92,20 @@ function ViewProjectCases(): React.JSX.Element {
 
 
         />
-      <Section8 />
       <Section9 />
-      <Section10 />
-      <Section11 />
+      <Section10
+          title=  "Moola Pay - Die smarte Finanzlösung"
+          imageUrl= "/assets/images/cases/Frame 5.png"
+          caseUrl= "/project-cases/case2"
+          title2="Pronto - Effiziente Versandlösung"
+          imageUrl2="/assets/images/cases/Frame 3.png"
+          caseUrl2="/project-cases/case1"
+      />
+      <Section11
+          title= { "Barq Daily – Deine Plattform für Online-Shopping"}
+          imageUrl= {"/assets/images/cases/Frame 7.png"}
+          caseUrl= "/project-cases/case4"
+      />
     </Box>
   );
 }

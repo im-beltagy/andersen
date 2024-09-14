@@ -10,14 +10,6 @@ interface Section2Props {
 const Section2: React.FC<Section2Props> = ({description}) => {
   return (
     <section className={styles.section}>
-      <Box className={styles.container}>
-        <Box className={styles.leftSection}>
-          <Typography className={styles.title}>Über den Kunden</Typography>
-          <Typography className={styles.clientDescription}>
-            {description}
-          </Typography>
-        </Box>
-      </Box>
     </section>
   );
 };

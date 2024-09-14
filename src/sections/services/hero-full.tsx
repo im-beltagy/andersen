@@ -5,7 +5,7 @@ import {
   Container,
 } from "@mui/material";
 
-import Section9 from "@/sections/project-cases/section9/Section9";
+import Section9 from "@/sections/project-cases/sectionContactForm/Section9";
 import styles2 from "./hero.module.css";
 import ProvidedServices from "@/sections/home/provided-services";
 import ProvidedServicesAccordion from "@/sections/home/provided-services/withAccordion";

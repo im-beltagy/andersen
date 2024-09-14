@@ -5,7 +5,7 @@ import ItServices from "./it-services";
 import TeamWork from "./team-work";
 import HomeTrust from "../home/trust";
 import HomeWorkedWith from "../home/worked-with";
-import Section9 from "../project-cases/section9/Section9";
+import Section9 from "@/sections/project-cases/sectionContactForm/Section9";
 
 const companies = [
   "https://static.andersenlab.com/andersenlab/new-andersensite/icons/logos/oracle-java-se.svg",

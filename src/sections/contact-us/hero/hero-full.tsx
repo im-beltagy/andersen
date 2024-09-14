@@ -16,7 +16,7 @@ import {
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import React, { useEffect, useState } from "react";
-import Section9 from "@/sections/project-cases/section9/Section9";
+import Section9 from "@/sections/project-cases/sectionContactForm/Section9";
 import Slider from "@/components/slider";
 import styles from "../../../components/slider/styles.module.css";
 import styles2 from "./hero.module.css";

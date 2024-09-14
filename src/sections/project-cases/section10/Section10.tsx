@@ -2,8 +2,15 @@ import React from "react";
 import styles from "./section10.module.css";
 import Image from "next/image";
 import { Box } from "@mui/material";
-
-const Section10 = () => {
+interface Section11Props {
+  title: string;
+  imageUrl: string;
+  caseUrl: any;
+  title2: string;
+  imageUrl2: string;
+  caseUrl2: any;
+}
+const Section10: React.FC<Section11Props> = ( {title, caseUrl, imageUrl, title2, imageUrl2, caseUrl2}) => {
   return (
     <section className={styles.section}>
       <Box className={styles.container}>
@@ -13,29 +20,29 @@ const Section10 = () => {
               className={
                 styles["ProjectGalleryCard-module--pictureWrapper--b2b15"]
               }
-              href="/project-cases/ui-ux-redesign-saas-airlines-loyalty-management"
+              href={caseUrl}
             >
               <picture
                 className={styles["ProjectGalleryCard-module--picture--7ce08"]}
               >
                 <source
-                  data-srcset="https://content.andersenlab.com/case/ui-ux-redesign-saas-airlines-loyalty-management/preview/mobile_webp/1712317953.webp 1x"
+                  data-srcset={imageUrl}
                   media="(max-width: 544px)"
                   type="image/webp"
                 />
                 <source
-                  data-srcset="https://content.andersenlab.com/case/ui-ux-redesign-saas-airlines-loyalty-management/preview/mobile/1712317946.jpg 1x"
+                  data-srcset={imageUrl}
                   media="(max-width: 544px)"
                 />
                 <source
-                  data-srcset="https://content.andersenlab.com/case/ui-ux-redesign-saas-airlines-loyalty-management/preview/desktop_webp/1712317943.webp 1x"
+                  data-srcset={imageUrl}
                   type="image/webp"
                 />
-                <source data-srcset="https://content.andersenlab.com/case/ui-ux-redesign-saas-airlines-loyalty-management/preview/desktop/1712317939.jpg 1x" />
+                <source data-srcset={imageUrl} />
                 <Image
                   className={`${styles["ProjectGalleryCard-module--img--11f55"]} ${styles["Image-module--img--b87cd"]} lazyloaded`}
                   alt="UI/UX Redesign for Airline SaaS preview"
-                  src="https://content.andersenlab.com/case/ui-ux-redesign-saas-airlines-loyalty-management/preview/desktop_webp/1712317943.webp"
+                  src={imageUrl}
                   width={500} // Set appropriate width
                   height={300} // Set appropriate height
                 />
@@ -44,18 +51,12 @@ const Section10 = () => {
             <Box
               className={styles["ProjectGalleryCard-module--content--513b2"]}
             >
-              <Image
-                className={`${styles["ProjectGalleryCard-module--logo--75429"]} lazyloaded`}
-                src="https://static.andersenlab.com/andersenlab/new-andersensite/cases/nda.svg"
-                alt="UI/UX Redesign for Airline SaaS logo"
-                width={50} // Set appropriate width
-                height={50} // Set appropriate height
-              />
+
               <a
                 className={styles["ProjectGalleryCard-module--title--f49ae"]}
-                href="/project-cases/ui-ux-redesign-saas-airlines-loyalty-management"
+                href={caseUrl}
               >
-                UI/UX Redesign for Airline SaaS
+                {title}
               </a>
             </Box>
           </Box>
@@ -66,29 +67,29 @@ const Section10 = () => {
               className={
                 styles["ProjectGalleryCard-module--pictureWrapper--b2b15"]
               }
-              href="/project-cases/ui-ux-redesign-saas-airlines-loyalty-management"
+              href={caseUrl2}
             >
               <picture
                 className={styles["ProjectGalleryCard-module--picture--7ce08"]}
               >
                 <source
-                  data-srcset="https://content.andersenlab.com/case/ui-ux-redesign-saas-airlines-loyalty-management/preview/mobile_webp/1712317953.webp 1x"
+                  data-srcset={imageUrl2}
                   media="(max-width: 544px)"
                   type="image/webp"
                 />
                 <source
-                  data-srcset="https://content.andersenlab.com/case/ui-ux-redesign-saas-airlines-loyalty-management/preview/mobile/1712317946.jpg 1x"
+                  data-srcset={imageUrl2}
                   media="(max-width: 544px)"
                 />
                 <source
-                  data-srcset="https://content.andersenlab.com/case/ui-ux-redesign-saas-airlines-loyalty-management/preview/desktop_webp/1712317943.webp 1x"
+                  data-srcset={imageUrl2}
                   type="image/webp"
                 />
-                <source data-srcset="https://content.andersenlab.com/case/ui-ux-redesign-saas-airlines-loyalty-management/preview/desktop/1712317939.jpg 1x" />
+                <source data-srcset={imageUrl2} />
                 <Image
                   className={`${styles["ProjectGalleryCard-module--img--11f55"]} ${styles["Image-module--img--b87cd"]} lazyloaded`}
                   alt="UI/UX Redesign for Airline SaaS preview"
-                  src="https://static.andersenlab.com/andersenlab/new-andersensite/cases/avacanet_camino/preview-shots/medium.webp"
+                  src={imageUrl2}
                   width={500}
                   height={300}
                 />
@@ -97,18 +98,11 @@ const Section10 = () => {
             <Box
               className={styles["ProjectGalleryCard-module--content--513b2"]}
             >
-              <Image
-                className={`${styles["ProjectGalleryCard-module--logo--75429"]} lazyloaded`}
-                src="https://static.andersenlab.com/andersenlab/new-andersensite/cases/nda.svg"
-                alt="UI/UX Redesign for Airline SaaS logo"
-                width={50}
-                height={50}
-              />
               <a
                 className={styles["ProjectGalleryCard-module--title--f49ae"]}
-                href="/project-cases/ui-ux-redesign-saas-airlines-loyalty-management"
+                href={caseUrl2}
               >
-                UI/UX Redesign for Airline SaaS
+                {title2}
               </a>
             </Box>
           </Box>

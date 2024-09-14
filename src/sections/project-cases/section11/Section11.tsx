@@ -1,30 +1,38 @@
+"use client";
 import React from "react";
 import styles from "./Section11.module.css"; // Make sure to include the CSS file
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-
-const Section11 = () => {
+import Link from 'next/link';
+interface Section11Props {
+    title: string;
+    imageUrl: string;
+    caseUrl: any;
+}
+const Section11: React.FC<Section11Props> = ( {title, caseUrl, imageUrl}) => {
   return (
     <Box className={styles.container}>
-      <Box className={styles.textSection1}>
-        <Box className={styles.label}>NDA</Box>
-        <Typography className={styles.hi}>
-          A Blockchain Ecosystem for B2B and B2C Products
-        </Typography>
-      </Box>
-      <Box className={styles.imageSection}>
-        <Image
-          src="https://content.andersenlab.com/case/ui-ux-redesign-saas-airlines-loyalty-management/preview/desktop_webp/1712317943.webp"
-          alt="Description"
-          width={500} 
-          height={300}
-        />
+        <Box className={styles.textSection1}>
+            <Box></Box>
+            <Link href={caseUrl} passHref legacyBehavior>
+                <a className={styles.title}>
+                    <Typography component="span" style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>
+                        {title}
+                    </Typography>
+                </a>
+            </Link>
+
+        </Box>
+        <Box className={styles.imageSection}>
+            <Link href={caseUrl} passHref legacyBehavior>
+                <a>
+                    <Image src={imageUrl} alt="Description" width={500} height={300} />
+                </a>
+            </Link>
       </Box>
       <Box className={styles.textSection2}>
-        <Box className={styles.label}>NDA</Box>
-        <Typography className={styles.hi}>
-          A Blockchain Ecosystem for B2B and B2C Products
-        </Typography>
+        <Box ></Box>
+
       </Box>
     </Box>
   );

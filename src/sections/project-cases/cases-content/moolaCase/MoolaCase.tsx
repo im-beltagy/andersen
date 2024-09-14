@@ -6,10 +6,9 @@ import Section4 from "@/sections/project-cases/sectionImage/Section4";
 import Section5 from "@/sections/project-cases/sectionFunctionalities/Section5";
 import Section6 from "@/sections/project-cases/sectionSolution/Section6";
 import Section7 from "@/sections/project-cases/sectionResults/Section7";
-import Section8 from "../../section8/Section8";
 import Section10 from "../../section10/Section10";
 import Section11 from "../../section11/Section11";
-import Section9 from "../../section9/Section9";
+import Section9 from "@/sections/project-cases/sectionContactForm/Section9";
 import Section2 from "@/sections/project-cases/sectionAboutCustomer/Section2";
 import SectionProblem from "@/sections/project-cases/sectionProblem/SectionProblem";
 
@@ -17,7 +16,7 @@ function ViewProjectCases(): React.JSX.Element {
   return (
     <Box sx={{padding:"20px", maxWidth:"1200px", margin:"auto", marginTop:"50px", backgroundColor: "#ffffff"}}>
       <Section1
-          title="Mola Pay - Die smarte Finanzlösung"
+          title="Moola Pay - Die smarte Finanzlösung"
           branch="Fintech"
           imageUrl= "/assets/images/cases/Frame 5.png"
 
@@ -26,7 +25,7 @@ function ViewProjectCases(): React.JSX.Element {
           description=""
       />
       <Section3
-          description={"Die Mola Pay-Anwendung ist ein unverzichtbares Werkzeug für Unternehmen, die ihre Ausgaben effizient und effektiv steuern möchten. Sie bietet die notwendigen Funktionen zur Nachverfolgung von Ausgaben und zur Kontrolle von Budgets, was dazu beiträgt, fundierte Finanzentscheidungen zu treffen und gleichzeitig Zeit und Ressourcen zu sparen. Die Anwendung steht in Verbindung mit der T2 International Company. Das Team hinter Mola Pay besteht aus erfahrenen Fachleuten, die sich darauf spezialisiert haben, Unternehmen auf ihrem Weg zum finanziellen Erfolg zu begleiten.\n" +
+          description={"Die Moola Pay-Anwendung ist ein unverzichtbares Werkzeug für Unternehmen, die ihre Ausgaben effizient und effektiv steuern möchten. Sie bietet die notwendigen Funktionen zur Nachverfolgung von Ausgaben und zur Kontrolle von Budgets, was dazu beiträgt, fundierte Finanzentscheidungen zu treffen und gleichzeitig Zeit und Ressourcen zu sparen. Die Anwendung steht in Verbindung mit der T2 International Company. Das Team hinter Moola Pay besteht aus erfahrenen Fachleuten, die sich darauf spezialisiert haben, Unternehmen auf ihrem Weg zum finanziellen Erfolg zu begleiten.\n" +
               "\n" +
               "Anwendung Funktionalität"}
           duration={"24 Monate"}
@@ -39,11 +38,11 @@ function ViewProjectCases(): React.JSX.Element {
       />
       <Section5
           functionalities={[
-              "Automatisierung von Buchhaltungsprozessen: Mola Pay erleichtert die Verwaltung von Ausgaben durch die Automatisierung von Buchhaltungsprozessen. Dies reduziert den Zeitaufwand für die Bearbeitung und Abwicklung von Rechnungen erheblich und minimiert Fehler.",
+              "Automatisierung von Buchhaltungsprozessen: Moola Pay erleichtert die Verwaltung von Ausgaben durch die Automatisierung von Buchhaltungsprozessen. Dies reduziert den Zeitaufwand für die Bearbeitung und Abwicklung von Rechnungen erheblich und minimiert Fehler.",
               "Ausgabenkontrolle: Die Anwendung ermöglicht es Unternehmen, Ausgabenlimits festzulegen und Ausgaben zu kontrollieren, bevor sie anfallen. Dies trägt zu einer besseren Budgetkontrolle bei und verhindert unnötige Ausgaben.",
-              "Sicherheit: Mola Pay gewährleistet sichere Geschäftstransaktionen durch den Einsatz von traditionellen und virtuellen Karten, die vollständig verschlüsselt sind. Zusätzlich werden mehrere Authentifizierungsstufen implementiert, um die Sicherheit der Transaktionen zu gewährleisten.",
+              "Sicherheit: Moola Pay gewährleistet sichere Geschäftstransaktionen durch den Einsatz von traditionellen und virtuellen Karten, die vollständig verschlüsselt sind. Zusätzlich werden mehrere Authentifizierungsstufen implementiert, um die Sicherheit der Transaktionen zu gewährleisten.",
               "Integration: Die Anwendung lässt sich nahtlos in andere Buchhaltungssoftware integrieren, was die Datengenauigkeit verbessert und hilft, Einsparpotenziale zu identifizieren.",
-              "Sofortberichte: Mola Pay bietet sofortige Finanzberichte, die es Unternehmen ermöglichen, Ausgaben zu analysieren und ihre Finanzentscheidungen zu verbessern. Diese Berichte sorgen für Klarheit und Transparenz im Kostenmanagement und steigern die betriebliche Effizienz."
+              "Sofortberichte: Moola Pay bietet sofortige Finanzberichte, die es Unternehmen ermöglichen, Ausgaben zu analysieren und ihre Finanzentscheidungen zu verbessern. Diese Berichte sorgen für Klarheit und Transparenz im Kostenmanagement und steigern die betriebliche Effizienz."
 
               ]}
 
@@ -67,7 +66,7 @@ function ViewProjectCases(): React.JSX.Element {
         <Section6
             description={
                 <>
-                    Ein Proof of Concept (PoC) wurde durchgeführt, um die Machbarkeit und den Nutzen der Mola Pay-Anwendung zu validieren. Diese Phase war entscheidend für den Softwareentwicklungsprozess und umfasste mehrere Schritte:
+                    Ein Proof of Concept (PoC) wurde durchgeführt, um die Machbarkeit und den Nutzen der Moola Pay-Anwendung zu validieren. Diese Phase war entscheidend für den Softwareentwicklungsprozess und umfasste mehrere Schritte:
                     <br /><br />
                     Zunächst wurde eine umfassende <strong>Marktanalyse</strong> durchgeführt, um die Bedürfnisse des Marktes und die Herausforderungen, denen Kunden und Dienstleister gegenüberstehen, zu identifizieren. Diese Analyse legte die Grundlage für die Entwicklung einer Anwendung, die diese Anforderungen effektiv erfüllt.
                     <br /><br />
@@ -80,23 +79,33 @@ function ViewProjectCases(): React.JSX.Element {
             }
       />
       <Section7
-          description={"Die Implementierung der Mola Pay-Anwendung führte zu folgenden konkreten Ergebnissen:"}
+          description={"Die Implementierung der Moola Pay-Anwendung führte zu folgenden konkreten Ergebnissen:"}
           functionalities={
             [
-                "Verbesserung der Effizienz: Mola Pay reduzierte den Zeit- und Arbeitsaufwand für die Verwaltung von Ausgaben und die Bearbeitung von Rechnungen erheblich.",
+                "Verbesserung der Effizienz: Moola Pay reduzierte den Zeit- und Arbeitsaufwand für die Verwaltung von Ausgaben und die Bearbeitung von Rechnungen erheblich.",
                 "Erhöhte Transparenz: Die Anwendung bietet einen klaren Überblick über die Ausgaben, was zu einer verbesserten Nachverfolgung und Kontrolle der Unternehmensausgaben führt.",
                 "Transparenz und Vertrauen: Die Bereitstellung präziser Informationen hat die Transparenz erhöht und das Vertrauen zwischen den Nutzern und den Dienstanbietern gestärkt.",
                 "Fehlerreduzierung: Durch die Automatisierung der Prozesse werden potenzielle menschliche Fehler minimiert.",
                 "Verbesserung der Entscheidungsfindung: Die Bereitstellung genauer und aktueller Daten unterstützt Unternehmen dabei, fundierte Finanzentscheidungen zu treffen.",
-                "Integration: Mola Pay ermöglicht eine einfache Integration mit anderen Buchhaltungssystemen, wodurch die Datengenauigkeit verbessert und Einsparpotenziale identifiziert werden können."
+                "Integration: Moola Pay ermöglicht eine einfache Integration mit anderen Buchhaltungssystemen, wodurch die Datengenauigkeit verbessert und Einsparpotenziale identifiziert werden können."
             ]
           }
 
       />
-      <Section8 />
       <Section9 />
-      <Section10 />
-      <Section11 />
+      <Section10
+          title=  "Pronto - Effiziente Versandlösung"
+          imageUrl= "/assets/images/cases/Frame 3.png"
+          caseUrl= "/project-cases/case1"
+          title2="Quick Clean – Mobile Autowäsche für Komfort"
+          imageUrl2="/assets/images/cases/Frame 1.png"
+          caseUrl2="/project-cases/case3"
+      />
+      <Section11
+          title= { "Barq Daily – Deine Plattform für Online-Shopping"}
+          imageUrl= {"/assets/images/cases/Frame 7.png"}
+          caseUrl= "/project-cases/case4" />
+
     </Box>
   );
 }
