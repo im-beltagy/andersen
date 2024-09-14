@@ -3,12 +3,10 @@ import HomeForm from "@/sections/home/form";
 import HomeHero from "@/sections/home/hero";
 import HomeNews from "@/sections/home/hero/news";
 import InfiniteAutoplayCarousel from "@/sections/home/infinite-scroll";
-import EventsTabs from "@/sections/home/meet-us";
 import ProvidedServices from "@/sections/home/provided-services";
 import ProvidedServicesAccordion from "@/sections/home/provided-services/withAccordion";
 import HomeTechSet from "@/sections/home/tech-set";
 import HomeTrust from "@/sections/home/trust";
-import HomeWorkedWith from "@/sections/home/worked-with";
 import { Box } from "@mui/material";
 const slides = [
   {
@@ -70,8 +68,6 @@ export default function Page() {
         <HomeTrust />
       </Box>
       <InfiniteAutoplayCarousel />
-      <ProvidedServices />
-      <ProvidedServicesAccordion />
       <Box
         sx={{
           backgroundColor: "#fff",
@@ -84,10 +80,8 @@ export default function Page() {
       >
         <HomeNews slidess={slides} />
       </Box>
-      <HomeWorkedWith />
       <HomeCaseStudies />
       <HomeTechSet />
-      <EventsTabs />
       <HomeForm />
     </Box>
   );

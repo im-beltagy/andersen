@@ -6,25 +6,25 @@ import Link from "next/link";
 
 const data = [
   {
-    cover: "/assets/home/case-studies/1.webp",
-    icon: "/assets/companies/tui-color.svg",
-    title: "Internal Tools for a Travel Company",
+    cover: "/assets/images/cases/Frame 3.png",
+    title: "Pronto - Effiziente Versandlösung",
     specialists: "7",
-    months: "22",
+    months: "24",
+    url: "/project-cases/case1",
   },
   {
-    cover: "/assets/home/case-studies/1.webp",
-    icon: "/assets/companies/tui-color.svg",
-    title: "A Data-Driven Medical Solution for a Skin-Care Provider",
-    specialists: "10",
-    months: "42",
+    cover: "/assets/images/cases/Frame 7.png",
+    title: "Barq Daily – Deine Plattform für Online-Shopping",
+    specialists: "13",
+    months: "12",
+    url: "/project-cases/case4",
   },
   {
-    cover: "/assets/home/case-studies/2.webp",
-    icon: "/assets/companies/tui-color.svg",
-    title: "A FinTech Portal to Compare Utility Payment Rates",
-    specialists: "5",
-    months: "36",
+    cover: "/assets/images/cases/Frame 5.png",
+    title: "Moola Pay - Die smarte Finanzlösung",
+    specialists: "9",
+    months: "24",
+    url: "/project-cases/case2",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function HomeCaseStudies() {
 
         <div className={styles.cards_container}>
           {data.map((item) => (
-            <a href="#" className={styles.card} key={item.title}>
+            <a href={item.url} className={styles.card} key={item.title}>
               <div className={styles.cover}>
                 <Image
                   className={styles.cover_image}
@@ -55,7 +55,7 @@ export default function HomeCaseStudies() {
                   justifyContent="flex-end"
                 >
                   <span className={styles.label_item}>
-                    {item.specialists} specialists
+                    {item.specialists} Experte
                   </span>
                   <span className={styles.label_item}>
                     {item.months} months
@@ -64,13 +64,7 @@ export default function HomeCaseStudies() {
               </div>
 
               <div className={styles.card_content}>
-                <Image
-                  className={styles.icon}
-                  src={item.icon}
-                  alt="-"
-                  width={71}
-                  height={30}
-                />
+
                 <h3 className={styles.card_title}>{item.title}</h3>
                 <Stack
                   className={styles.labels_after_title}
@@ -79,7 +73,7 @@ export default function HomeCaseStudies() {
                   justifyContent="flex-end"
                 >
                   <span className={styles.label_item}>
-                    {item.specialists} specialists
+                    {item.specialists} Experte
                   </span>
                   <span className={styles.label_item}>
                     {item.months} months
@@ -99,14 +93,14 @@ export default function HomeCaseStudies() {
           padding={{ xs: "20px", sm: "40px" }}
         >
           <h3 className={styles.card_title}>
-            {"Explore more of Andersen’s case studies"}
+            {"Entdecken Sie weitere Projekte von Webizi"}
           </h3>
           <Link
-            href="#"
+            href="/project-cases"
             target="_blank"
             className={`${globals.button} ${globals.button_primary}`}
           >
-            See all (202)
+            mehr...
           </Link>
         </Stack>
       </Container>
