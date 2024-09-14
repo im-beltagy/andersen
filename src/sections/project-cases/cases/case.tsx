@@ -6,25 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const caseStudies = [
-    {
-        id: 1,
-        title: "Pronto - Effiziente Versandlösung",
-        description: "Pronto vereinfacht den Versand von Waren zwischen Städten, bietet eine schnelle, effiziente Lösung und erleichtert den gesamten Prozess für Kunden und Dienstleister.",
-        category: "Logistik",
-        imageUrl: "/assets/images/cases/pronto_logo 1.png",
-        stats: {
-            downloads: "1k+",
-            rating: "4.7/5",
-            funding: "$100K+",
-        },
-        availableOn: {
-            appleStore: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/source/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/b6c8582d22b0931adebab631f350cece.apple-store.svg",
-            playStore: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/source/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/7b7fef4813775657e82e44a30e3573a4.play-store.svg",
-        },
-        caseStudyUrl: "/project-cases/case1",
-        backgroundImg: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/optimized/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/9aceea39b7236ecc9721eaeab27e93aa.portfolio-app-bharatpay-bg.webp",
-        phoneImg: "/assets/images/cases/pronto.png"
-    },
+
     {
         id: 2,
         title: "Moola Pay - Die smarte Finanzlösung",
@@ -62,6 +44,25 @@ const caseStudies = [
         caseStudyUrl: "/project-cases/case3",
         backgroundImg: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/optimized/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/9aceea39b7236ecc9721eaeab27e93aa.portfolio-app-bharatpay-bg.webp",
         phoneImg: "/assets/images/cases/quick clean.png"
+    },
+    {
+        id: 1,
+        title: "Pronto - Effiziente Versandlösung",
+        description: "Pronto vereinfacht den Versand von Waren zwischen Städten, bietet eine schnelle, effiziente Lösung und erleichtert den gesamten Prozess für Kunden und Dienstleister.",
+        category: "Logistik",
+        imageUrl: "/assets/images/cases/pronto_logo 1.png",
+        stats: {
+            downloads: "1k+",
+            rating: "4.7/5",
+            funding: "$100K+",
+        },
+        availableOn: {
+            appleStore: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/source/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/b6c8582d22b0931adebab631f350cece.apple-store.svg",
+            playStore: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/source/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/7b7fef4813775657e82e44a30e3573a4.play-store.svg",
+        },
+        caseStudyUrl: "/project-cases/case1",
+        backgroundImg: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/optimized/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/9aceea39b7236ecc9721eaeab27e93aa.portfolio-app-bharatpay-bg.webp",
+        phoneImg: "/assets/images/cases/pronto.png"
     },
     {
         id: 4,
