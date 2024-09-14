@@ -23,7 +23,7 @@ const caseStudies = [
         },
         caseStudyUrl: "/project-cases/case1",
         backgroundImg: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/optimized/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/9aceea39b7236ecc9721eaeab27e93aa.portfolio-app-bharatpay-bg.webp",
-        phoneImg: "/assets/images/cases/phone1.png"
+        phoneImg: "/assets/images/cases/pronto.png"
     },
     {
         id: 2,
@@ -42,7 +42,7 @@ const caseStudies = [
         },
         caseStudyUrl: "/project-cases/case2",
         backgroundImg: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/optimized/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/9aceea39b7236ecc9721eaeab27e93aa.portfolio-app-bharatpay-bg.webp",
-        phoneImg: "/assets/images/cases/phone1.png"
+        phoneImg: "/assets/images/cases/moola.png"
     },
     {
         id: 3,
@@ -61,7 +61,7 @@ const caseStudies = [
         },
         caseStudyUrl: "/project-cases/case3",
         backgroundImg: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/optimized/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/9aceea39b7236ecc9721eaeab27e93aa.portfolio-app-bharatpay-bg.webp",
-        phoneImg: "/assets/images/cases/phone1.png"
+        phoneImg: "/assets/images/cases/quick clean.png"
     },
     {
         id: 4,
@@ -80,7 +80,7 @@ const caseStudies = [
         },
         caseStudyUrl: "/project-cases/case4",
         backgroundImg: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/optimized/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/9aceea39b7236ecc9721eaeab27e93aa.portfolio-app-bharatpay-bg.webp",
-        phoneImg: "/assets/images/cases/phone1.png"
+        phoneImg: "/assets/images/cases/barq.png"
     }
 
 

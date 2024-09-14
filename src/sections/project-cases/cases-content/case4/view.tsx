@@ -19,7 +19,7 @@ function ViewProjectCases(): React.JSX.Element {
         <Section1
             title="Barq Daily - Die führende Plattform für Online-Einkäufe"
             branch="E-Commerce / Online-Shopping"
-            imageUrl= "https://d3jqtupnzefbtn.cloudfront.net/andersenlab/new-andersensite/cases/fti/preview-shots/big.webp"
+            imageUrl= "/assets/images/cases/Frame 7.png"
         />
         <Section2
             description= "TODO"
@@ -33,7 +33,7 @@ function ViewProjectCases(): React.JSX.Element {
         />
 
         <Section4
-            imageUrl={"https://static.andersenlab.com/andersenlab/new-andersensite/cases/fti/1.1.desktop-2x.webp"}
+            imageUrl={"/assets/images/cases/Frame 8.png"}
             alt={"Barq Daily" }
             imageDescription={"Barq Daily - Online-Einkaufsplattform"}
         />
