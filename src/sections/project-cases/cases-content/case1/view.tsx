@@ -1,16 +1,17 @@
 import { Box } from "@mui/material";
 import React from "react";
-import Section1 from "../../section1/Section1";
-import Section3 from "../../section3/Section3";
-import Section4 from "../../section4/Section4";
-import Section5 from "../../section5/Section5";
-import Section6 from "../../section6/Section6";
-import Section7 from "../../section7/Section7";
+import Section1 from "@/sections/project-cases/sectionTitle/Section1";
+import Section3 from "@/sections/project-cases/sectionAboutProject/Section3";
+import Section4 from "@/sections/project-cases/sectionImage/Section4";
+import Section5 from "@/sections/project-cases/sectionFunctionalities/Section5";
+import Section6 from "@/sections/project-cases/sectionSolution/Section6";
+import Section7 from "@/sections/project-cases/sectionResults/Section7";
 import Section8 from "../../section8/Section8";
 import Section10 from "../../section10/Section10";
 import Section11 from "../../section11/Section11";
 import Section9 from "../../section9/Section9";
-import Section2 from "../../section2/Section2";
+import Section2 from "@/sections/project-cases/sectionAboutCustomer/Section2";
+import SectionProblem from "@/sections/project-cases/sectionProblem/SectionProblem";
 
 function ViewProjectCases(): React.JSX.Element {
   return (
@@ -44,22 +45,40 @@ function ViewProjectCases(): React.JSX.Element {
                 "Moderne Technologien: Die Anwendung nutzt mobile Apps für iOS und Android, Standortverfolgung, elektronische Zahlungen, Cloud-Computing und fortschrittliche Kommunikationstechnologien, um ein effizientes und sicheres Nutzungserlebnis zu gewährleisten."]}
 
       />
+        <SectionProblem
+            description={
+                <>
+                    Das Hauptproblem, das durch die Pronto-App gelöst wurde, war die Ineffizienz und Komplexität im Versandprozess. Unternehmen hatten Schwierigkeiten, ihre Sendungen und Bestellungen effektiv zu verwalten, was oft zu Verzögerungen, Kommunikationsproblemen und einem Mangel an Transparenz führte.
+                    <br /><br />
+                    Zudem bestand die Herausforderung, mehrere Systeme zu integrieren, den Versandprozess zu automatisieren und gleichzeitig den rechtlichen Anforderungen in Bezug auf Datenschutz und Sicherheit gerecht zu werden.
+                    <br /><br />
+                    Die Notwendigkeit einer zentralen, benutzerfreundlichen Lösung, die diese Prozesse vereinfacht, war entscheidend.
+                </>
+            }
+        />
+
+
         <Section6
             description={
-                "Ein Proof of Concept (PoC) wurde durchgeführt, um die Machbarkeit und den Nutzen der Mola Pay-Anwendung zu validieren. Diese Phase war entscheidend für den Softwareentwicklungsprozess und umfasste:" +
-                "\n" +
-                "• Prototypenentwicklung: Ein erster Prototyp der Anwendung wurde entwickelt, der grundlegende Funktionen zur Spesenverwaltung beinhaltete. Dies half dabei, die Anwendbarkeit und den praktischen Nutzen der Lösung zu demonstrieren.\n" +
-                "\n" +
-                "• Ideenvalidierung: Durch Tests des Prototyps wurde sichergestellt, dass die Idee der Mola Pay-Anwendung umsetzbar ist und erfolgreich weiterentwickelt werden kann.\n" +
-                "\n" +
-                "• Feedback sammeln: Der Prototyp wurde genutzt, um Feedback von potenziellen Nutzern zu sammeln. Dies half dabei, die Anforderungen und notwendige Verbesserungen zu identifizieren.\n" +
-                "\n" +
-                "• Technologiebewertung: Es wurde geprüft, ob die in der Anwendung verwendeten Technologien die erforderliche Funktionalität unterstützen, stabil und sicher sind.\n" +
-                "\n" +
-                "Die Analyse der Funktionsweise von Mola Pay basierte auf den Anforderungen des Kunden und der Transformation manueller Ausgabenprozesse in ein digitales, sicheres System:\n" +
-                "1. Erfassung von Ausgaben: Mitarbeiter erfassen ihre Ausgaben digital und sicher in der Anwendung. Diese Ausgaben werden dann zur Genehmigung vorgelegt.\n" +
-                "2. Überprüfung und Genehmigung: Die Verwaltung prüft die eingereichten Ausgaben. Bei Genehmigung wird der Betrag freigegeben.\n" +
-                "3. Bearbeitung im Falle einer Ablehnung: Falls eine Ausgabe abgelehnt wird, erhält der Mitarbeiter Benachrichtigungen über die Ablehnung, und die Ausgaben werden nicht freigegeben. Die Kommunikation zwischen Mitarbeitern und Abteilungen erfolgt über E-Mail oder Benachrichtigungen innerhalb der Anwendung.\n"
+                <>
+                    Ein Proof of Concept (PoC) wurde durchgeführt, um die Machbarkeit und den Nutzen der Mola Pay-Anwendung zu validieren. Diese Phase war entscheidend für den Softwareentwicklungsprozess und umfasste:
+                    <br /><br />
+                    <strong>• Prototypenentwicklung:</strong> Ein erster Prototyp der Anwendung wurde entwickelt, der grundlegende Funktionen zur Spesenverwaltung beinhaltete. Dies half dabei, die Anwendbarkeit und den praktischen Nutzen der Lösung zu demonstrieren.
+                    <br /><br />
+                    <strong>• Ideenvalidierung:</strong> Durch Tests des Prototyps wurde sichergestellt, dass die Idee der Mola Pay-Anwendung umsetzbar ist und erfolgreich weiterentwickelt werden kann.
+                    <br /><br />
+                    <strong>• Feedback sammeln:</strong> Der Prototyp wurde genutzt, um Feedback von potenziellen Nutzern zu sammeln. Dies half dabei, die Anforderungen und notwendige Verbesserungen zu identifizieren.
+                    <br /><br />
+                    <strong>• Technologiebewertung:</strong> Es wurde geprüft, ob die in der Anwendung verwendeten Technologien die erforderliche Funktionalität unterstützen, stabil und sicher sind.
+                    <br /><br />
+                    Die Analyse der Funktionsweise von Mola Pay basierte auf den Anforderungen des Kunden und der Transformation manueller Ausgabenprozesse in ein digitales, sicheres System:
+                    <br /><br />
+                    <strong>1. Erfassung von Ausgaben:</strong> Mitarbeiter erfassen ihre Ausgaben digital und sicher in der Anwendung. Diese Ausgaben werden dann zur Genehmigung vorgelegt.
+                    <br /><br />
+                    <strong>2. Überprüfung und Genehmigung:</strong> Die Verwaltung prüft die eingereichten Ausgaben. Bei Genehmigung wird der Betrag freigegeben.
+                    <br /><br />
+                    <strong>3. Bearbeitung im Falle einer Ablehnung:</strong> Falls eine Ausgabe abgelehnt wird, erhält der Mitarbeiter Benachrichtigungen über die Ablehnung, und die Ausgaben werden nicht freigegeben. Die Kommunikation zwischen Mitarbeitern und Abteilungen erfolgt über E-Mail oder Benachrichtigungen innerhalb der Anwendung.
+                </>
             }
 
 
