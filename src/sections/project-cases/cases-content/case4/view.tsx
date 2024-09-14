@@ -17,7 +17,7 @@ function ViewProjectCases(): React.JSX.Element {
   return (
     <Box sx={{padding:"20px", maxWidth:"1200px", margin:"auto", marginTop:"50px", backgroundColor: "#ffffff"}}>
         <Section1
-            title="Barq Daily - Die führende Plattform für Online-Einkäufe"
+            title="Barq Daily – Deine Plattform für Online-Shopping"
             branch="E-Commerce / Online-Shopping"
             imageUrl= "/assets/images/cases/Frame 7.png"
         />

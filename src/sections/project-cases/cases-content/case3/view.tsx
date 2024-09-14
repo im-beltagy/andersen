@@ -17,7 +17,7 @@ function ViewProjectCases(): React.JSX.Element {
   return (
     <Box sx={{padding:"20px", maxWidth:"1200px", margin:"auto", marginTop:"50px", backgroundColor: "#ffffff"}}>
         <Section1
-            title="Quick clean  - Die mobile Autowaschanwendung für Komfort und Effizienz"
+            title="Quick Clean – Mobile Autowäsche für Komfort"
             branch="Mobile Apps / Fahrzeugpflege"
             imageUrl= "/assets/images/cases/Frame 1.png"
         />
