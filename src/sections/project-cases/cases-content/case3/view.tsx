@@ -19,7 +19,7 @@ function ViewProjectCases(): React.JSX.Element {
         <Section1
             title="Quick clean  - Die mobile Autowaschanwendung für Komfort und Effizienz"
             branch="Mobile Apps / Fahrzeugpflege"
-            imageUrl= "https://d3jqtupnzefbtn.cloudfront.net/andersenlab/new-andersensite/cases/fti/preview-shots/big.webp"
+            imageUrl= "/assets/images/cases/Frame 1.png"
         />
         <Section2
             description= "TODO"
@@ -30,7 +30,7 @@ function ViewProjectCases(): React.JSX.Element {
             technologies={["Node JS", "React JS", "MySQL", "Azure", "Gitlab CI/CD", "Flutter"]}
         />
         <Section4
-            imageUrl={"https://static.andersenlab.com/andersenlab/new-andersensite/cases/fti/1.1.desktop-2x.webp"}
+            imageUrl={"/assets/images/cases/Frame 2.png"}
             alt={"Quick clean" }
             imageDescription={"Quick clean - mobile Autowaschanwendung"}
 

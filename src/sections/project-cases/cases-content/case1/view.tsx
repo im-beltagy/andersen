@@ -19,7 +19,7 @@ function ViewProjectCases(): React.JSX.Element {
       <Section1
             title="Pronto - Effiziente Versandlösung"
             branch="Logistik"
-            imageUrl= "https://d3jqtupnzefbtn.cloudfront.net/andersenlab/new-andersensite/cases/fti/preview-shots/big.webp"
+            imageUrl= "/assets/images/cases/Frame 3.png"
       />
         <Section2
             description="FTI Group operates in six source markets and offers holiday packages in more than 120 countries."
@@ -30,7 +30,7 @@ function ViewProjectCases(): React.JSX.Element {
             technologies={[".Net", "React JS", "MySQL", "Azure", "Gitlab CI/CD", "Flutter"]}
       />
       <Section4
-            imageUrl={"https://static.andersenlab.com/andersenlab/new-andersensite/cases/fti/1.1.desktop-2x.webp"}
+            imageUrl={"/assets/images/cases/Frame 4.png"}
             alt={"Pronto Versandlösung" }
             imageDescription={"Pronto - Effiziente Versandlösung"}
 

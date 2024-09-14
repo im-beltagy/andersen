@@ -19,7 +19,7 @@ function ViewProjectCases(): React.JSX.Element {
       <Section1
           title="Mola Pay - Die smarte Finanzlösung"
           branch="Fintech"
-          imageUrl= "https://d3jqtupnzefbtn.cloudfront.net/andersenlab/new-andersensite/cases/fti/preview-shots/big.webp"
+          imageUrl= "/assets/images/cases/Frame 5.png"
 
       />
       <Section2
@@ -33,7 +33,7 @@ function ViewProjectCases(): React.JSX.Element {
           technologies={["Node JS", "Vue.js", "MySQL", "Azure", "Gitlab CI/CD", "Flutter"]}
       />
       <Section4
-          imageUrl={"https://static.andersenlab.com/andersenlab/new-andersensite/cases/fti/1.1.desktop-2x.webp"}
+          imageUrl={"/assets/images/cases/Frame 6.png"}
           alt={"Pronto Versandlösung" }
           imageDescription={"Pronto - Effiziente Versandlösung"}
       />
