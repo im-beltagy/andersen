@@ -43,7 +43,46 @@ const caseStudies = [
         caseStudyUrl: "/project-cases/case2",
         backgroundImg: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/optimized/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/9aceea39b7236ecc9721eaeab27e93aa.portfolio-app-bharatpay-bg.webp",
         phoneImg: "/assets/images/cases/phone1.png"
+    },
+    {
+        id: 3,
+        title: "Quick clean  - Die mobile Autowaschanwendung für Komfort und Effizienz",
+        description: "Quicki Clean ist eine mobile App, die hochwertige Autowaschdienste bietet. Mit Funktionen wie Geolokalisierung und sicheren Zahlungstechniken ermöglicht die App eine bequeme und benutzerfreundliche Buchung von Fahrzeugpflege-Diensten.",
+        category: "Mobile Apps / Fahrzeugpflege",
+        imageUrl: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/source/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/c2171a5a36ef99d621b79775abe9acd6.portfolio-log-bharatpay.svg",
+        stats: {
+            downloads: "1K+",
+            rating: "4.8/5",
+            funding: "$105K+",
+        },
+        availableOn: {
+            appleStore: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/source/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/b6c8582d22b0931adebab631f350cece.apple-store.svg",
+            playStore: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/source/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/7b7fef4813775657e82e44a30e3573a4.play-store.svg",
+        },
+        caseStudyUrl: "/project-cases/case3",
+        backgroundImg: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/optimized/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/9aceea39b7236ecc9721eaeab27e93aa.portfolio-app-bharatpay-bg.webp",
+        phoneImg: "/assets/images/cases/phone1.png"
+    },
+    {
+        id: 4,
+        title: "Barq Daily - Die führende Plattform für Online-Einkäufe",
+        description: "Barq Daily ist die führende Plattform für Online-Einkäufe. Sie bietet ein reibungsloses und komfortables Einkaufserlebnis und kombiniert eine große Auswahl an hochwertigen Produkten mit wettbewerbsfähigen Preisen, die bequem von zu Hause aus zugänglich sind. Die Anwendung spart den Nutzern Zeit und Mühe und ermöglicht ihnen eine erstklassige Einkaufserfahrung.",
+        category: "E-Commerce / Online-Shopping",
+        imageUrl: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/source/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/c2171a5a36ef99d621b79775abe9acd6.portfolio-log-bharatpay.svg",
+        stats: {
+            downloads: "1K+",
+            rating: "4.8/5",
+            funding: "$105K+",
+        },
+        availableOn: {
+            appleStore: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/source/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/b6c8582d22b0931adebab631f350cece.apple-store.svg",
+            playStore: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/source/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/7b7fef4813775657e82e44a30e3573a4.play-store.svg",
+        },
+        caseStudyUrl: "/project-cases/case4",
+        backgroundImg: "https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/optimized/rev-6b6d411/www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/09/9aceea39b7236ecc9721eaeab27e93aa.portfolio-app-bharatpay-bg.webp",
+        phoneImg: "/assets/images/cases/phone1.png"
     }
+
 
 ];
 const Case = () => {

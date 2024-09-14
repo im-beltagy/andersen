@@ -1,16 +1,17 @@
 import { Box } from "@mui/material";
 import React from "react";
-import Section1 from "../../section1/Section1";
-import Section3 from "../../section3/Section3";
-import Section4 from "../../section4/Section4";
-import Section5 from "../../section5/Section5";
-import Section6 from "../../section6/Section6";
-import Section7 from "../../section7/Section7";
+import Section1 from "@/sections/project-cases/sectionTitle/Section1";
+import Section3 from "@/sections/project-cases/sectionAboutProject/Section3";
+import Section4 from "@/sections/project-cases/sectionImage/Section4";
+import Section5 from "@/sections/project-cases/sectionFunctionalities/Section5";
+import Section6 from "@/sections/project-cases/sectionSolution/Section6";
+import Section7 from "@/sections/project-cases/sectionResults/Section7";
 import Section8 from "../../section8/Section8";
 import Section10 from "../../section10/Section10";
 import Section11 from "../../section11/Section11";
 import Section9 from "../../section9/Section9";
-import Section2 from "../../section2/Section2";
+import Section2 from "@/sections/project-cases/sectionAboutCustomer/Section2";
+import SectionProblem from "@/sections/project-cases/sectionProblem/SectionProblem";
 
 function ViewProjectCases(): React.JSX.Element {
   return (
@@ -47,19 +48,36 @@ function ViewProjectCases(): React.JSX.Element {
               ]}
 
       />
-      <Section6
-          description={
-              "Ein Proof of Concept (PoC) wurde durchgeführt, um die Machbarkeit und den Nutzen der Mola Pay-Anwendung zu validieren. Diese Phase war entscheidend für den Softwareentwicklungsprozess und umfasste:" +
-              "\n" +
-              "Zunächst wurde eine umfassende Marktanalyse durchgeführt, um die Bedürfnisse des Marktes und die Herausforderungen, denen Kunden und Dienstleister gegenüberstehen, zu identifizieren. Diese Analyse legte die Grundlage für die Entwicklung einer Anwendung, die diese Anforderungen effektiv erfüllt.\n" +
-              "\n" +
-              "In den anschließenden ersten Tests und Interviews mit einer repräsentativen Stichprobe potenzieller Benutzer zeigte sich ein großes Interesse an den vorgeschlagenen Funktionen der Pronto-Anwendung. \n" +
-              "Die positiven Rückmeldungen aus diesen Tests wurden genutzt, um die Anwendung weiter zu verbessern.\n" +
-              "\n" +
-              "Die Nutzer reagierten insgesamt sehr positiv auf die Pronto-Anwendung, zeigten eine hohe Bereitschaft zur Nutzung und lobten die erleichterte und transparentere Abwicklung des Versandbetriebs. \n" +
-              "\n" +
-              "Nach der Markteinführung verzeichnete die Anwendung ein kontinuierliches Wachstum in Bezug auf Nutzerzahlen und durchgeführte Vorgänge, was die positive Marktreaktion und die Akzeptanz der Zielgruppe verdeutlichte.\n"
-          }
+        <SectionProblem
+        description={
+            <>
+                Im Rahmen dieses Projekts stellte der Kunde die Aufgabe, eine umfassende Web- und Mobilanwendung zu entwickeln, die die Verwaltung, Verfolgung und Analyse von Ausgaben und Auszahlungen innerhalb von Unternehmen ermöglicht. Dabei galt es, mehrere Herausforderungen zu meistern:
+                <br /> <br />
+                <strong>Klarheit und Vision:</strong> Es mangelte an einer Echtzeit-Überwachung und einer klaren Übersicht über die Unternehmensausgaben, was die Transparenz und Effizienz der Finanzverwaltung stark beeinträchtigte.
+                <br /><br />
+                <strong>Organisation der Spesenverwaltung:</strong> Traditionelle, papierbasierte Methoden zur Verwaltung von Ausgaben erwiesen sich als ineffektiv und zeitaufwendig, wodurch die Notwendigkeit einer digitalen Lösung offensichtlich wurde.
+                <br /><br />
+                <strong>Automatisierung und Integration:</strong> Der Mangel an Automatisierung und die fehlende Integration mit anderen Systemen erschwerten eine effiziente Verwaltung und Analyse der Finanzdaten.
+                <br /><br />
+                <strong>Informationssicherheit:</strong> Es bestand ein Bedarf an besserer Datensicherheit sowie an der Einhaltung von Vorschriften und Gesetzen, um die Integrität der Finanzdaten zu gewährleisten.
+            </>
+        }
+    />
+
+        <Section6
+            description={
+                <>
+                    Ein Proof of Concept (PoC) wurde durchgeführt, um die Machbarkeit und den Nutzen der Mola Pay-Anwendung zu validieren. Diese Phase war entscheidend für den Softwareentwicklungsprozess und umfasste mehrere Schritte:
+                    <br /><br />
+                    Zunächst wurde eine umfassende <strong>Marktanalyse</strong> durchgeführt, um die Bedürfnisse des Marktes und die Herausforderungen, denen Kunden und Dienstleister gegenüberstehen, zu identifizieren. Diese Analyse legte die Grundlage für die Entwicklung einer Anwendung, die diese Anforderungen effektiv erfüllt.
+                    <br /><br />
+                    In den anschließenden <strong>ersten Tests und Interviews</strong> mit einer repräsentativen Stichprobe potenzieller Benutzer zeigte sich ein großes Interesse an den vorgeschlagenen Funktionen der Pronto-Anwendung. Die positiven Rückmeldungen aus diesen Tests wurden genutzt, um die Anwendung weiter zu verbessern.
+                    <br /><br />
+                    Die Nutzer reagierten insgesamt sehr positiv auf die Pronto-Anwendung, zeigten eine hohe Bereitschaft zur Nutzung und lobten die erleichterte und transparentere Abwicklung des Versandbetriebs.
+                    <br /><br />
+                    Nach der <strong>Markteinführung</strong> verzeichnete die Anwendung ein kontinuierliches Wachstum in Bezug auf Nutzerzahlen und durchgeführte Vorgänge, was die positive Marktreaktion und die Akzeptanz der Zielgruppe verdeutlichte.
+                </>
+            }
       />
       <Section7
           description={"Die Implementierung der Mola Pay-Anwendung führte zu folgenden konkreten Ergebnissen:"}

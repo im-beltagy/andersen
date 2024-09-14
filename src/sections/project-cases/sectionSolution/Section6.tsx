@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Box, Typography } from "@mui/material";
 
 interface Section6Props {
-    description: string;
+    description: any;
 }
 
 const Section6: React.FC<Section6Props> = ({ description }) => {
@@ -20,13 +20,7 @@ const Section6: React.FC<Section6Props> = ({ description }) => {
                         height={40}
                     />
                     <Typography className={styles.description}>
-                        {/* Handling line breaks by splitting the text and mapping it */}
-                        {description.split("\n").map((line, index) => (
-                            <React.Fragment key={index}>
-                                {line}
-                                <br />
-                            </React.Fragment>
-                        ))}
+                        {description}
                     </Typography>
                 </Box>
             </Box>
