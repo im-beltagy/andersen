@@ -1,12 +1,11 @@
 .company_img {
   display: block;
   margin-inline: auto;
-  filter: grayscale(1) contrast(50%) brightness(60%);
+  filter: none;
 }
 
 @media (min-width: 545px) {
   .company_link .company_img {
-    filter: grayscale(1) contrast(50%) brightness(60%);
     transition: filter 0.3;
     -webkit-transition: -webkit-filter 0.3s;
   }
@@ -24,6 +23,6 @@
     filter: grayscale(1) contrast(50%) brightness(60%);
     transition: filter 0.3;
     -webkit-transition: -webkit-filter 0.3s;
-    
+
   }
 }

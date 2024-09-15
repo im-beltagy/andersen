@@ -32,7 +32,7 @@ function HeroFull():React.JSX.Element {
           <ImageListItemBar
           sx={{height:'50%', background:`linear-gradient(0deg, rgba(2,13,28,1) 0%, rgba(255,255,255,0) 100%)`}}
           title={  <Container>
-            <Typography fontWeight="bold"  sx={{lineHeight:1.1,fontSize: {xs:35, sm:50, md:70, lg:100}}}>Get to Know Your <br /> Software Experts
+            <Typography fontWeight="bold"  sx={{lineHeight:1.1,fontSize: {xs:35, sm:50, md:70, lg:100}}}>Lernen Sie Ihre   <br /> Softwareexperten kennen
              <Box component="span" sx={{mx:2,fontSize:30,color:(theme)=> theme.palette.primary.main}}>•</Box></Typography>
              </Container>}
           />

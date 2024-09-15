@@ -37,7 +37,7 @@ function TeamWork(): React.JSX.Element {
                 fontWeight="bold"
                 sx={{ color: "#fff", fontSize: { xs: 18, sm: 25, md: 60 } }}
               >
-                {`Andersen's team at work and leisure`}
+                {`Das Webizi Team `}
               </Typography>
             </Grid>
             <Grid item xs={12}>
