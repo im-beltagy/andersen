@@ -6,7 +6,12 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
     images: {
         domains: [
-
+          "d3jqtupnzefbtn.cloudfront.net",
+          "content.andersenlab.com",
+          "static.andersenlab.com",
+          "cdn-gnpmp.nitrocdn.com",
+          "prestashop.com",
+          "andersenlab.com"
         ],
       },
 };
