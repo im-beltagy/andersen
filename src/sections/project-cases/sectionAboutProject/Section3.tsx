@@ -14,17 +14,6 @@ const Section3: React.FC<Section3Props> = ({description, duration, technologies}
         <Typography className={styles.firstDescription}>
           {description}
         </Typography>
-        {/*<Box className={styles.parentSecondDescription}>
-          <Typography className={styles.secondDescription}>
-            {`   The results of the project spoke for themselves. PR Manager at FTI
-            Group Gert Becker was full of praise for Andersen's contribution to
-            the resulting voucher management software. He noted that the clean
-            code, business-friendly ideas, and transparency of our engineers'
-            work won their confidence, leading to the partnership extending to
-            four subprojects in the travel industry. FTI Group entrusted
-            Andersen with tasks of various complexity levels.`}
-          </Typography>
-        </Box>*/}
         <Box className={styles.details}>
           <Box className={styles.detailItem}>
             <span className={styles.detailTitle}>DAUER:</span>

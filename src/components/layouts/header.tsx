@@ -210,7 +210,7 @@ export default function Header(props: Props) {
           className={`${globals.button} ${globals.button_outlined}`}
           style={{ minWidth: "110px", padding: "10px 18px", fontSize: "14px" }}
         >
-          Kontaktieren Sie uns
+            Kontaktieren Sie uns
         </Link>
       </Stack>
     </Box>

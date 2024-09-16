@@ -207,7 +207,7 @@ export default function Footer(props: Props) {
                       }}
                       color="white"
                     >
-                      Datenschutz
+                      AGB
                     </Typography>
                     <Typography sx={{ my: 0.5, fontSize: 12 }} color="#ccc">
                       ,
