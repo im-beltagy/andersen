@@ -1,4 +1,6 @@
 
+"use server"
+
 import axios from "axios";
 export const SendEmail = async (data: any) => {
 console.log(data);
