@@ -4,18 +4,20 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import styles from "./styles.module.css";
 import globals from "@/app/globals.module.css";
-import HomeNews from "./news";
 import { Container } from "@mui/material";
+import LocaleButton from "@/components/layouts/locale-button";
+import Link from "next/link";
+import React from "react";
+
 
 export default function HomeHero() {
   const t = useTranslations("Pages.Home.Hero");
-
   return (
     <section className={styles.container}>
       <div className={styles.wrapper}>
         <Image
           className={styles.background_sm}
-          src="/assets/home/hero/hero1.png"
+          src="/assets/home/hero/hero3.png"
           alt="hero"
           sizes="(min-width: 3840px) 3840px, 100vw"
           layout="fill"
@@ -34,16 +36,16 @@ export default function HomeHero() {
 
         <Container className={`${styles.content}`}>
           <h1 className={styles.headding}>{t("headding")}</h1>
-          <button
-            className={`${globals.button} ${globals.button_primary} ${styles.action}`}
+          <LocaleButton />
+          <Link
+              href="/contact-us"
+              className={`${globals.button} ${globals.button_primary} ${styles.action}`}
+              style={{ minWidth: "110px", padding: "10px 18px", fontSize: "14px" }}
           >
-            {t("action")}
-          </button>
+            Projekt Anfrage
+          </Link>
         </Container>
       </div>
-      {/* <Container className={`${styles.news_wrapper}`}>
-        <HomeNews />
-      </Container> */}
     </section>
   );
 }
