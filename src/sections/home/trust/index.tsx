@@ -18,25 +18,17 @@ export default function HomeTrust({mainText}:props) {
           spacing={{ xs: 2, md: 10 }}
         >
           <h2 className={styles.title}>
-           {mainText || ' Our software products are a direct result of the right team and processes cultivated over the years.'}
+           {mainText || ' Unsere Softwareprodukte sind das Ergebnis eines erfahrenen Teams und optimierter Prozesse, die über die Jahre verfeinert und perfektioniert wurden.'}
           </h2>
-          <Divider flexItem orientation="vertical" />
+
           <Stack direction="row" spacing={2} flexShrink={0} color={"#858585"}>
-            <Image
-              width="100"
-              height="100"
-              alt="Clutch top information technology companies"
-              src="/assets/brands/clutch-gray.svg"
-            />
-            <Image
-              width="140"
-              height="100"
-              alt="Clutch top information technology companies"
-              src="https://static.andersenlab.com/andersenlab/new-andersensite/icons/logos/clutch-reviews-stars-100-dark.svg"
-            />
           </Stack>
+
         </Stack>
+        <Divider flexItem  sx={{ width: '100%', my: 2 , marginTop: 10}}/>
+
       </Container>
+
     </Box>
   );
 }

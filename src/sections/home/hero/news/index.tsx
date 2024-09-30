@@ -43,6 +43,16 @@ export default function HomeNews({ slidess }: any) {
           width={1000}
           height={1000}
         />
+          <Typography
+              variant="h4" // Use a heading variant, e.g., "h4" for title styling
+              sx={{
+                  fontWeight: "bold", // You can add custom styles like bold if needed
+                  fontSize: { xs: "1.2rem", md: "2rem" }, // Adjust font size based on screen size
+                  marginY: { xs: ".6rem", md: "1.5rem" },
+              }}
+          >
+              {slide.title}
+          </Typography>
         <Typography
           variant="body1"
           gutterBottom
@@ -61,7 +71,7 @@ export default function HomeNews({ slidess }: any) {
           }}
         >
           <Typography variant="body2" gutterBottom>
-            Available on
+            Verfügbar im
           </Typography>
           <Image
             src={
@@ -130,7 +140,8 @@ export default function HomeNews({ slidess }: any) {
           </Box>
         </Box>
 
-        <Button
+
+          <Button onClick={() => window.open(slide.buttonLink)}
           variant="contained"
           color="success"
           sx={{ marginTop: 1, fontSize: { xs: ".7rem", md: "1rem" } }}

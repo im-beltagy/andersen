@@ -5,17 +5,29 @@ import React from 'react'
 import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
 import TabPanel from '@/components/tabs/tab-panel';
 import Iconify from '@/components/iconify';
+import Link from "next/link";
 
 
-const tabsHead = ['Custom Software Development','Mobile Development', 
-'Web Development',
- 'Managed Delivery',
-'UI/UX Design Services',
-'Staff Augmentation','Dedicated Team' ,'Solution Architecture',
-'Project Management','Quality Assurance Services',
-'DevOps Services','Business Analysis','Cloud Development',' IT Security Management',
-'Data Science', 'Discovery Phase', 'Application Maintenance and Support Services',
-]
+const tabsHead = [
+    'Maßgeschneiderte Softwareentwicklung',
+    'Mobile Entwicklung',
+    'Webentwicklung',
+    'Verwaltete Bereitstellung',
+    'UI/UX-Design-Services',
+    'Personalaufstockung',
+    'Dediziertes Team',
+    'Lösungsarchitektur',
+    'Projektmanagement',
+    'Qualitätssicherungsdienste',
+    'DevOps-Dienste',
+    'Geschäftsanalyse',
+    'Cloud-Entwicklung',
+    'IT-Sicherheitsmanagement',
+    'Datenwissenschaft',
+    'Entdeckungsphase',
+    'Anwendungswartung und -support',
+];
+
 const customTheme = createTheme({
         typography: {
             fontFamily: 'Roboto, Segoe UI, Helvetica Neue, Arial, sans-serif',
@@ -51,7 +63,7 @@ function ItServices():React.JSX.Element {
             <Grid item xs={12}>
 
             <Typography fontWeight="bold" sx={{fontSize:{xs:18, sm:25, md:60}}}>
-            Andersen’s scope of IT services
+                Webizi – Ihr Partner für umfassende IT-Lösungen!
             </Typography>
             </Grid>
             <Grid item xs={12}>
@@ -93,26 +105,27 @@ function ItServices():React.JSX.Element {
         <TabPanel key={item} value={value} index={index} >
             <Box sx={{maxWidth: '100%',}}>
                 <Typography fontWeight="semibold" sx={{fontSize:{xs:16, md:19}}}>
-               {`Andersen's team will bring your idea to life with our diverse expertise and a deep understanding of customers' business goals across a wide variety of industries.`}
+               {`Mit unserer breiten Expertise und tiefem Verständnis Ihrer Geschäftsziele bringt das Webizi-Team Ihre Ideen zum Leben – maßgeschneidert für jede Branche!`}
                 </Typography>
                 <Box sx={{bgcolor: '#fafafa', p:2, my:2, maxWidth: 500,}}>
                 <Typography fontWeight="semibold" sx={{  fontSize:{xs:16, md:19}}}>
-                    Collaborate with Andersen for:
+                    Mit Webizi zum Erfolg!:
                     </Typography>
                     <Typography fontWeight="semibold" sx={{display:'flex',alignItems:'center',gap:2,fontSize:{xs:16, md:19}}}>
                     <Iconify  icon="basil:check-outline" sx={{color:'green',width:13,height:13}}  />
-                       Mobile, web, and cloud development;
+                       Mobile, Web, und Cloud Entwicklung;
                     </Typography>
                     <Typography fontWeight="semibold" sx={{display:'flex',alignItems:'center',gap:2,fontSize:{xs:16, md:19}}}>
                     <Iconify  icon="basil:check-outline" sx={{color:'green',width:13,height:13}}  />
-                    DevOps, QA, and tech support services;
+                    DevOps, QA, und Tech support services;
                     </Typography>
                     <Typography fontWeight="semibold" sx={{display:'flex',alignItems:'center',gap:2,fontSize:{xs:16, md:19}}}>
                     <Iconify  icon="basil:check-outline" sx={{color:'green',width:13,height:13}}  />
-                    UI/UX software design.
+                    UI/UX Software Design.
                     </Typography>
                 </Box>
-                <Button   
+                <Link href="/contact-us" passHref>
+                <Button
                 sx={{
                     borderRadius:0,
                     boxShadow:0,
@@ -130,8 +143,10 @@ function ItServices():React.JSX.Element {
                       borderColor:(theme)=> theme.palette.primary.light,
                     },
                   }} color="primary" variant="contained"  >
-                 See more
+                 Mehr Erfahren
                   </Button>
+                </Link>
+
             </Box>
         </TabPanel>
        ))}

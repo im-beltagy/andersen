@@ -16,7 +16,7 @@ import {
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import React, { useEffect, useState } from "react";
-import Section9 from "@/sections/project-cases/section9/Section9";
+import Section9 from "@/sections/project-cases/sectionContactForm/Section9";
 import Slider from "@/components/slider";
 import styles from "../../../components/slider/styles.module.css";
 import styles2 from "./hero.module.css";
@@ -65,9 +65,6 @@ function HeroFull(): React.JSX.Element {
             key={index}
           >
             <p className={styles.title}>Jun 14, 2024</p>
-            <h4 className={styles.content}>
-              Andersen Sponsors Digital Uzbekistan 2024 Forum
-            </h4>
           </div>
         ))
       );
@@ -77,17 +74,10 @@ function HeroFull(): React.JSX.Element {
   return (
     <div className={styles2.contactSection}>
       <div className={styles2.contactUs}>
-        <Image
-          src="https://andersenlab.com/react-assets/static/800ae4bec3dde4fa3f515d0f41c6264e/1b2ee/tablet.webp"
-          alt="Contact Us"
-          className={styles2.contactUsImage}
-          width={500}
-            height={300}
-        />
         <div className={styles2.contactUsContent}>
-          <h2>Contact Us</h2>
+          <h2>Kontaktieren Sie uns</h2>
           <p>
-            We would love to hear from you! Please reach out for any inquiries.
+            Wir würden uns freuen, von Ihnen zu hören! Kontaktieren Sie uns gerne bei Fragen oder Anfragen.
           </p>
         </div>
       </div>
@@ -96,27 +86,15 @@ function HeroFull(): React.JSX.Element {
       >
         <Section9 />
       </Container>
-      <Container sx={{ marginTop: "100px", padding: "50px", color: "#fff" }}>
-        <Typography sx={{ fontSize: "60px", fontWeight: "bold" }}>
-          Testimonials
-        </Typography>
-        <Typography
-          sx={{ fontSize: "20px", fontWeight: "bold", marginY: "50px" }}
-        >
-          Customers of different sizes, industries, and business lines
-          consistently choose our software company for their IT needs,
-          expressing satisfaction with our deliverables. Below is the feedback
-          they have shared.
-        </Typography>
-        <Slider slides={slides} />
-      </Container>
+
       <Container
         sx={{ marginTop: "100px", padding: "50px", backgroundColor: "#fff", display:{ xs: "none", sm: "block"} }}
       >
         <Typography
           sx={{ fontSize: "50px", fontWeight: "bold", marginBottom: "40px" }}
         >
-          Request an IT project cost estimate
+          Anfrage für eine IT-Projektkostenschätzung
+
         </Typography>
         <Tabs
           value={value}
@@ -126,19 +104,14 @@ function HeroFull(): React.JSX.Element {
           
         >
           <Tab
-            label="custom software development"
+            label="Maßgeschneiderte Softwareentwicklung"
             sx={{ color: value === 0 ? "#000" : "#000" }}
-          />
-          <Tab
-            label="team augmentation"
-            sx={{ color: value === 1 ? "#000" : "#000" }}
           />
         </Tabs>
         <TabPanel value={value} index={0}>
           <Grid container spacing={2}>
             <Grid item xs={12} sx={{ fontSize: "20px", fontWeight: "bold" }}>
-              1.What type of software solution would you like to develop with
-              Andersen?
+              1.Welche Art von Softwarelösung möchten Sie mit Webizi entwickeln?
             </Grid>
             <Grid item xs={3} sx={{ display: "flex", alignItems: "center" }}>
               <Checkbox />
@@ -148,10 +121,14 @@ function HeroFull(): React.JSX.Element {
               <Checkbox />
               <Typography>Web</Typography>
             </Grid>
+            <Grid item xs={3} sx={{ display: "flex", alignItems: "center" }}>
+              <Checkbox />
+              <Typography>Desktop</Typography>
+            </Grid>
           </Grid>
           <Grid container spacing={2} sx={{ marginY: "50px" }}>
             <Grid item xs={12} sx={{ fontSize: "20px", fontWeight: "bold" }}>
-              2.What is the current stage of your software development process?
+              2.In welchem Stadium befindet sich Ihr Softwareentwicklungsprozess derzeit?
             </Grid>
 
             <Grid item xs={12} sx={{ fontSize: "20px", fontWeight: "bold" }}>
@@ -170,19 +147,19 @@ function HeroFull(): React.JSX.Element {
                 <FormControlLabel
                   value="option1"
                   control={<Radio />}
-                  label="Idea"
+                  label="Idee"
                   sx={{ margin: "5px" }}
                 />
                 <FormControlLabel
                   value="option2"
                   control={<Radio />}
-                  label="Prototype/Specification"
+                  label="Prototyp/Spezifikation"
                   sx={{ margin: "5px" }}
                 />
                 <FormControlLabel
                   value="option3"
                   control={<Radio />}
-                  label="Designed solution"
+                  label="Entwickelte Lösung"
                   sx={{ margin: "5px" }}
                 />
                 <FormControlLabel
@@ -196,48 +173,20 @@ function HeroFull(): React.JSX.Element {
           </Grid>
           <Grid container spacing={2}>
             <Grid item xs={12} sx={{ fontSize: "20px", fontWeight: "bold" }}>
-              3.What type of software solution would you like to develop with
-              Andersen?
+              3. Was sind die Hauptziele oder -vorgaben für diese Softwarelösung?
             </Grid>
-            <Grid
-              item
-              md={3}
-              xs={12}
-              sx={{ display: "flex", alignItems: "center" }}
-            >
-              <Checkbox />
-              <Typography>Project Manager</Typography>
-            </Grid>
-            <Grid
-              item
-              md={3}
-              xs={12}
-              sx={{ display: "flex", alignItems: "center" }}
-            >
-              <Checkbox />
-              <Typography>Business Analyst</Typography>
-            </Grid>
-            <Grid
-              item
-              md={3}
-              xs={12}
-              sx={{ display: "flex", alignItems: "center" }}
-            >
-              <Checkbox />
-              <Typography>UI/UX Designer</Typography>
-            </Grid>
-            <Grid
-              item
-              md={3}
-              xs={12}
-              sx={{ display: "flex", alignItems: "center" }}
-            >
-              <Checkbox />
-              <Typography>Architect</Typography>
+            <Grid item xs={12}>
+              <TextField
+                  fullWidth
+                  multiline
+                  rows={4}
+                  variant="outlined"
+                  placeholder="Beschreiben Sie die Ziele Ihrer Softwarelösung"
+              />
             </Grid>
           </Grid>
           <Button  sx={{ marginTop: "50px", color: "#000", backgroundColor:"#ffdb00" }}>
-            Get pricing
+            Preise anfordern
           </Button>
         </TabPanel>
         <TabPanel value={value} index={1}>

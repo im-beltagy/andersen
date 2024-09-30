@@ -23,8 +23,8 @@ const ProvidedServicesAccordion = () => {
     };
 
   const customDevelopment = [
-    "MObile development",
-    "Web development",
+    "Mobile Entwicklung",
+    "Webentwicklung",
     "Desktop application development",
     "Game development",
     "AI and Machine Learning development",

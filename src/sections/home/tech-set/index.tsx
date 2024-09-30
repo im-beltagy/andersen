@@ -10,273 +10,110 @@ import Link from "next/link";
 import Iconify from "@/components/iconify";
 
 const labels = [
-  "popular",
+  "Alle",
   "mobile",
   "front-end",
   "back-end",
-  "database",
   "cloud",
   "CMS",
 ];
 
 const data = {
-  popular: [
+  Alle: [
     {
       icon: "/assets/tech/iOS.svg",
       label: "iOS",
-      href: "#",
     },
     {
       icon: "/assets/tech/Android.svg",
       label: "Android",
-      href: "#",
     },
     {
       icon: "/assets/tech/React.svg",
       label: "React.js",
-      href: "#",
     },
     {
-      icon: "/assets/tech/iOS.svg",
-      label: "iOS",
-      href: "#",
+      icon: "/assets/images/cases/node.png",
+      label: "Node JS",
     },
     {
-      icon: "/assets/tech/Android.svg",
-      label: "Android",
-      href: "#",
+      icon: "/assets/images/cases/spring.png",
+      label: "Spring boot",
     },
     {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
+      icon: "/assets/images/cases/net.png",
+      label: ".Net Core",
     },
     {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
+      icon: "/assets/images/cases/flutter.svg",
+      label: "Flutter",
     },
+    {
+      icon: "/assets/images/cases/vue.png",
+      label: "Vue JS",
+    },
+    {
+      icon: "/assets/images/cases/angular.png",
+      label: "Angular",
+    }
+
   ],
   mobile: [
     {
       icon: "/assets/tech/iOS.svg",
       label: "iOS",
-      href: "#",
     },
     {
       icon: "/assets/tech/Android.svg",
       label: "Android",
-      href: "#",
     },
     {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/iOS.svg",
-      label: "iOS",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/Android.svg",
-      label: "Android",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
+      icon: "/assets/images/cases/flutter.svg",
+      label: "Flutter",
+    }
   ],
   "front-end": [
-    {
-      icon: "/assets/tech/iOS.svg",
-      label: "iOS",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/Android.svg",
-      label: "Android",
-      href: "#",
-    },
+
     {
       icon: "/assets/tech/React.svg",
       label: "React.js",
-      href: "#",
     },
     {
-      icon: "/assets/tech/iOS.svg",
-      label: "iOS",
-      href: "#",
+      icon: "/assets/images/cases/vue.png",
+      label: "Vue JS",
     },
     {
-      icon: "/assets/tech/Android.svg",
-      label: "Android",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
+      icon: "/assets/images/cases/angular.png",
+      label: "Angular",
+    }
+
   ],
   "back-end": [
     {
-      icon: "/assets/tech/iOS.svg",
-      label: "iOS",
-      href: "#",
+      icon: "/assets/images/cases/node.png",
+      label: "Node JS",
     },
     {
-      icon: "/assets/tech/Android.svg",
-      label: "Android",
-      href: "#",
+      icon: "/assets/images/cases/spring.png",
+      label: "Spring boot",
     },
     {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/iOS.svg",
-      label: "iOS",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/Android.svg",
-      label: "Android",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
+      icon: "/assets/images/cases/net.png",
+      label: ".Net Core",
+    }
+
   ],
-  database: [
-    {
-      icon: "/assets/tech/iOS.svg",
-      label: "iOS",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/Android.svg",
-      label: "Android",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/iOS.svg",
-      label: "iOS",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/Android.svg",
-      label: "Android",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
-  ],
+
   cloud: [
     {
-      icon: "/assets/tech/iOS.svg",
-      label: "iOS",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/Android.svg",
-      label: "Android",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/iOS.svg",
-      label: "iOS",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/Android.svg",
-      label: "Android",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
+      icon: "/assets/images/cases/microsoft-azure.svg",
+      label: "Microsoft Azure",
+    }
   ],
   CMS: [
     {
-      icon: "/assets/tech/iOS.svg",
-      label: "iOS",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/Android.svg",
-      label: "Android",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/iOS.svg",
-      label: "iOS",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/Android.svg",
-      label: "Android",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
-    },
-    {
-      icon: "/assets/tech/React.svg",
-      label: "React.js",
-      href: "#",
+      icon: "/assets/images/cases/wordpress.png",
+      label: "Wordpress",
     },
   ],
 };
@@ -290,27 +127,25 @@ export default function HomeTechSet() {
       sx={{ py: "var(--section-py)", bgcolor: "var(--primary-light)" }}
     >
       <Container>
-        <h2 className={globals.headding}>Technology set</h2>
+        <h2 className={globals.headding}>Technologie</h2>
         <p className={globals.sub_headding}>
-          Cooperate with competent and knowledgeable IT experts in{" "}
-          <a href="/services/web-development" target="_blank">
-            web
+          Kooperieren Sie mit kompetenten IT-Experten im Bereich der{" "}
+          <a  target="_blank">
+            Web
           </a>{" "}
-          and{" "}
-          <a href="/services/mobile-development" target="_blank">
-            mobile
+          und{" "}
+          <a  target="_blank">
+            mobilen
           </a>{" "}
-          software engineering. As a trusted tech and business partner, we apply
-          the most advanced technologies, frameworks, and components to build
-          software notable for both its solid and effective{" "}
-          <a href="/find-developers/back-end" target="_blank">
-            back-end
+          Softwareentwicklung. Als vertrauenswürdiger Technologie- und Geschäftspartner setzen wir die fortschrittlichsten Technologien, Frameworks und Komponenten ein, um Software zu entwickeln, die sowohl durch ein solides und effektives {" "}
+          <a  target="_blank">
+            Back-End
           </a>{" "}
-          with intuitive{" "}
-          <a href="/services/design-studio" target="_blank">
+          als auch durch eine intuitive{" "}
+          <a  target="_blank">
             UI/UX
-          </a>
-          .
+          </a>{" "}
+           überzeugt.
         </p>
 
         <div className={styles.labels}>
@@ -353,7 +188,7 @@ export default function HomeTechSet() {
               }}
               slides={data[tab as keyof typeof data].map((item) => (
                 <div className={styles.card_wrapper} key={item.label}>
-                  <a href="#" className={styles.card}>
+                  <a  className={styles.card}>
                     <Image
                       className={styles.icon}
                       src={item.icon}
@@ -369,10 +204,6 @@ export default function HomeTechSet() {
           </div>
         ))}
 
-        <Link href="#" className={styles.link}>
-          <span>Assemble a software development team</span>
-          <Iconify icon="material-symbols:arrow-right-alt-rounded" />
-        </Link>
       </Container>
     </Box>
   );

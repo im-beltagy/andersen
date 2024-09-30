@@ -8,18 +8,12 @@ import { Grid, useMediaQuery } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import React, { useEffect, useMemo, useState } from "react";
 import {
-  Avatar,
   Box,
-  Button,
   Divider,
   Drawer,
   List,
   ListItem,
-  ListItemAvatar,
   ListItemButton,
-  ListItemText,
-  ListSubheader,
-  Paper,
   Typography,
 } from "@mui/material";
 import Iconify from "../iconify/iconify";
@@ -42,19 +36,16 @@ const navItems = [
     href: "/",
   },
   {
-    label: "About",
+    label: "Über uns",
     href: "/about-us",
   },
   {
-    label: "Project Cases",
-    href: "/project-cases/", // internal-management-system-for-tourism",
+    label: "Projekte",
+    href: "/project-cases/",
   },
+
   {
-    label: "Services",
-    href: "/services",
-  },
-  {
-    label: "Contact us",
+    label: "Kontakt",
     href: "/contact-us",
   },
 ];
@@ -219,7 +210,7 @@ export default function Header(props: Props) {
           className={`${globals.button} ${globals.button_outlined}`}
           style={{ minWidth: "110px", padding: "10px 18px", fontSize: "14px" }}
         >
-          Contact us
+            Kontaktieren Sie uns
         </Link>
       </Stack>
     </Box>

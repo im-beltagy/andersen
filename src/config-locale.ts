@@ -5,7 +5,6 @@ export type Locales = "en" | "de";
 export const locales: Locales[] = ["en", "de"];
 export const defaultLocale: Locales = "en";
 export const LocalesNames = {
-  en: "English",
   de: "Deutsch",
 };
 

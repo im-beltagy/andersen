@@ -5,12 +5,11 @@ import {
   Container,
 } from "@mui/material";
 
-import Section9 from "@/sections/project-cases/section9/Section9";
+import Section9 from "@/sections/project-cases/sectionContactForm/Section9";
 import styles2 from "./hero.module.css";
-import ProvidedServices from "@/sections/home/provided-services";
-import ProvidedServicesAccordion from "@/sections/home/provided-services/withAccordion";
-import Grantees from "@/sections/services/Grantees/Grantees";
 import Image from "next/image";
+import ItServices from "@/sections/about-us/it-services";
+import React from "react";
 
 function HeroFull(): React.JSX.Element {
 
@@ -28,11 +27,8 @@ function HeroFull(): React.JSX.Element {
           <h2>IT Services with Sparkling Results</h2>
         </Box>
       </Box>
-     
-      <Container sx={{ padding: "50px" }}>
-        <ProvidedServices />
-        <ProvidedServicesAccordion />
-      </Container>
+
+        <ItServices />
       <Container
         sx={{
           marginTop: "100px",
@@ -41,7 +37,6 @@ function HeroFull(): React.JSX.Element {
           display: { xs: "none", sm: "block" },
         }}
       >
-        <Grantees />
       </Container>
       <Container sx={{ backgroundColor: "#fff", padding: "20px", marginTop: "100px" }}>
         <Section9 />

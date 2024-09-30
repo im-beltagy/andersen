@@ -14,29 +14,7 @@ import {
 } from "@mui/material";
 
 const events = [
-  {
-    title: "Finnovex",
-    date: "Jul 22 – 23, 2024",
-    location: "Johannesburg, SA",
-    img: "https://content.andersenlab.com/event/previews/1707143483.webp", // replace with actual image
-    description:
-      "Finnovex is a series of industry-leading events focused on financial services and innovation.",
-  },
-  {
-    title: "Money 20/20 Europe",
-    date: "Jun 4 – 6, 2024",
-    location: "Amsterdam, NL",
-    img: "https://static.andersenlab.com/andersenlab/new-andersensite/events/money-20-20-europe/meet-card-desk.webp", // replace with actual image
-    description:
-      "Money 20/20 is the most influential gathering of the global money ecosystem.",
-  },
-  {
-    title: "DMEA",
-    date: "Apr 9 – 11, 2024",
-    location: "Berlin, Germany",
-    img: "https://content.andersenlab.com/event/previews/1719828673.webp", // replace with actual image
-    description: "DMEA is Europe’s leading event for digital health.",
-  },
+
 ];
 const events2 = [
   {

@@ -22,7 +22,6 @@ export default function LocaleButton() {
       fontSize={{ xs: "14px", md: "16px" }}
       fontWeight="light"
     >
-      {LocalesNames[anotherLocale]}
     </Typography>
   );
 }

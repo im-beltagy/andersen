@@ -8,11 +8,11 @@ const companies = [
   "/assets/companies/tui-color.svg",
   "/assets/companies/media-markt-color.svg",
   "/assets/companies/digital-inspire-color.svg",
-  "/assets/companies/samsung-color.svg",
+  "/assets/companies/deutsche-bahn-ag-1.svg",
   "/assets/companies/asset-book-color.svg",
   "/assets/companies/prea-gmbh-color.svg",
   "/assets/companies/mogo-finance-color.svg",
-  "/assets/companies/mercedes-color.svg",
+  "/assets/companies/Condor_logo_2022.svg",
 ];
 type props = {
   Links?:string[];
@@ -26,7 +26,7 @@ export default function HomeWorkedWith({Links, mainText}:props) {
     >
       <Container>
         <Typography className={globals.headding} style={{color: Links? "#fff": '#000000' }}>
-          {mainText ?mainText :`Companies we're proud to have worked with`}
+          {mainText ?mainText :`Stolz auf die Partnerschaften mit führenden Unternehmen!`}
         </Typography>
         <Grid container justifyContent="center" spacing={4} sx={{ mt: { xs: 2, sm: 7.5 } }}>
           {
