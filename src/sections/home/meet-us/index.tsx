@@ -13,10 +13,10 @@ import {
   Container,
 } from "@mui/material";
 
-const events = [
+// const events = [
 
-];
-const events2 = [
+// ];
+const events = [
   {
     title: "KSA Digital Disruption and Innovation Exchange",
     date: "May 13, 2024",

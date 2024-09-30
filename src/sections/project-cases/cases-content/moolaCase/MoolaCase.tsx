@@ -1,3 +1,6 @@
+"use client"
+
+
 import { Box } from "@mui/material";
 import React from "react";
 import Section1 from "@/sections/project-cases/sectionTitle/Section1";

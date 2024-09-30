@@ -1,3 +1,6 @@
+"use client"
+
+
 import { Box } from "@mui/material";
 import React from "react";
 import Section1 from "@/sections/project-cases/sectionTitle/Section1";
@@ -6,7 +9,7 @@ import Section4 from "@/sections/project-cases/sectionImage/Section4";
 import Section5 from "@/sections/project-cases/sectionFunctionalities/Section5";
 import Section6 from "@/sections/project-cases/sectionSolution/Section6";
 import Section7 from "@/sections/project-cases/sectionResults/Section7";
-import Section8 from "../../section8/Section8";
+// import Section8 from "../../section8/Section8";
 import Section10 from "../../section10/Section10";
 import Section11 from "../../section11/Section11";
 import Section9 from "@/sections/project-cases/sectionContactForm/Section9";
