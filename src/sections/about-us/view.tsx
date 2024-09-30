@@ -1,3 +1,5 @@
+"use client"
+
 import HeroFull from "@/sections/about-us/hero-full";
 import {Box, Container, Divider} from "@mui/material";
 import React from "react";

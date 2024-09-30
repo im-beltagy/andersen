@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import globals from "@/app/globals.module.css";
 import { useForm, Controller } from "react-hook-form";
@@ -15,8 +14,9 @@ import {
   Box,
   Paper,
 } from "@mui/material";
+import { SendEmail } from "@/actions/Form";
+import toast, { Toaster } from "react-hot-toast";
 
-// Validation schema
 const schema = yup.object().shape({
   industry: yup.string().required("Branche ist erforderlich"),
   name: yup.string().required("Name ist erforderlich"),
@@ -32,7 +32,7 @@ const industries = [
   "Gesundheitswesen",
   "Bildung",
   "Einzelhandel",
-  "Sonstiges"
+  "Sonstiges",
 ];
 
 const Section9 = () => {
@@ -44,8 +44,17 @@ const Section9 = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data: any) => {
-    console.log(data);
+  const onSubmit = async (data: any) => {
+
+    try {
+      const res = await SendEmail(data);
+      console.log(res.message);
+      if (res.message === "Email sent successfully") {
+        toast.success(res.message);
+      } else {
+        toast.error(res.response.data.error);
+      }
+    } catch (err) {}
   };
 
   return (
@@ -76,7 +85,8 @@ const Section9 = () => {
               </Typography>
             </Box>
             <Typography variant="body1">
-              Ein Experte wird Sie kontaktieren, nachdem er Ihre Anforderungen analysiert hat
+              Ein Experte wird Sie kontaktieren, nachdem er Ihre Anforderungen
+              analysiert hat
             </Typography>
           </Box>
           <Box display="flex" alignItems="center" mb={2}>
@@ -86,7 +96,9 @@ const Section9 = () => {
               </Typography>
             </Box>
             <Typography variant="body1">
-              Falls erforderlich, unterzeichnen wir eine Vertraulichkeitsvereinbarung, um das höchste Maß an Datenschutz zu gewährleisten
+              Falls erforderlich, unterzeichnen wir eine
+              Vertraulichkeitsvereinbarung, um das höchste Maß an Datenschutz zu
+              gewährleisten
             </Typography>
           </Box>
           <Box display="flex" alignItems="center" mb={2}>
@@ -96,131 +108,134 @@ const Section9 = () => {
               </Typography>
             </Box>
             <Typography variant="body1">
-              Wir unterbreiten Ihnen einen umfassenden Projektvorschlag mit Kostenschätzungen, Zeitplänen, Lebensläufen usw.
+              Wir unterbreiten Ihnen einen umfassenden Projektvorschlag mit
+              Kostenschätzungen, Zeitplänen, Lebensläufen usw.
             </Typography>
           </Box>
         </Box>
       </Grid>
       <Grid item xs={12} md={6}>
-        <Paper elevation={0} sx={{ p: 4, bgcolor: "#fafafa" }}>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <Controller
-              name="industry"
-              control={control}
-              render={({ field }) => (
-                <TextField
-                  {...field}
-                  select
-                  label="Wählen Sie Ihre Branche aus"
-                  variant="standard"
-                  fullWidth
-                  margin="normal"
-                  error={!!errors.industry}
-                  helperText={errors.industry ? errors.industry.message : ""}
-                >
-                  {industries.map((industry, index) => (
-                    <MenuItem key={index} value={industry}>
-                      {industry}
-                    </MenuItem>
-                  ))}
-                </TextField>
-              )}
-            />
-            <Controller
-              name="name"
-              control={control}
-              render={({ field }) => (
-                <TextField
-                  {...field}
-                  label="Name"
-                  variant="standard"
-                  fullWidth
-                  margin="normal"
-                  error={!!errors.name}
-                  helperText={errors.name ? errors.name.message : ""}
-                />
-              )}
-            />
-            <Controller
-              name="email"
-              control={control}
-              render={({ field }) => (
-                <TextField
-                  {...field}
-                  label="E-mail"
-                  variant="standard"
-                  fullWidth
-                  margin="normal"
-                  error={!!errors.email}
-                  helperText={errors.email ? errors.email.message : ""}
-                />
-              )}
-            />
-            <Controller
-              name="phone"
-              control={control}
-              render={({ field }) => (
-                <TextField
-                  {...field}
-                  label="Telefon"
-                  variant="standard"
-                  fullWidth
-                  margin="normal"
-                  error={!!errors.phone}
-                  helperText={errors.phone ? errors.phone.message : ""}
-                />
-              )}
-            />
-            <Controller
-              name="description"
-              control={control}
-              render={({ field }) => (
-                <TextField
-                  {...field}
-                  label="Bitte beschreiben Sie Ihre Projektanforderungen"
-                  variant="standard"
-                  fullWidth
-                  margin="normal"
-                  multiline
-                  rows={4}
-                  error={!!errors.description}
-                  helperText={
-                    errors.description ? errors.description.message : ""
-                  }
-                />
-              )}
-            />
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "column",
-              }}
-            >
-              <FormControlLabel
-                control={
-                  <Controller
-                    name="nda"
-                    control={control}
-                    render={({ field }) => <Checkbox {...field} />}
-                  />
-                }
-                label="Ich möchte meine Daten durch die Unterzeichnung einer Vertraulichkeitsvereinbarung schützen."
+        <Toaster />
+
+          <Paper elevation={0} sx={{ p: 4, bgcolor: "#fafafa" }}>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <Controller
+                name="industry"
+                control={control}
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    select
+                    label="Wählen Sie Ihre Branche aus"
+                    variant="standard"
+                    fullWidth
+                    margin="normal"
+                    error={!!errors.industry}
+                    helperText={errors.industry ? errors.industry.message : ""}
+                  >
+                    {industries.map((industry, index) => (
+                      <MenuItem key={index} value={industry}>
+                        {industry}
+                      </MenuItem>
+                    ))}
+                  </TextField>
+                )}
               />
-              <Box mt={2}>
-                <button
-                  type="submit"
-                  className={`${globals.button} ${globals.button_primary}`}
-                >
-                  Senden
-                </button>
-                <Typography variant="body2" color="textSecondary" mt={1}>
-                  Ihr Datenschutz ist gewährleistet
-                </Typography>
+              <Controller
+                name="name"
+                control={control}
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    label="Name"
+                    variant="standard"
+                    fullWidth
+                    margin="normal"
+                    error={!!errors.name}
+                    helperText={errors.name ? errors.name.message : ""}
+                  />
+                )}
+              />
+              <Controller
+                name="email"
+                control={control}
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    label="E-mail"
+                    variant="standard"
+                    fullWidth
+                    margin="normal"
+                    error={!!errors.email}
+                    helperText={errors.email ? errors.email.message : ""}
+                  />
+                )}
+              />
+              <Controller
+                name="phone"
+                control={control}
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    label="Telefon"
+                    variant="standard"
+                    fullWidth
+                    margin="normal"
+                    error={!!errors.phone}
+                    helperText={errors.phone ? errors.phone.message : ""}
+                  />
+                )}
+              />
+              <Controller
+                name="description"
+                control={control}
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    label="Bitte beschreiben Sie Ihre Projektanforderungen"
+                    variant="standard"
+                    fullWidth
+                    margin="normal"
+                    multiline
+                    rows={4}
+                    error={!!errors.description}
+                    helperText={
+                      errors.description ? errors.description.message : ""
+                    }
+                  />
+                )}
+              />
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexDirection: "column",
+                }}
+              >
+                <FormControlLabel
+                  control={
+                    <Controller
+                      name="nda"
+                      control={control}
+                      render={({ field }) => <Checkbox {...field} />}
+                    />
+                  }
+                  label="Ich möchte meine Daten durch die Unterzeichnung einer Vertraulichkeitsvereinbarung schützen."
+                />
+                <Box mt={2}>
+                  <button
+                    type="submit"
+                    className={`${globals.button} ${globals.button_primary}`}
+                  >
+                    Senden
+                  </button>
+                  <Typography variant="body2" color="textSecondary" mt={1}>
+                    Ihr Datenschutz ist gewährleistet
+                  </Typography>
+                </Box>
               </Box>
-            </Box>
-          </form>
-        </Paper>
+            </form>
+          </Paper>
       </Grid>
     </Grid>
   );

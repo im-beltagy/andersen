@@ -1,3 +1,6 @@
+"use client"
+
+
 import { Box } from '@mui/material';
 import React from 'react';
 import HeroFull from '@/sections/contact-us/hero/hero-full';
