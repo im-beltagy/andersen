@@ -1,3 +1,6 @@
+"use client"
+
+
 import globals from "@/app/globals.module.css";
 import Section9 from "@/sections/project-cases/section9/Section9";
 import { Box, Container } from "@mui/material";
