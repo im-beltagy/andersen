@@ -48,6 +48,10 @@ const navItems = [
     label: "Kontakt",
     href: "/contact-us",
   },
+  {
+    label: "Impressum",
+    href: "/info",
+  },
 ];
 export default function Header(props: Props) {
   const { window } = props;
