@@ -17,7 +17,7 @@ function HeroFull(): React.JSX.Element {
     <Box className={styles2.contactSection}>
       <Box className={styles2.contactUs}>
         <Image
-          src="https://andersenlab.com/react-assets/static/74306c57a3b06cb29a7e834f2089349b/ae3a5/1920x546-2x-v2.webp"
+          src="/assets/home/hero/hero3.png"
           alt="Contact Us"
           className={styles2.contactUsImage}
           width={500}

@@ -11,7 +11,6 @@ const nextConfig = {
           "static.andersenlab.com",
           "cdn-gnpmp.nitrocdn.com",
           "prestashop.com",
-          "andersenlab.com"
         ],
       },
 };
