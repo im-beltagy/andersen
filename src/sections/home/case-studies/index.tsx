@@ -97,7 +97,6 @@ export default function HomeCaseStudies() {
           </h3>
           <Link
             href="/project-cases"
-            target="_blank"
             className={`${globals.button} ${globals.button_primary}`}
           >
             mehr...
