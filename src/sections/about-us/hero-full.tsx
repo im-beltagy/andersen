@@ -22,7 +22,7 @@ function HeroFull():React.JSX.Element {
       <Box sx={{width:'100%', height:{xs:300,sm:450,md:668}}}>
       <ImageListItem style={{height:"100%"}} >
           <Image
-            src={`/assets/images/about-us/hero.jpeg`}
+            src={`/assets/home/hero/hero5.png`}
             alt="hero"
             loading="lazy"
             width={1000}
