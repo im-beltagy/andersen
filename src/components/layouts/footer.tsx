@@ -30,6 +30,8 @@ import {
 import Iconify from "../iconify/iconify";
 import { useRouter } from "next/navigation";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Link from "next/link";
+import Image from "next/image";
 
 // ----------------------------------------------------------------------
 
@@ -82,16 +84,11 @@ export default function Footer(props: Props) {
         >
           <Toolbar sx={{ py: 11, display: "flex", flexDirection: "column" }}>
             <Grid container justifyContent="center">
-              <Grid
-                container
-                spacing={1}
-              >
-              </Grid>
+              <Grid container spacing={1}></Grid>
             </Grid>
           </Toolbar>
           <Toolbar sx={{ mb: 11, display: "flex", flexDirection: "column" }}>
             <Container>
-
               <Divider
                 sx={{ borderTop: 0.1, borderRadius: 20 }}
                 color="grey"
@@ -143,23 +140,25 @@ export default function Footer(props: Props) {
                         icon="mingcute:mail-line"
                         sx={{ color: (theme) => theme.palette.primary.main }}
                       />
-                      <Typography
-                        fontWeight="regular"
-                        component="div"
-                        sx={{
-                          my: 3,
-                          unicodeBidi: "embed",
-                          direction: "ltr",
-                          color: "#fff",
-                          ml: 1,
-                          fontSize: {
-                            xs: 13,
-                            md: 15,
-                          },
-                        }}
-                      >
-                        info@webizi.de
-                      </Typography>
+                      <Link href="https://accounts.google.com/servicelogin?service=mail" target="_blank">
+                        <Typography
+                          fontWeight="regular"
+                          component="div"
+                          sx={{
+                            my: 3,
+                            unicodeBidi: "embed",
+                            direction: "ltr",
+                            color: "#fff",
+                            ml: 1,
+                            fontSize: {
+                              xs: 13,
+                              md: 15,
+                            },
+                          }}
+                        >
+                          info@webizi.de
+                        </Typography>
+                      </Link>
                     </Box>
                   </Grid>
                 </Grid>
@@ -231,7 +230,11 @@ export default function Footer(props: Props) {
                     <Typography sx={{ my: 0.5, fontSize: 12 }} color="#ccc">
                       &
                     </Typography>
-                    <Typography
+                    <Link
+                      href="/info"
+                      style={{ textDecoration: "none", color: "white" }}
+                    >
+                      <Typography
                         fontWeight="bold"
                         sx={{
                           mx: 0.3,
@@ -244,11 +247,11 @@ export default function Footer(props: Props) {
                           },
                         }}
                         color="white"
-                    >
-                      Impressum
-                    </Typography>
+                      >
+                        Impressum
+                      </Typography>
+                    </Link>
                   </Box>
-
                 </Grid>
 
                 <Grid item xs={12} md={6}>
@@ -259,18 +262,68 @@ export default function Footer(props: Props) {
                       alignItems: "center",
                     }}
                   >
-                    <Box sx={{ display: "flex", alignItems: "center", gap: 2, flexWrap: "wrap" }}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 2,
+                        flexWrap: "wrap",
+                      }}
+                    >
                       <Box component="span">
-                        <Iconify
-                          icon="uil:instagram-alt"
-                          sx={{
-                            ":hover": {
-                              color: (theme) => theme.palette.primary.main,
-                            },
-                            width: 25,
-                            height: 25,
-                          }}
-                        />
+                        <Link
+                          href="https://www.instagram.com/webizi.de?igsh=MWZ2YmVxaDhpeXVvMA=="
+                          target="_blank"
+                          style={{ textDecoration: "none", color: "white" }}
+                        >
+                          <Iconify
+                            icon="uil:instagram-alt"
+                            sx={{
+                              ":hover": {
+                                color: (theme) => theme.palette.primary.main,
+                              },
+                              width: 25,
+                              height: 25,
+                            }}
+                          />
+                        </Link>
+                      </Box>
+                      <Box component="span">
+                        <Link
+                          href="https://www.linkedin.com"
+                          target="_blank"
+                          style={{ textDecoration: "none", color: "white" }}
+                        >
+                          <Iconify
+                            icon="uil:linkedin-alt"
+                            sx={{
+                              ":hover": {
+                                color: (theme) => theme.palette.primary.main,
+                              },
+                              width: 25,
+                              height: 25,
+                            }}
+                          />
+                        </Link>
+                      </Box>
+                      <Box component="span">
+                        <Link
+                          href="https://www.xing.com/en"
+                          target="_blank"
+                          style={{ textDecoration: "none", color: "white" }}
+                        >
+                          <Image src="/assets/icons8-xing.svg" alt="xing" width={40} height={40} style={{color: "white"}} />
+                          {/* <Iconify
+                            icon="uil:linkedin-alt"
+                            sx={{
+                              ":hover": {
+                                color: (theme) => theme.palette.primary.main,
+                              },
+                              width: 25,
+                              height: 25,
+                            }}
+                          /> */}
+                        </Link>
                       </Box>
                     </Box>
                   </Box>

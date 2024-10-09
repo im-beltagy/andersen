@@ -35,11 +35,11 @@ const InfiniteAutoplayCarousel = () => {
   };
 
   const images = [
-    "https://prestashop.com/wp-content/uploads/2023/03/Kway-1.png",
-    "https://prestashop.com/wp-content/uploads/2023/03/Push_listing_offre_Finsbury_240-1.png",
-    "https://prestashop.com/wp-content/uploads/2023/03/Push_listing_offre_Pylones_240_NB-1-e1679901855972.png",
-    "https://prestashop.com/wp-content/uploads/2023/03/Push_dealy_460_Noir-1.svg",
-    "https://prestashop.com/wp-content/uploads/2023/04/LOGO_HUYGENS.svg",
+    "/assets/home/Laravel 1.svg",
+    "/assets/home/NET_Core_Logo 1@2x.svg",
+    "/assets/home/Node.js_logo 1.svg",
+    "/assets/home/pngegg 1.svg",
+    "/assets/home/Spring_Framework_Logo_2018 1.svg",
   ];
 
   const duplicatedImages = [...images, ...images];

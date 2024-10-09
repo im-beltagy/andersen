@@ -11,9 +11,11 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import Slider from "../../slider";
+import { useRouter } from "next/navigation";
 
 export default function HomeNews({ slidess }: any) {
   const md = useMediaQuery("(min-width:1190px)");
+  const router = useRouter()
   const slides = slidess?.map((slide: any, index: number) => (
     <Grid
       key={index}
@@ -141,7 +143,7 @@ export default function HomeNews({ slidess }: any) {
         </Box>
 
 
-          <Button onClick={() => window.open(slide.buttonLink)}
+          <Button onClick={() => router.push(slide.buttonLink)}
           variant="contained"
           color="success"
           sx={{ marginTop: 1, fontSize: { xs: ".7rem", md: "1rem" } }}

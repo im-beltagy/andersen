@@ -6,6 +6,7 @@ import Footer from "@/components/layouts/footer";
 import Header from "@/components/layouts/header";
 import { ThemeProvider } from "@mui/material";
 import theme from "@/lib/hooks/mui/theme";
+import { Metadata } from "next";
 
 // Base Font
 const roboto = Roboto({
@@ -13,7 +14,9 @@ const roboto = Roboto({
   weight: "400",
   display: "swap",
 });
-
+export const metadata: Metadata = {
+  title: "Webizi",
+};
 export default async function LocaleLayout({
   children,
   params: { locale },
