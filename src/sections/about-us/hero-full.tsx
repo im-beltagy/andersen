@@ -22,15 +22,17 @@ function HeroFull():React.JSX.Element {
       <Box sx={{width:'100%', height:{xs:300,sm:450,md:668}}}>
       <ImageListItem style={{height:"100%"}} >
           <Image
-            src={`/assets/home/hero/hero5.png`}
+            src={`/assets/Frame 3.svg`}
             alt="hero"
             loading="lazy"
-            width={1000}
-            height={1000}
+            sizes="(min-width: 3840px) 3840px, 100vw"
             style={{height:"100%", width:"100%"}}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top"
             />
           <ImageListItemBar
-          sx={{height:'50%', background:`linear-gradient(0deg, rgba(2,13,28,1) 0%, rgba(255,255,255,0) 100%)`}}
+          sx={{height:'100%', background:`linear-gradient(0deg, rgba(2,13,28,1) 0%, rgba(255,255,255,0) 100%)`}}
           title={  <Container>
             <Typography fontWeight="bold"  sx={{lineHeight:1.1,fontSize: {xs:35, sm:50, md:70, lg:100}}}>Lernen Sie Ihre   <br /> Softwareexperten kennen
              <Box component="span" sx={{mx:2,fontSize:30,color:(theme)=> theme.palette.primary.main}}>•</Box></Typography>
