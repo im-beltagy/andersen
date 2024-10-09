@@ -15,7 +15,7 @@ export default function HomeHero() {
       <div className={styles.wrapper}>
         <Image
           className={styles.background_sm}
-          src="/assets/Frame 3.svg"
+          src="/assets/home/hero/hero3.png"
           alt="hero"
           sizes="(min-width: 3840px) 3840px, 100vw"
           layout="fill"
@@ -24,7 +24,7 @@ export default function HomeHero() {
         />
         <Image
           className={styles.background_lg}
-          src="/assets/Frame 3.svg"
+          src="/assets/home/hero/hero3.png"
           alt="hero"
           sizes="(min-width: 3840px) 3840px, 100vw"
           layout="fill"
