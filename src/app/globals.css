@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   --accent-dark: #f2cb00;
   --accent-main: #ffdb00;
@@ -48,6 +52,13 @@ svg {
   display: block;
   max-width: 100%;
 }
+.link{
+  background-color: #e9f3ff;
+}
+  .none{
+    display: none;
+  }
+
 input,
 button,
 textarea,
