@@ -52,6 +52,14 @@ const navItems = [
     label: "Impressum",
     href: "/info",
   },
+  {
+    label: "Agile",
+    href: "/agile",
+  },
+  {
+    label: "E-commerce",
+    href: "/e-commerce",
+  },
 ];
 export default function Header(props: Props) {
   const { window } = props;
